@@ -6,154 +6,276 @@
 
 }/*grande taille, format paysage*/
 
-
+/* Fonctionnel. */
 body{
-    background-color: #ffeedb; 
+    background-color: white; 
     font-family: 'Courier New', Courier, monospace; 
     font-size: 15px;
-    margin: auto;
     }
 
-.navigation-horizontale{
-    width:100%;
+/* Fonctionnel. */
+.menu{
+    box-sizing: border-box;
+}
+
+/* Fonctionnel. */
+.menu-item1{
+    width:14.28%;
     height: 125px;
-    background-color: #38a3a5;
+    background-color: #F8997D;
     color: white;
-    }
+}
 
+/* Fonctionnel. */
+.menu-item2{
+    width:14.28%;
+    height: 125px;
+    background-color: #F08E7B;
+    color: white;
+}
+
+/* Fonctionnel. */
+.menu-item3{
+    width:14.28%;
+    height: 125px;
+    background-color: #E78279;
+    color: white;
+}
+
+/* Fonctionnel. */
+.menu-item4{
+    width:14.28%;
+    height: 125px;
+    background-color: #DF7778;
+    color: white;
+}
+
+/* Fonctionnel. */
+.menu-item5{
+    width:14.28%;
+    height: 125px;
+    background-color: #D76C76;
+    color: white;
+}
+
+/* Fonctionnel. */
+.menu-item6{
+    width:14.28%;
+    height: 125px;
+    background-color: #CE6074;
+    color: white;
+}
+
+/* Fonctionnel. */
+.rechercher {
+    flex-basis: 14.28%;
+    height: 125px;
+    background-color: #C65572;
+    display: flex; /* Pour aligner le champ de texte et le bouton horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: space-between; /* Espace entre le champ de texte et le bouton */
+    padding: 0 10px; /* Ajoute un peu d'espace à l'intérieur du conteneur */
+    box-sizing: border-box; /* Inclut les padding dans la taille totale */
+}
+
+/* Fonctionnel. */
+.rechercher input[type="text"] {
+    width: 60%; /* Le champ de texte prend 70% de la largeur du conteneur */
+    height: 70%; /* Ajuste la hauteur pour rester proportionnelle */
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+}
+
+/* Fonctionnel. */
+.rechercher button.rechercher-btn {
+    width: 40%; 
+    height: 70%; 
+    background-color: #AD336D;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Fonctionnel. */
+.rechercher button.rechercher-btn:hover {
+    background-color: white;
+    color: #AD336D;
+    border: 3px solid #AD336D; 
+} 
+
+/* Fonctionnel. */
 li{
     list-style:none !important; 
-    color:#FFF;
-    padding:10px;
-    font-size:20px;
-    text-decoration:none;
+    font-size:22px;
+    text-align: center;
     }
-             
+     
+/* Fonctionnel. */
 nav ul{
-    list-style:none !important;
-    display: flex;
-    background-color:#38a3a5;
+    display: flex; 
     padding:0;
     margin:0;
     }
-             
+
+/* Fonctionnel. */          
 nav ul li{
-    list-style: none !important;
     line-height:100px;
     float:none;
-    background-color:#38a3a5;
+    position: relative; /* Parent relatif pour le sous-menu */
+    padding:0;
+    margin:0;
+    list-style: none;
     }
-             
+
+/* Fonctionnel. */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 125px; /* Positionner sous le parent */
+    left: 0;
+}
+
+/* Fonctionnel. */
+nav ul li:hover ul, 
+nav ul li ul:hover {
+    display: block;
+    z-index: 99999;
+}
+
+/* Ne Fonctionne pas.*/
+nav ul li ul.sous-menu {
+    display: none; /* Masque le sous-menu par défaut */
+    position: absolute;
+    top: 100%; /* Positionne le sous-menu juste en dessous du parent */
+    left: 0; /* Aligne le sous-menu avec le bord gauche du parent */
+    background-color: #F08E7B; /* Couleur de fond du sous-menu */
+    z-index: 1000;
+}
+
+/* Ne Fonctionne pas.*/
+nav ul li:hover ul.sous-menu {
+    display: block; /* Affiche le sous-menu lors du survol */
+}
+
+/* Ne Fonctionne pas.*/   
+nav ul li ul.sous-menu li {
+    width: 100%; /* Chaque élément du sous-menu occupe toute la largeur */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+/* Fonctionnel. */
 nav ul li a{
-    list-style:none !important;
     color:#FFF;
-    padding:10px;
-    font-size:20px;
     text-decoration:none;
-    }
-             
+}
+  
+/* Fonctionnel. */
 li a:hover{
-    list-style:none !important;
     border-bottom:5px #FFF solid;
-    }
-            
-    /*nav ul li ul .navigation-verticale{ 
-        list-style:none !important;
-        display:none;
-        } */
-             
+}
+  
+/* Fonctionnel. */
 nav ul li:hover ul{ 
     list-style:none !important;
     z-index:99999;
     display:list-item !important;
     position:absolute;
-    margin-top:5px;
     margin-left:-10px;
-    }
-             
-    /*nav ul li:hover ul li .navigation-verticale{
-        list-style:none !important;
-        float:none;
-        }*/
-
-Section{
-    list-style:none !important;
-    display: flex;
-    Flex-direction: row;
-    Flex-wrap: no-wrap;
-    }
-
-    /*.navigation-verticale{
-        width: 250px;
-        height: 100%;
-        background-color:#38a3a5;
-        color: black;
-    }*/
-
-.sous-navigation{
-    display: none;
-    }
-
-li:hover .sous-navigation {
-    display: block;
 }
 
-.div-parent{
+/* Fonctionnel. */
+.grid-container {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: repeat(7, 1fr); /* 4 colonnes de largeur égale */
+    gap: 35px; /* Espacement entre les items */
+    padding: 60px; /* Espacement intérieur */
+    box-sizing: border-box;
+    
 }
 
-.flex-container {
-    display: flex;
-}
-
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1px solid #04dd45;
-}
-
-.panel-left {
-    border: 1px solid #38a3a5;
-}
-
-.panel-right {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #38a3a5;
-    text-align: center;
-    height: fit-content;
-}
-
-.panel-centre {
-    text-align: center;
-    margin: 10px;
-    padding: 20px;
-    border: 5px solid #38a3a5;
-}
-
-.panel-centre img{
-    width: 50%;
-    height: 50%; 
-    margin: auto;
-    display: flex;
-}
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr); /* 4 colonnes de largeur égale */
-    gap: 20px; /* Espacement entre les items */
-    padding: 20px; /* Espacement intérieur */
-}
+/* Ne fonctionne pas. */
 
 .item {
-    background-color: #ffb3c1; /* Couleur de fond des items */
-    border: 2px solid #a4133c; /* Bordure des items */
-    padding: 20px; /* Espacement intérieur des items */
-    text-align: center; /* Centrer le texte */
+    background-color: white; 
+    border: 5px solid #AD336D; 
+    text-align: center; 
+    color: black;
+    font-size: 20px;
+    min-width: 200px; 
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing: border-box; 
+    padding: 7px;
 }
 
+/* Fonctionnel. */
 .item img {
-    max-width: 100%; /* Assurer que l'image ne dépasse pas la taille de son conteneur */
-    height: auto; /* Garantir que l'image conserve ses proportions */
+    max-width: 100%; /* Assurer que l'image ne dépasse pas la taille de son conteneur. */
+    height: auto; /* Garantir que l'image conserve ses proportions. */
+}
+
+/* Fonctionnel. */
+.btn-page {
+    background-color: #F8997D; /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    border: none; /* Supprime la bordure */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la taille */
+    font-size: 15px; /* Taille de la police */
+    padding: 10px 20px; /* Ajustez le padding pour de l'espace autour du texte */
+    margin: 20px auto 0 auto; /* Ajoute une marge supérieure pour l'espacement */
+    display: block; /* Assurez-vous que le bouton est un élément en bloc */
+    align-self: center; /* Centre le bouton horizontalement si nécessaire */
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.plus{
+    background-color: #AD336D;
+    Border: none;
+}
+  
+.moins{
+    background-color: #F8997D;
+    border: none;
+}
+
+form{
+    text-align: center;
+    background-color: #B185DB;
+}
+
+label{
+    color: white;
+}
+
+input[type="submit"]{
+    background-color: #ffacc5;
+    color: #FFF;
+    border: #F8997D;
+}
+
+.no-underline {
+    display: inline-block; /* Nécessaire pour centrer l'élément avec text-align */
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.calcul{
+    display: flex;
+    flex-direction: row;
 }
