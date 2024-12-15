@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <body>
+        
+    <head>
+        <meta charset="utf-8">
+        <title>Liste des livres lus</title>
+        <link href="Style.css" rel="stylesheet">
+    </head>
+
+</head>
+
+<header>
+    <script src="Notation_Etoile.js"></script>
+
+  <nav class="menu">
+
+      <ul>
+
+          <!--<li><img src="logo.jpg" alt="logo"></li> A AJUSTER.-->
+
+          <li class="menu-item1"><a href="Index.html">Accueil</a></li>
+
+          <li class="menu-item2"><a href="">Ma bibliothèque</a>
+            <ul class="sous-menu1">
+                <li><a href="">2024</a></li>
+                <li><a href="">2025</a></li>
+            </ul>
+        </li>
+
+        <li class="menu-item3"><a href="">Top de l'année</a>
+            <ul class="sous-menu2">
+                <li><a href="">2024</a></li>
+            </ul>
+        </li>
+
+          <li class="menu-item4"><a href="">Pile à lire</a></li>
+
+          <li class="menu-item5"><a href="Calendrier.html">Calendrier</a></li>
+
+          <li class="menu-item6"><a href="">Me connecter</a></li>
+
+          <li>
+            <div class="rechercher">
+              <input type="text" placeholder="Rechercher...">
+              <button class="rechercher-btn">Rechercher</button>
+            </div>
+          </li>
+
+      </ul>
+
+  </nav>
+
+  </header>
+
+  <div class="calendar-container">
+    <div class="calendar">
+        <button class="fleches" id="prevMonth">◀</button>
+        <h3 id="monthDisplay"></h3>
+        <button class="fleches" id="nextMonth">▶</button>
+    </div>
+
+    <!-- Conteneur global pour les jours de la semaine et du mois -->
+    <div class="grid-container-calendar">
+        <div class="weekDaysContainer">
+            <div>Di</div>
+            <div>Lu</div>
+            <div>Ma</div>
+            <div>Me</div>
+            <div>Je</div>
+            <div>Ve</div>
+            <div>Sa</div>
+        </div>
+
+        <div id="daysContainer">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>10</button>
+            <button>11</button>
+            <button>12</button>
+            <button>13</button>
+            <button>14</button>
+            <button>15</button>
+            <button>16</button>
+            <button>17</button>
+            <button>18</button>
+            <button>19</button>
+            <button>20</button>
+            <button>21</button>
+            <button>22</button>
+            <button>23</button>
+            <button>24</button>
+            <button>25</button>
+            <button>26</button>
+            <button>27</button>
+            <button>28</button>
+            <button>29</button>
+            <button>30</button>
+            <button>31</button>
+            <button>32</button>
+            <button>33</button>
+            <button>34</button>
+            <button>35</button>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="Calendrier.js"></script>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
 
 /* Fonctionnel. */
 body{
-    background-color: white; 
+    background-color: #faedcd; 
     font-family: 'Courier New', Courier, monospace; 
     font-size: 15px;
     }
@@ -18,7 +18,7 @@ body{
     box-sizing: border-box;
 }
 
-/* Fonctionnel. */
+/* Fonctionnel. Accueil*/
 .menu-item1{
     width:14.28%;
     height: 125px;
@@ -26,7 +26,7 @@ body{
     color: white;
 }
 
-/* Fonctionnel. */
+/* Fonctionnel. Bibliotheque*/
 .menu-item2{
     width:14.28%;
     height: 125px;
@@ -34,7 +34,7 @@ body{
     color: white;
 }
 
-/* Fonctionnel. */
+/* Fonctionnel. Top de lannee*/
 .menu-item3{
     width:14.28%;
     height: 125px;
@@ -42,7 +42,7 @@ body{
     color: white;
 }
 
-/* Fonctionnel. */
+/* Fonctionnel. Pile a lire*/
 .menu-item4{
     width:14.28%;
     height: 125px;
@@ -50,7 +50,7 @@ body{
     color: white;
 }
 
-/* Fonctionnel. */
+/* Fonctionnel. Calendrier*/
 .menu-item5{
     width:14.28%;
     height: 125px;
@@ -58,11 +58,11 @@ body{
     color: white;
 }
 
-/* Fonctionnel. */
+/* Fonctionnel. Calendrier*/
 .menu-item6{
     width:14.28%;
     height: 125px;
-    background-color: #CE6074;
+    background-color: #ce6074;
     color: white;
 }
 
@@ -148,12 +148,22 @@ nav ul li ul:hover {
 }
 
 /* Ne Fonctionne pas.*/
-nav ul li ul.sous-menu {
+nav ul li ul.sous-menu1{
     display: none; /* Masque le sous-menu par défaut */
     position: absolute;
     top: 100%; /* Positionne le sous-menu juste en dessous du parent */
     left: 0; /* Aligne le sous-menu avec le bord gauche du parent */
     background-color: #F08E7B; /* Couleur de fond du sous-menu */
+    z-index: 1000;
+}
+
+/* Ne Fonctionne pas.*/
+nav ul li ul.sous-menu2{
+    display: none; /* Masque le sous-menu par défaut */
+    position: absolute;
+    top: 100%; /* Positionne le sous-menu juste en dessous du parent */
+    left: 0; /* Aligne le sous-menu avec le bord gauche du parent */
+    background-color: #E78279; /* Couleur de fond du sous-menu */
     z-index: 1000;
 }
 
@@ -191,7 +201,7 @@ nav ul li:hover ul{
 /* Fonctionnel. */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 4 colonnes de largeur égale */
+    grid-template-columns: repeat(6, 1fr); /* 4 colonnes de largeur égale */
     gap: 35px; /* Espacement entre les items */
     padding: 60px; /* Espacement intérieur */
     box-sizing: border-box;
@@ -201,81 +211,176 @@ nav ul li:hover ul{
 /* Ne fonctionne pas. */
 
 .item {
-    background-color: white; 
+    background-color: #f5f1e3; 
     border: 5px solid #AD336D; 
     text-align: center; 
     color: black;
-    font-size: 20px;
-    min-width: 200px; 
-    min-height: 200px;
+    font-size: 17px;
+    min-width: 150px; 
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
     align-items: center; 
     box-sizing: border-box; 
-    padding: 7px;
+    padding: 10px;
 }
 
 /* Fonctionnel. */
 .item img {
-    max-width: 100%; /* Assurer que l'image ne dépasse pas la taille de son conteneur. */
-    height: auto; /* Garantir que l'image conserve ses proportions. */
+    max-width: 100%; /* Assurer que l'image ne dépasse pas la largeur du conteneur */
+    max-height: 100%; /* Assurer que l'image ne dépasse pas la hauteur du conteneur */
+    margin: auto; /* Centrer dans le conteneur */
+    display: block;
+    background-color: #fff; /* Couleur de fond pour les espaces vides */
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .star-rating input[type="radio"] {
+    display: none; /* Cacher les boutons radio */
+  }
+
+  .star-rating label {
+    font-size: 2rem;
+    color: #8e9aaf;
+    cursor: pointer;
+  }
+
+  .star-rating input[type="radio"]:checked ~ label {
+    color: #006d77; /* Colorier les étoiles sélectionnées */
+  }
+
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: #83c5be; /* Effet de survol */
+  }
+
+/* Fonctionnel. */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le calendrier horizontalement */
+    width: fit-content;
+    margin: 0 auto; /* Centre la grille sur la page */
 }
 
 /* Fonctionnel. */
-.btn-page {
-    background-color: #F8997D; /* Couleur de fond */
-    color: black; /* Couleur du texte */
-    text-align: center; /* Centrage du texte */
-    border: none; /* Supprime la bordure */
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la taille */
-    font-size: 15px; /* Taille de la police */
-    padding: 10px 20px; /* Ajustez le padding pour de l'espace autour du texte */
-    margin: 20px auto 0 auto; /* Ajoute une marge supérieure pour l'espacement */
-    display: block; /* Assurez-vous que le bouton est un élément en bloc */
-    align-self: center; /* Centre le bouton horizontalement si nécessaire */
-    text-decoration: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-.plus{
-    background-color: #AD336D;
-    Border: none;
-}
-  
-.moins{
-    background-color: #F8997D;
-    border: none;
-}
-
-form{
-    text-align: center;
-    background-color: #B185DB;
-}
-
-label{
-    color: white;
-}
-
-input[type="submit"]{
-    background-color: #ffacc5;
-    color: #FFF;
-    border: #F8997D;
-}
-
-.no-underline {
-    display: inline-block; /* Nécessaire pour centrer l'élément avec text-align */
-    background-color: white;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-}
-
-.calcul{
+.calendar {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    background-color: #38a3a5;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Fonctionnel. */
+.grid-container-calendar {
+    display: flex;
+    flex-direction: column; /* Les jours de la semaine en haut et les jours du mois en dessous */
+    width: 100%; /* Assure une largeur alignée */
+    margin-top: 10px;
+}
+
+/* Fonctionnel. */
+#daysContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    grid-gap: 5px;
+}
+
+/* Fonctionnel. */
+#daysContainer div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #AD336D;
+    font-weight: bold;
+}
+
+/* Fonctionnel. */
+.fleches{
+    background-color: #38a3a5;
+    border: none;
+    color: #fff;
+}
+
+/* Fonctionnel. */
+.fleches:hover{
+    background-color: #38a3a5;
+    border: none;
+    color: #AD336D;
+}
+
+/* Fonctionnel. */
+.weekDaysContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour chaque jour de la semaine */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Fonctionnel. */
+#daysContainer div:hover {
+    box-shadow: 0 4px 15px rgba(56, 163, 165, 0.7); /* Bleu semi-transparent */
+}
+
+/* Fonctionnel. */
+.today {
+    background-color: #fff !important; /* Couleur de fond jaune forcée */
+    border: 2px solid #38a3a5 !important; /* Bordure orange forcée */
+    font-weight: bolder;
+    color: #38a3a5 !important; /* Texte en noir forcé */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+}
+
+/* Style des boutons dans le calendrier */
+#daysContainer button {
+    width: 40px; /* Largeur de chaque bouton */
+    height: 40px; /* Hauteur de chaque bouton */
+    display: flex; /* Centrage du contenu */
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd; /* Bordure discrète */
+    border-radius: 5px; /* Légèrement arrondi */
+    background-color: #fff; /* Couleur de fond des boutons */
+    font-size: 14px; /* Taille de la police */
+    font-weight: bold;
+    color: #333; /* Couleur du texte */
+    cursor: pointer; /* Pointeur interactif */
+    transition: all 0.2s ease-in-out; /* Animation fluide */
+}
+
+/* Effet au survol */
+#daysContainer button:hover {
+    background-color: #38a3a5; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+    box-shadow: 0 4px 10px rgba(56, 163, 165, 0.5); /* Ombre douce */
+}
+
+/* Bouton pour le jour actuel */
+#daysContainer button.today {
+    background-color: #006d77; /* Fond spécifique au jour actuel */
+    color: #fff; /* Texte blanc */
+    font-weight: bolder; /* Texte plus gras */
+    border: 2px solid #83c5be; /* Bordure spéciale */
+}
+
+/* Effet "cliqué" */
+#daysContainer button:active {
+    transform: scale(0.95); /* Réduction légère pour un effet "pressé" */
+    background-color: #005f6b; /* Couleur plus foncée */
 }

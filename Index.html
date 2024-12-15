@@ -11,6 +11,7 @@
 </head>
 
 <header>
+    <script src="Notation_Etoile.js"></script>
 
   <nav class="menu">
 
@@ -20,16 +21,24 @@
 
           <li class="menu-item1"><a href="Index.html">Accueil</a></li>
 
-          <li class="menu-item3"><a href="">Ma bibliothèque</a>
-            <ul class="sous-menu">
+          <li class="menu-item2"><a href="">Ma bibliothèque</a>
+            <ul class="sous-menu1">
                 <li><a href="">2024</a></li>
                 <li><a href="">2025</a></li>
             </ul>
         </li>
 
+        <li class="menu-item3"><a href="">Top de l'année</a>
+            <ul class="sous-menu2">
+                <li><a href="">2024</a></li>
+            </ul>
+        </li>
+
           <li class="menu-item4"><a href="">Pile à lire</a></li>
 
-          <li class="menu-item6"><a href="">Calendrier</a></li>
+          <li class="menu-item5"><a href="Calendrier.html">Calendrier</a></li>
+
+          <li class="menu-item6"><a href="">Me connecter</a></li>
 
           <li>
             <div class="rechercher">
@@ -46,19 +55,51 @@
 
 <div class="grid-container">
 
-    <div class="item">
+    <div class="item" data-id="1">
         <img src="La_Soeur_De_La_Tempete.jpg" alt="La_Soeur_De_La_Tempete">
         <br>
         La Soeur De La Tempête - Lucinda Riley
         <br>
+        <form class="star-rating">
+            <input type="radio" id="star5" name="rating1" value="5">
+            <label for="star5" title="5 étoiles">★</label>
+        
+            <input type="radio" id="star4" name="rating1" value="4">
+            <label for="star4" title="4 étoiles">★</label>
+        
+            <input type="radio" id="star3" name="rating1" value="3">
+            <label for="star3" title="3 étoiles">★</label>
+        
+            <input type="radio" id="star2" name="rating1" value="2">
+            <label for="star2" title="2 étoiles">★</label>
+        
+            <input type="radio" id="star1" name="rating1" value="1">
+            <label for="star1" title="1 étoile">★</label>
+          </form>
         ★★★★
     </div>
 
-    <div class="item">
+    <div class="item" data-id="2">
         <img src="Lettre_A_Un_Ami_Allemand.jpg" alt="Lettre_A_Un_Ami_Allemand">
         <br>
         Lettre À Un Ami Allemand - Albert Camus
         <br>
+        <form class="star-rating">
+            <input type="radio" id="star5" name="rating2" value="5">
+            <label for="star5" title="5 étoiles">★</label>
+        
+            <input type="radio" id="star4" name="rating2" value="4">
+            <label for="star4" title="4 étoiles">★</label>
+        
+            <input type="radio" id="star3" name="rating2" value="3">
+            <label for="star3" title="3 étoiles">★</label>
+        
+            <input type="radio" id="star2" name="rating2" value="2">
+            <label for="star2" title="2 étoiles">★</label>
+        
+            <input type="radio" id="star1" name="rating2" value="1">
+            <label for="star1" title="1 étoile">★</label>
+          </form>
         ★★
     </div>
 
