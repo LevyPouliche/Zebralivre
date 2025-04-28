@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <body>
+        
+    <head>
+        <meta charset="utf-8">
+        <title>Timer</title>
+        <link href="Style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+
+    <nav class="menu">
+
+        <ul>
+  
+          <li class="menu-item1">
+            <a href="Index.html">
+              <img src="djpony.jpg" alt="perso">
+              <p>Profil</p>
+              <p>Chargement</p>
+            </a>
+          </li>
+  
+          <li class="menu-item2"><a href="">Objectifs</a></li>
+  
+          <li class="menu-item3"><a href="">Livres Lus</a></li>
+  
+            <li class="menu-item4"><a href="">Citations</a></li>
+  
+          <li class="menu-item5"><a href="">Calendrier</a></li>
+  
+          <li class="menu-item6"><a href="">Connexion</a></li>
+  
+          <li class="menu-item7"><a href="">
+            <img src="editer.png" alt="parametres"></a>
+          </li>
+  
+        </ul>
+  
+    </nav>
+
+    <div class="timer-wrapper">
+        <div id="timer">00:00:00</div>
+    
+        <div class="button-group">
+            <button id="startBtn" onclick="demarrer()">Démarrer</button>
+            <button id="stopBtn" onclick="arreter()" disabled>Arrêter</button>
+            <button id="resetBtn" onclick="reinitialiser()" disabled>Réinitialiser</button>
+        </div>
+    
+        <div class="button-group">
+            <input type="text" id="tempsAjouter" placeholder="Ex: 01:15:30">
+            <button onclick="ajouterTemps()">Ajouter Temps</button>
+        </div>
+    </div>
+
+<script>
+class Timer {
+    constructor(affichageElement) {
+        this.affichageElement = affichageElement;
+        this.reset();
+        this.interval = null;
+    }
+
+    start() {
+        if (!this.interval) {
+            this.startTime = Date.now() - this.elapsedTime;
+            this.interval = setInterval(() => {
+                this.elapsedTime = Date.now() - this.startTime;
+                this.afficherTemps();
+            }, 1000);
+        }
+    }
+
+    stop() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
+
+    reset() {
+        this.stop();
+        this.elapsedTime = 0;
+        this.startTime = null;
+        this.afficherTemps();
+    }
+
+    ajouterTemps(listeDeTemps) {
+        let totalSecondes = 0;
+        listeDeTemps.forEach(temps => {
+            const [heures, minutes, secondes] = temps.split(':').map(Number);
+            totalSecondes += (heures * 3600) + (minutes * 60) + (secondes || 0);
+        });
+
+        this.elapsedTime += totalSecondes * 1000;
+        if (this.startTime) {
+            this.startTime = Date.now() - this.elapsedTime;
+        }
+        this.afficherTemps();
+    }
+
+    afficherTemps() {
+        let totalSecondes = Math.floor(this.elapsedTime / 1000);
+        const heures = Math.floor(totalSecondes / 3600);
+        const minutes = Math.floor((totalSecondes % 3600) / 60);
+        const secondes = totalSecondes % 60;
+
+        const tempsFormate = [
+            String(heures).padStart(2, '0'),
+            String(minutes).padStart(2, '0'),
+            String(secondes).padStart(2, '0')
+        ].join(':');
+
+        this.affichageElement.textContent = tempsFormate;
+    }
+}
+
+// Création du Timer
+const monTimer = new Timer(document.getElementById('timer'));
+
+// Récupération des boutons
+const startBtn = document.getElementById('startBtn');
+const stopBtn = document.getElementById('stopBtn');
+const resetBtn = document.getElementById('resetBtn');
+
+// Fonctions appelées par onclick
+function demarrer() {
+    monTimer.start();
+    startBtn.disabled = true;    // Désactiver "Démarrer"
+    stopBtn.disabled = false;    // Activer "Arrêter"
+    resetBtn.disabled = false;   // Activer "Réinitialiser"
+}
+
+function arreter() {
+    monTimer.stop();
+    startBtn.disabled = false;   // Activer "Démarrer"
+    stopBtn.disabled = true;     // Désactiver "Arrêter"
+    resetBtn.disabled = false;   // "Réinitialiser" reste actif
+}
+
+function reinitialiser() {
+    monTimer.reset();
+    startBtn.disabled = false;   // Activer "Démarrer"
+    stopBtn.disabled = true;     // Désactiver "Arrêter"
+    resetBtn.disabled = true;    // Désactiver "Réinitialiser"
+}
+
+function ajouterTemps() {
+    const input = document.getElementById('tempsAjouter');
+    const temps = input.value.trim();
+    if (temps) {
+        monTimer.ajouterTemps([temps]);
+        input.value = '';
+        // Facultatif : activer Réinitialiser si on ajoute du temps
+        resetBtn.disabled = false;
+    }
+}
+</script>
+
+    </body>
+</html>
