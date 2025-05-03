@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <title>Timer</title>
         <link href="Style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
 
         <ul>
   
-          <li class="menu-item1">
+          <li class="menu-profil">
             <a href="Index.html">
               <img src="djpony.jpg" alt="perso">
               <p>Profil</p>
@@ -23,17 +24,17 @@
             </a>
           </li>
   
-          <li class="menu-item2"><a href="">Objectifs</a></li>
+          <li class="menu-objectifs"><a href="">Objectifs</a></li>
   
-          <li class="menu-item3"><a href="">Livres Lus</a></li>
+          <li class="menu-livres"><a href="">Livres Lus</a></li>
   
-            <li class="menu-item4"><a href="">Citations</a></li>
+            <li class="menu-citations"><a href="">Citations</a></li>
   
-          <li class="menu-item5"><a href="">Calendrier</a></li>
+          <li class="menu-calendrier"><a href="">Calendrier</a></li>
   
-          <li class="menu-item6"><a href="">Connexion</a></li>
+          <li class="menu-connexion"><a href="">Connexion</a></li>
   
-          <li class="menu-item7"><a href="">
+          <li class="menu-parametres"><a href="">
             <img src="editer.png" alt="parametres"></a>
           </li>
   
@@ -159,6 +160,20 @@ function ajouterTemps() {
     }
 }
 </script>
+
+<label for="heure">Choisissez une heure :</label>
+  <input type="text" id="heure" placeholder="HH:MM">
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script>
+    flatpickr("#heure", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",     // Format 24h: heures:minutes
+      time_24hr: true        // Force le format 24h
+    });
+  </script>
 
     </body>
 </html>

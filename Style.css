@@ -1,97 +1,140 @@
+/*Petite taille, format portrait, adapté au tactile.*/
 @media screen and (max-width:768px) and (orientation: portrait) and (pointer: coarse){
+}
 
-}/*petite taille, format portrait, adapte au tactile*/
-
+/*Grande taille, format paysage.*/
 @media screen and (min-width: 1024px) and (orientation: landscape){
+}
 
-}/*grande taille, format paysage*/
-
-/* Fonctionnel. */
 body{
     background-color: #faedcd; 
     font-family: Arial, sans-serif; 
     font-size: 15px;
-    }
+}
 
-/* Fonctionnel. */
 .menu{
     box-sizing: border-box;
     font-family: 'quicksand', Arial, sans-serif; 
 }
 
-/* Fonctionnel. Profil*/
-.menu-item1 {
+.menu-profil {
     width: 125px;
-    min-height: 125px; /* Utilisez min-height au lieu de height */
+    min-height: 125px;
     background-color: #B28D91;
     color: white;
 }
 
-.sous-menu1{
-    padding: 5px;
-}
-
-
-.menu-item1 a {
+.menu-profil a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 14px;      /* Assurez-vous qu’il a une taille lisible */
-    overflow: visible;    /* Pour éviter qu’il soit masqué */
+    font-size: 14px;
+    overflow: visible;
 }
-
   
-  .menu-item1 a img {
+.menu-profil a img {
     margin-top: 15px;
-    width: 60px;         /* Ajustez la taille de l'image si nécessaire */
-    height: auto;        /* Maintient les proportions de l'image */
-  }
+    width: 60px;
+    height: auto;
+}
   
-.menu-item1 p{
+.menu-profil p{
     padding: 0px;
     margin: 2px;
 }
 
-/* Fonctionnel. Objectifs*/
-.menu-item2{
-    width:14.28%;
+.menu-objectifs {
+    width: 215px;
     height: 125px;
-    background-color: #5a434b;
+    background-color: #AF8890;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
-/* Fonctionnel. Livres Lus*/
-.menu-item3{
-    width:14.28%;
+.menu-livres{
+    width: 215px;
     height: 125px;
-    background-color:  #634a53;
+    background-color: #AB828E;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    padding-bottom: 10px; 
 }
 
-/* Fonctionnel. Citations*/
-.menu-item4{
-    width:14.28%;
+.menu-citations{
+    width: 215px;
     height: 125px;
-    background-color: #6d515b;
+    background-color: #A87D8D;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
-/* Fonctionnel. */
+.menu-calendrier{
+    width: 215px;
+    height: 125px;
+    background-color: #A4778B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.menu-connexion{
+    width: 215px;
+    height: 125px;
+    background-color: #9d7186;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.menu-parametres{
+    width: 215px;
+    height: 125px;
+    background-color: #966a81;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding-bottom: 10px; 
+}
+
+.menu-parametres a img {
+    margin-top: 15px;
+    width: 60px;        
+    height: auto;     
+}
+
 .rechercher {
     flex-basis: 14.28%;
     height: 125px;
     background-color: #8b676d;
-    display: flex; /* Pour aligner le champ de texte et le bouton horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
-    justify-content: space-between; /* Espace entre le champ de texte et le bouton */
-    padding: 0 10px; /* Ajoute un peu d'espace à l'intérieur du conteneur */
-    box-sizing: border-box; /* Inclut les padding dans la taille totale */
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 10px; 
+    box-sizing: border-box; 
 }
 
-/* Fonctionnel. */
 .rechercher input[type="text"] {
-    width: 60%; /* Le champ de texte prend 70% de la largeur du conteneur */
-    height: 70%; /* Ajuste la hauteur pour rester proportionnelle */
+    width: 60%; 
+    height: 70%; 
     padding: 5px;
     font-size: 16px;
     border: none;
@@ -99,7 +142,6 @@ body{
     color: black;
 }
 
-/* Fonctionnel. */
 .rechercher button.rechercher-btn {
     width: 40%; 
     height: 70%; 
@@ -111,130 +153,70 @@ body{
     font-size: 16px;
 }
 
-/* Fonctionnel. */
 .rechercher button.rechercher-btn:hover {
     background-color: white;
     color: #6d515b;
     border: 3px solid #6d515b; 
 } 
 
-/* Fonctionnel. Connexion*/
-.menu-item5{
-    width:14.28%;
-    height: 125px;
-    background-color: #9e7576;
-    color: white;
-}
-
-/* Fonctionnel. Paramètres*/
-.menu-item6{
-    width:14.28%;
-    height: 125px;
-    background-color: #b07c7a;
-    color: white;
-}
-
-/* Fonctionnel. */
 li{
     list-style:none !important; 
     font-size:22px;
     text-align: center;
-    }
+}
      
-/* Fonctionnel. */
 nav ul{
     display: flex; 
     padding:0;
     margin:0;
-    }
-
-/* Fonctionnel. */          
+}
+       
 nav ul li{
     margin: auto;
     float:none;
-    position: relative; /* Parent relatif pour le sous-menu */
+    position: relative; 
     padding:0;
     margin:0;
     list-style: none;
-    }
+}
 
-/* Fonctionnel. */
 nav ul li ul {
     display: none;
     position: absolute;
-    top: 125px; /* Positionner sous le parent */
+    top: 125px; 
     left: 0;
 }
 
-/* Fonctionnel. */
 nav ul li:hover ul, 
 nav ul li ul:hover {
     display: block;
     z-index: 99999;
 }
 
-/* Ne Fonctionne pas.*/
-nav ul li ul.sous-menu1{
-    display: none; /* Masque le sous-menu par défaut */
-    position: absolute;
-    top: 100%; /* Positionne le sous-menu juste en dessous du parent */
-    left: 0; /* Aligne le sous-menu avec le bord gauche du parent */
-    background-color: #F08E7B; /* Couleur de fond du sous-menu */
-    z-index: 1000;
-}
-
-/* Ne Fonctionne pas.*/
-nav ul li ul.sous-menu2{
-    display: none; /* Masque le sous-menu par défaut */
-    position: absolute;
-    top: 100%; /* Positionne le sous-menu juste en dessous du parent */
-    left: 0; /* Aligne le sous-menu avec le bord gauche du parent */
-    background-color: #E78279; /* Couleur de fond du sous-menu */
-    z-index: 1000;
-}
-
-/* Ne Fonctionne pas.*/
-nav ul li:hover ul.sous-menu {
-    display: block; /* Affiche le sous-menu lors du survol */
-}
-
-/* Ne Fonctionne pas.*/   
-nav ul li ul.sous-menu li {
-    width: 100%; /* Chaque élément du sous-menu occupe toute la largeur */
-    text-align: left; /* Aligne le texte à gauche */
-}
-
-/* Fonctionnel. */
 nav ul li a{
-    color:#FFF;
-    text-decoration:none;
+    color: #FFF;
+    text-decoration: none;
 }
   
-/* Fonctionnel. */
 li a:hover{
-    border-bottom:5px #FFF solid;
+    border-bottom: 5px #FFF solid;
 }
   
-/* Fonctionnel. */
 nav ul li:hover ul{ 
-    list-style:none !important;
-    z-index:99999;
-    display:list-item !important;
-    position:absolute;
-    margin-left:-10px;
+    list-style: none !important;
+    z-index: 99999;
+    display: list-item !important;
+    position: absolute;
+    margin-left: -10px;
 }
 
-/* Fonctionnel. */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 4 colonnes de largeur égale */
-    gap: 35px; /* Espacement entre les items */
-    padding: 60px; /* Espacement intérieur */
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 35px;
+    padding: 60px; 
     box-sizing: border-box;
-    
 }
-
-/* Ne fonctionne pas. */
 
 .item {
     background-color: #f5f1e3; 
@@ -252,40 +234,137 @@ nav ul li:hover ul{
     padding: 10px;
 }
 
-/* Fonctionnel. */
 .item img {
-    max-width: 100%; /* Assurer que l'image ne dépasse pas la largeur du conteneur */
-    max-height: 100%; /* Assurer que l'image ne dépasse pas la hauteur du conteneur */
-    margin: auto; /* Centrer dans le conteneur */
+    max-width: 100%; 
+    max-height: 100%; 
+    margin: auto; 
     display: block;
-    background-color: #fff; /* Couleur de fond pour les espaces vides */
+    background-color: #fff; 
 }
 
 .star-rating {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-  }
+}
 
-  .star-rating input[type="radio"] {
-    display: none; /* Cacher les boutons radio */
-  }
+.star-rating input[type="radio"] {
+    display: none; 
+}
 
-  .star-rating label {
+.star-rating label {
     font-size: 2rem;
     color: #8e9aaf;
     cursor: pointer;
-  }
+}
 
-  .star-rating input[type="radio"]:checked ~ label {
-    color: #006d77; /* Colorier les étoiles sélectionnées */
-  }
+.star-rating input[type="radio"]:checked ~ label {
+    color: #006d77; 
+}
 
-  .star-rating label:hover,
-  .star-rating label:hover ~ label {
-    color: #83c5be; /* Effet de survol */
-  }
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #83c5be; 
+}
 
 .select{
     appearance: none;
+}
+
+.timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#timer {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    margin-bottom: 15px;
+}
+
+.button-group button,
+.button-group input {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.button-group button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.button-group input[type="text"] {
+    width: 200px;
+}
+
+#resetBtn:disabled{
+    background-color: white;
+    color: #865b75;
+    border: 2px solid #865b75;
+}
+
+#resetBtn{
+    background-color: #865b75;
+    color: white;
+    border: 2px solid #865b75;
+}
+
+#resetBtn:hover:not(:disabled) {
+    background-color: #966a81; 
+    color: white;    
+    border: 2px solid #966a81; 
+}
+
+#stopBtn{
+    background-color: #AA6369;
+    color: white;
+    border: 2px solid #AA6369;
+}
+
+#stopBtn:disabled{
+    background-color: white;
+    color: #AA6369;
+    border: 2px solid #AA6369;
+}
+
+#stopBtn:hover:not(:disabled) {
+    background-color: #B17176; 
+    color: white;             
+    border: 2px solid #B17176; 
+}
+
+#startBtn{
+    background-color: #728270;
+    color: white;
+    border: 2px solid #728270;
+}
+
+#startBtn:disabled{
+    background-color: white;
+    color: #728270;
+    border: 2px solid #728270;
+}
+
+#startBtn:hover:not(:disabled) {
+    background-color: #7E8D7C; 
+    color: white;           
+    border: 2px solid #7E8D7C; 
 }
