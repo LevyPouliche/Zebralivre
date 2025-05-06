@@ -282,9 +282,10 @@ nav ul li:hover ul{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 140px auto 0 auto; /* 140px en haut pour laisser un peu d’air sous le menu */
     text-align: center;
 }
+
 
 #timer {
     font-size: 48px;
