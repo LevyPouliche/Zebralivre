@@ -4,14 +4,12 @@
         
     <head>
         <meta charset="utf-8">
-        <title>Liste des livres lus</title>
+        <title>Zebralivre</title>
         <link href="Style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     </head>
-
-</head>
 
 <header>
     <script src="Notation_Etoile.js"></script>
@@ -20,65 +18,42 @@
 
       <ul>
 
-        <li class="menu-item1">
+        <li class="menu-profil">
           <a href="Index.html">
             <img src="djpony.jpg" alt="perso">
             <p>Profil</p>
             <p>Chargement</p>
           </a>
-          <ul class="sous-menu1">
-            <li><a href="">Niveau</a></li>
-            <li><a href="">Classements</a></li>
-            <li><a href="">Amis</a></li>
-          </ul>
-        </li>
-        
-
-          <li class="menu-item2"><a href="">Objectifs</a>
-            <ul class="sous-menu1">
-                <li><a href="">Succès</a></li>
-            </ul>
         </li>
 
-        <li class="menu-item3"><a href="">Livres Lus</a>
-            <ul class="sous-menu2">
-                <li><a href="">Avis</a></li>
-                <li><a href="">Tops De L'Année</a></li>
-                <li><a href="">PAL</a></li>
-            </ul>
+      <div class="menu-content">
+
+        <li class="menu-objectifs"><a href="">Objectifs</a></li>
+
+        <li class="menu-livres"><a href="">Livres Lus</a></li>
+
+          <li class="menu-citations"><a href="">Citations</a></li>
+
+        <li class="menu-calendrier"><a href="">Calendrier</a></li>
+
+        <li class="menu-connexion"><a href="">Connexion</a></li>
+
+        <li class="menu-parametres"><a href="">
+          <img src="editer.png" alt="parametres"></a>
         </li>
 
-          <li class="menu-item4"><a href="">Citations</a>
-            <ul class="sous-menu1">
-                <li><a href="">Poèmes</a></li>
-            </ul>
-        </li>
-
-          <li>
-            <div class="rechercher">
-              <input type="text" placeholder="Rechercher...">
-              <button class="rechercher-btn">Rechercher</button>
-            </div>
-          </li>
-
-          <li class="menu-item5"><a href="">Connexion</a>
-            <ul class="sous-menu1">
-                <li><a href="">Inscription</a></li>
-            </ul>
-        </li>
-
-        <li class="menu-item6"><a href="">Paramètres</a>
-            <ul class="sous-menu1">
-                <li><a href="">Affichages</a></li>
-                <li><a href="">Notifications</a></li>
-            </ul>
-        </li>
+      </div>
 
       </ul>
 
   </nav>
 
   </header>
+
+  <div class="rechercher">
+    <button class="rechercher-btn">Rechercher</button>
+    <input type="text" placeholder="Rechercher...">
+  </div>
 
   <label for="Pays">Liste des pays :</label>
 <select id="Pays" name="Pays">
@@ -282,4 +257,8 @@
 </select>
     
 </body>
+<footer>
+  <p class="footer">Fixez vos objectifs dès maintenant !</p>
+  <button class="footer-button">Rejoignez notre communauté !</button>
+</footer>
 </html>
