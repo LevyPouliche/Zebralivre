@@ -20,21 +20,35 @@ body{
     box-sizing: border-box;
 }
 
-.menu-content {
+.menu-list {
     display: flex;
-    flex: 1;
+    flex-direction: row;
+    width: 100%;
+    height: 125px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.menu-content > div {
-    flex: 1;
-    height: 125px;
+.menu-list li {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 10px;
-    color: white;
+    align-items: center;
+    height: 125px;
     box-sizing: border-box;
+    color: white;
 }
+
+.menu-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    flex-direction: column;
+  }
 
 .menu-profil {
     width: 125px;
@@ -45,6 +59,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-shrink: 0; 
+    flex-direction: column;
 }
 
 .menu-profil a {
@@ -71,7 +86,23 @@ body{
 .menu-citations   { background-color: #A87D8D; }
 .menu-calendrier  { background-color: #A4778B; }
 .menu-connexion   { background-color: #9d7186; }
-.menu-parametres  { background-color: #966a81; }
+
+.menu-objectifs,
+.menu-livres,
+.menu-citations,
+.menu-calendrier,
+.menu-connexion {
+  flex: 1;
+}
+
+.menu-parametres  { 
+    width: 125px;
+    background-color: #966a81; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+}
 
 .menu-parametres a img {
     margin-top: 15px;
