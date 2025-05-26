@@ -4,370 +4,53 @@
         
     <head>
         <meta charset="utf-8">
-        <title>Liste des livres lus</title>
+        <title>Zebralivre</title>
         <link href="Style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     </head>
 
-</head>
-
 <header>
-    <script src="Notation_Etoile.js"></script>
 
-  <nav class="menu">
-
-      <ul>
-
-          <!--<li><img src="logo.jpg" alt="logo"></li> A AJUSTER.-->
-
-          <li class="menu-item1"><a href="Index.html">Accueil</a></li>
-
-          <li class="menu-item2"><a href="">Ma bibliothèque</a>
-            <ul class="sous-menu1">
-                <li><a href="">2024</a></li>
-                <li><a href="">2025</a></li>
-            </ul>
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="menu-profil">
+          <a href="Index.html">
+            <img src="djpony.jpg" alt="perso">
+            <p>Profil</p>
+            <p>Chargement</p>
+          </a>
         </li>
-
-        <li class="menu-item3"><a href="">Top de l'année</a>
-            <ul class="sous-menu2">
-                <li><a href="">2024</a></li>
-            </ul>
+    
+        <li class="menu-objectifs"><a href="#">Objectifs</a></li>
+        <li class="menu-livres"><a href="#">Livres Lus</a></li>
+        <li class="menu-citations"><a href="#">Citations</a></li>
+        <li class="menu-calendrier"><a href="#">Calendrier</a></li>
+        <li class="menu-connexion"><a href="#">Connexion</a></li>
+    
+        <li class="menu-parametres">
+          <a href="#"><img src="editer.png" alt="parametres"></a>
         </li>
-
-          <li class="menu-item4"><a href="">Pile à lire</a></li>
-
-          <li class="menu-item5"><a href="Calendrier.html">Calendrier</a></li>
-
-          <li class="menu-item6"><a href="">Me connecter</a></li>
-
-          <li>
-            <div class="rechercher">
-              <input type="text" placeholder="Rechercher...">
-              <button class="rechercher-btn">Rechercher</button>
-            </div>
-          </li>
-
       </ul>
-
-  </nav>
-
+    </nav>
+    
   </header>
 
-<div class="grid-container">
+  <div class="rechercher">
+    <button class="rechercher-btn">Rechercher</button>
+    <input type="text" placeholder="Rechercher...">
+  </div>
 
-    <div class="item" data-id="1">
-        <img src="La_Soeur_De_La_Tempete.jpg" alt="La_Soeur_De_La_Tempete">
-        <br>
-        La Soeur De La Tempête - Lucinda Riley
-        <br>
-        <form class="star-rating">
-            <input type="radio" id="star5" name="rating1" value="5">
-            <label for="star5" title="5 étoiles">★</label>
-        
-            <input type="radio" id="star4" name="rating1" value="4">
-            <label for="star4" title="4 étoiles">★</label>
-        
-            <input type="radio" id="star3" name="rating1" value="3">
-            <label for="star3" title="3 étoiles">★</label>
-        
-            <input type="radio" id="star2" name="rating1" value="2">
-            <label for="star2" title="2 étoiles">★</label>
-        
-            <input type="radio" id="star1" name="rating1" value="1">
-            <label for="star1" title="1 étoile">★</label>
-          </form>
-        ★★★★
-    </div>
-
-    <div class="item" data-id="2">
-        <img src="Lettre_A_Un_Ami_Allemand.jpg" alt="Lettre_A_Un_Ami_Allemand">
-        <br>
-        Lettre À Un Ami Allemand - Albert Camus
-        <br>
-        <form class="star-rating">
-            <input type="radio" id="star5" name="rating2" value="5">
-            <label for="star5" title="5 étoiles">★</label>
-        
-            <input type="radio" id="star4" name="rating2" value="4">
-            <label for="star4" title="4 étoiles">★</label>
-        
-            <input type="radio" id="star3" name="rating2" value="3">
-            <label for="star3" title="3 étoiles">★</label>
-        
-            <input type="radio" id="star2" name="rating2" value="2">
-            <label for="star2" title="2 étoiles">★</label>
-        
-            <input type="radio" id="star1" name="rating2" value="1">
-            <label for="star1" title="1 étoile">★</label>
-          </form>
-        ★★
-    </div>
-
-    <div class="item">
-        <img src="Letat_De_Siege.jpg" alt="Letat_De_Siege">
-        <br>
-        L'état De Siège - Albert Camus
-        <br>
-        ★★★
-    </div>
-
-    <div class="item">
-        <img src="Les_Justes.jpg" alt="Les_Justes">
-        <br>
-        Les Justes - Albert Camus
-        <br>
-        ★★★
-    </div>
-
-    <div class="item">
-        <img src="Demons_Et_Merveilles.jpg" alt="Demons_Et_Merveilles">
-        <br>
-        Démons Et Merveilles - H.P Lovecraft
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="Le_Joueur_Dechecs.jpg" alt="Le_Joueur_Dechecs">
-        <br>
-        Le Joueur D'Échecs - Stefan Zweig
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="Tristan_Et_Iseut.jpg" alt="Tristan_Et_Iseut">
-        <br>
-        Tristan Et Iseut - Béroul
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="Au-Dela_De_La_Mer.jpg" alt="Au-Dela_De_La_Mer">
-        <br>
-        Au-Delà De La Mer - Paul Lynch - Marina Boraso
-        <br>
-        ★★★
-    </div>
-
-    <div class="item">
-        <img src="Les_Liens_Artificiels.jpg" alt="Les_Liens_Artificiels">
-        <br>
-        Les Liens Artificiels - Nathan Devers
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="When_I_Was_You.jpg" alt="When_I_Was_You">
-        <br>
-        When I Was You - Amber Garza 
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="La_Cite_Sans_Nom.jpg" alt="La_Cite_Sans_Nom">
-        <br>
-        La Cité Sans Nom - H.P Lovecraft
-        <br>
-        ★★
-    </div>
-
-    <div class="item">
-        <img src="Isabelle_La_Catholique.jpg" alt="Isabelle_La_Catholique">
-        <br>
-        Isabelle la catholique - Un modèle de chrétienté? - Joseph Pérez
-        <br>
-        ★★
-    </div>
-
-    <div class="item">
-        <img src="Diane_Henri_Catherine.jpg" alt="Diane_Henri_Catherine">
-        <br>
-        Diane, Henri, Catherine - Le Triangle Amoureux - Castelot
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="Magellan.jpg" alt="Magellan">
-        <br>
-        Magellan - Stefan Zweig
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="La_Boulangerie_De_La_Plage.jpg" alt="La_Boulangerie_De_La_Plage">
-        <br>
-        La Boulangerie De La Plage - Fiona Grace
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="Manger_La_Chair.jpg" alt="Manger_La_Chair">
-        <br>
-        Manger La Chair - Traité Sur Les Animaux - Plutarque
-        <br>
-        ★★
-    </div>
-
-    <div class="item">
-        <img src="La_Fortune_Des_Rougon.jpg" alt="La_Fortune_Des_Rougon">
-        <br>
-        La Fortune Des Rougon - Émile Zola
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="La_Curee.jpg" alt="La_Curee">
-        <br>
-        La curée - Émile Zola
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="Marie-Antoinette.jpg" alt="Marie-Antoinette">
-        <br>
-        Marie-Antoinette - Stefan Zweig
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="The_Missing_Husband.jpg" alt="The_Missing_Husband">
-        <br>
-        The Missing Husband - Natasha Boydell
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="Vingt-Quatre_Heures_De_La_Vie_Dune_Femme.jpg" alt="Vingt-Quatre_Heures_De_La_Vie_Dune_Femme">
-        <br>
-        Vingt-Quatre Heures De La Vie D'Une Femme - Stefan Zweig
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="Civilizations.jpg" alt="Civilizations">
-        <br>
-        Civilizations - Laurent Binet
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="Sauvons_Nos_Oceans.jpg" alt="Sauvons_Nos_Oceans">
-        <br>
-        Sauvons Nos Océans! - Jean-Michel Cousteau - Jaclyn M.Mandoske
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="Dune.jpg" alt="Dune">
-        <br>
-        Dune - Frank Herbert
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="La_Vie_Et_Moi.jpg" alt="La_Vie_Et_Moi">
-        <br>
-        La Vie Et Moi - Cecilia Ahern
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="Le_Ventre_De_Paris.jpg" alt="Le_Ventre_De_Paris">
-        <br>
-        Le Ventre De Paris - Émile Zola
-        <br>
-        ★★★
-    </div>
-
-    <div class="item">
-        <img src="Sing_Me_Forgotten.jpg" alt="Sing_Me_Forgotten">
-        <br>
-        Sing Me Forgotten - Jessica S. Olsen
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="La_Lisiere.jpg" alt="La_Lisiere">
-        <br>
-        La Lisière - Niko Tackian
-        <br>
-        ★★
-    </div>
-
-    <div class="item">
-        <img src="La_Sage-Femme_Auschwitz.jpg" alt="La_Sage-Femme_Auschwitz">
-        <br>
-        La Sage-Femme D'Auschwitz - Anna Stuart
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="Le_Messie_De_Dune.jpg" alt="Le_Messie_De_Dune">
-        <br>
-        Le Messie De Dune - Frank Herbert
-        <br>
-        ★★★
-    </div>
-
-    <div class="item">
-        <img src="Tout_Le_Bleu_Du_Ciel.jpg" alt="Tout_Le_Bleu_Du_Ciel">
-        <br>
-        Tout Le Bleu Du Ciel - Mélissa Da Costa
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="La_Peur.jpg" alt="La_Peur">
-        <br>
-        La Peur - Stefan Zweig
-        <br>
-        ★★★★
-    </div>
-
-    <div class="item">
-        <img src="Jacaranda.jpg" alt="Jacaranda">
-        <br>
-        Jacaranda - Gael Faye
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="La_Psy.jpg" alt="La_Psy">
-        <br>
-        La Psy - Freida Mcfadden
-        <br>
-        ★★★★★
-    </div>
-
-    <div class="item">
-        <img src="La_Sixieme_Lamentation.jpg" alt="La_Sixieme_Lamentation">
-        <br>
-        La Sixième Lamentation - William Brodrick 
-        <br>
-        ★★★★★
-    </div>
-
-    
+  <div class="galerie">
+    <img src="Images_Livres/Femme_De_Menage_McFadden.webp" alt="La femme de menage">
+    <img src="livre2.jpg" alt="Livre 2">
+    <img src="livre3.jpg" alt="Livre 3">
+  </div>  
     
 </body>
+<footer>
+  <p class="footer">Fixez vos objectifs dès maintenant !</p>
+  <button class="footer-button">Rejoignez notre communauté !</button>
+</footer>
 </html>
