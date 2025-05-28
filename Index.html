@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <body>
         
     <head>
         <meta charset="utf-8">
@@ -9,7 +8,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
+<body>
 
 <header>
 
@@ -43,19 +44,64 @@
   </div>
 
   <h3>Livres populaires</h3>
-  <div class="galerie">
-    <img src="Images_Livres/Femme_De_Menage_McFadden.webp" alt="La femme de menage">
-    <img src="Images_Livres/Tres_Catastrophique_Visite_Zoo_Dicker.jpg" alt="La tres catastrophique visite du zoo">
-    <img src="Images_Livres/Tout_Monde_Aime_Clara_Foenkinos.jpg" alt="Tout le monde aime clara">
-    <img src="Images_Livres/Renaissances_Martin_Lugand.jpg" alt="Renaissances">
-    <img src="Images_Livres/Fugue_Valognes.jpg" alt="Fugue">
-    <img src="Images_Livres/Automne_Pour_Pardonner_Montcomble.jpg" alt="Un automne pour te pardonner">
-    <img src="Images_Livres/Lakestone_Rivens.jpg" alt="Lakestone">
-    <img src="Images_Livres/Antigone_Anouilh.jpg" alt="Antigone">
-    <img src="Images_Livres/Cahiers_Douai_Rimbaud.jpg" alt="Les cahiers de Douai">
-    <img src="Images_Livres/Prof_McFadden.jpg" alt="La prof">
-    <img src="Images_Livres/Heures_Fragiles_Grimaldi.jpg" alt="Les heures fragiles">
-  </div>  
+<div class="carousel-livres">
+  <div><img src="Images_Livres/Femme_De_Menage_McFadden.webp" alt="La femme de menage"></div>
+  <div><img src="Images_Livres/Tres_Catastrophique_Visite_Zoo_Dicker.jpg" alt="La tres catastrophique visite du zoo"></div>
+  <div><img src="Images_Livres/Tout_Monde_Aime_Clara_Foenkinos.jpg" alt="Tout le monde aime clara"></div>
+  <div><img src="Images_Livres/Renaissances_Martin_Lugand.jpg" alt="Renaissances"></div>
+  <div><img src="Images_Livres/Fugue_Valognes.jpg" alt="Fugue"></div>
+  <div><img src="Images_Livres/Automne_Pour_Pardonner_Montcomble.jpg" alt="Un automne pour te pardonner"></div>
+  <div><img src="Images_Livres/Lakestone_Rivens.jpg" alt="Lakestone"></div>
+  <div><img src="Images_Livres/Antigone_Anouilh.jpg" alt="Antigone"></div>
+  <div><img src="Images_Livres/Cahiers_Douai_Rimbaud.jpg" alt="Les cahiers de Douai"></div>
+  <div><img src="Images_Livres/Prof_McFadden.jpg" alt="La prof"></div>
+  <div><img src="Images_Livres/Heures_Fragiles_Grimaldi.jpg" alt="Les heures fragiles"></div>
+  <div><img src="Images_Livres/Retardement_Thilliez.jpg" alt="A retardement"></div>
+  <div><img src="Images_Livres/Veiller_Sur_Elle_Andrea.jpg" alt="Veiller sur elle"></div>
+  <div><img src="Images_Livres/Reste_Vagues_Picard.jpg" alt="Pour quil reste des vagues"></div>
+  <div><img src="Images_Livres/Plage_Laval_Germain.jpg" alt="Plage Laval"></div>
+  <div><img src="Images_Livres/Guerre_Pavot_Kuang.jpg" alt="La guerre du pavot"></div>
+  <div><img src="Images_Livres/Vie_Heureuse_Foenkinos.jpg" alt="La vie heureuse"></div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.carousel-livres').slick({
+      infinite: true,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: true,
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
+
     
 </body>
 <footer>
