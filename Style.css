@@ -112,7 +112,7 @@ body{
 
 .navbar-vertical {
     position: fixed;
-    top: 130px;
+    top: 165px;
     left: 0;
     width: 150px;
     height: 100vh; /* pleine hauteur */
@@ -454,5 +454,22 @@ footer {
     text-align: center;
   }
   
+  .informations {
+    display: inline-block;         /* garantit que le bouton s'ajuste à son contenu */
+    width: auto;                   /* utile mais déjà par défaut avec inline-block */
+    height: auto;                  /* idem, s'adapte au texte */
+    background-color: #966a81;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 16px;             /* ajoute de l'espace autour du texte */
+    text-align: center;
+    white-space: nowrap;          /* empêche le texte de se couper sur plusieurs lignes */
+}
 
-  
+.informations:hover {
+    background-color: #B28D91; /* couleur plus claire au survol */
+    color: white;            /* texte plus foncé */
+}
