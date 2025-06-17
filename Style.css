@@ -473,3 +473,34 @@ footer {
     background-color: #B28D91; /* couleur plus claire au survol */
     color: white;            /* texte plus foncé */
 }
+
+.section-populaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centre horizontalement le contenu */
+    gap: 10px;            /* espace entre les éléments */
+    margin: 40px 0;       /* marge verticale */
+  }
+  
+  .galerie-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 170px; /* si votre nav est fixe à gauche */
+  }
+  
+  .fleche {
+    font-size: 32px;
+    color: #966a81;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+  }
+  
+  .fleche.gauche {
+    margin-right: 10px;
+  }
+  
+  .fleche.droite {
+    margin-left: 10px;
+  }
