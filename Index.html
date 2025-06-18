@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
+    
 <body>
 
 <header>
@@ -35,6 +36,20 @@
         </li>
       </ul>
     </nav>
+
+    <nav class="navbar-vertical">
+      <a href="#">Littérature</a>
+      <a href="#">Thriller</a>
+      <a href="#">Romance</a>
+      <a href="#">Policier</a>
+      <a href="#">Historique</a>
+      <a href="#">Science-Fiction</a>
+      <a href="#">Érotique</a>
+      <a href="#">Sociologie</a>
+      <a href="#">Fantastique</a>
+      <a href="#">Sciences</a>
+      <a href="#">Biographie</a>
+    </nav>
     
   </header>
 
@@ -54,9 +69,9 @@
   </div>
 
   <div class="galerie-container">
-    <div class="fleche gauche">&#10094;</div>
+    <div class="fleche gauche" onclick="scrollGalerie(-1)">&#10094;</div>
 
-<div class="galerie">
+    <div class="galerie-carousel" id="galerie">
   <div class="item">
     <img src="Images_Livres/Tata_Perrin.jpg" alt="Tata Perrin">
     <p>Tata - Valérie Perrin</p>
@@ -98,9 +113,69 @@
     <p>7m2 Jussi Adler-Olsen</p>
     <button class="informations">Voir plus</button>
   </div>
+
+  <div class="item">
+    <img src="Images_Livres/Femme_De_Menage_Voit_Tout_McFadden.jpg" alt="La femme de menage voit tout - McFadden">
+    <p>La femme de ménage voit tout - Freida McFadden</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Tenir_Debout_Da_Costa.jpg" alt="Tenir debout Da Costa">
+    <p>Tenir debout - Mélissa Da Costa</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Barman_Ritz_Collin.jpg" alt="Le barman du Ritz Collin">
+    <p>Le barman du Ritz - Philippe Collin</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Valse_Des_Ames_Werber.jpg" alt="La valse des ames Werber">
+    <p>La valse des âmes - Bernard Werber</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Printemps_Maryland_Roberts.jpg" alt="Un printemps au Maryland Roberts">
+    <p>Un printemps au Maryland - Nora Roberts</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Ou_Es-tu_Maintenant_Higgins_Clark.jpg" alt="Ou es-tu maintenant Higgins Clark">
+    <p>Où es-tu maintenant? - Mary Higgins Clark</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Psy_McFadden.jpg" alt="La psy McFadden">
+    <p>La psy - Freida McFadden</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Windy_City_Caught_Up_Tomforde.jpg" alt="Windy City Caught Up Tomforde">
+    <p>Windy city 3 Caught up - Liz Tomforde</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Ennemis_Plus_Affinites_Noir.jpg" alt="Ennemis et plus si affinites Noir">
+    <p>Ennemis et plus si affinités - Roxie Noir</p>
+    <button class="informations">Voir plus</button>
+  </div>
+
+  <div class="item">
+    <img src="Images_Livres/Stella_Hortense_Sabard.jpg" alt="Stella et Hortense Sabard">
+    <p>Stella & Hortense - Clarisse Sabard</p>
+    <button class="informations">Voir plus</button>
+  </div>
 </div>
 
-<div class="fleche droite">&#10095;</div>
+<div class="fleche droite" onclick="scrollGalerie(1)">&#10095;</div>
 
   </div>
 
@@ -108,43 +183,39 @@
 <p>Image</p>
 <p>Description</p>
 
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 <script>
-  $(document).ready(function(){
-    $('.carousel-livres').slick({
-      infinite: true,
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      arrows: true,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-  });
+  const galerie = document.getElementById("galerie");
+
+  // Étape 1 : Dupliquer le contenu pour simuler une boucle
+  galerie.innerHTML += galerie.innerHTML;
+
+  let scrollStep = 166; // ajustez selon vos besoins (image + margin)
+  let scrollPosition = 0;
+  const interval = 2500;
+
+  function autoScroll() {
+    scrollPosition += scrollStep;
+    galerie.scrollTo({ left: scrollPosition, behavior: "smooth" });
+
+    // Remise à zéro invisible dès qu'on atteint la fin de la première moitié
+    if (scrollPosition >= galerie.scrollWidth / 2) {
+      // Attendre que le scroll smooth finisse
+      setTimeout(() => {
+        galerie.scrollTo({ left: 0, behavior: "auto" });
+        scrollPosition = 0;
+      }, 300); // doit correspondre au temps du scroll smooth
+    }
+  }
+
+  setInterval(autoScroll, interval);
+
+  // Contrôle manuel avec les flèches
+  function scrollGalerie(direction) {
+    scrollPosition += direction * scrollStep;
+    galerie.scrollTo({ left: scrollPosition, behavior: "smooth" });
+  }
 </script>
+
 
     
 </body>

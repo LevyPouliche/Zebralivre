@@ -412,7 +412,9 @@ footer {
     grid-template-columns: repeat(8, 1fr); /* 8 colonnes */
     gap: 16px;
     margin-left: 170px; /* décale la galerie pour éviter le chevauchement avec la nav */
-    padding: 20px;
+    padding: 0x;
+    margin: 0;
+    margin-left: 140px; /* si votre nav est fixe à gauche */
   }
   
   
@@ -422,33 +424,6 @@ footer {
     object-fit: cover;
   }
   
-  .carousel-livres div {
-    width: 100%;
-    height: 400px; /* Hauteur fixe - ajustez selon vos préférences */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .carousel-livres img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-  }
-  
-  .carousel-livres div {
-    width: 100%;
-    height: 400px; /* Hauteur fixe - ajustez selon vos préférences */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .carousel-livres img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-  }
 
   .livre-populaire{
     text-align: center;
@@ -486,7 +461,8 @@ footer {
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: 170px; /* si votre nav est fixe à gauche */
+    margin-left: 140px; /* si votre nav est fixe à gauche */
+    overflow: hidden;
   }
   
   .fleche {
@@ -503,4 +479,19 @@ footer {
   
   .fleche.droite {
     margin-left: 10px;
+  }
+
+  .galerie-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .galerie-carousel img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
   }
