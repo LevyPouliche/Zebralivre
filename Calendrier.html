@@ -4,117 +4,174 @@
         
     <head>
         <meta charset="utf-8">
-        <title>Liste des livres lus</title>
+        <title>Calendrier</title>
         <link href="Style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     </head>
 
-</head>
+    <header>
 
-<header>
-    <script src="Notation_Etoile.js"></script>
+        <nav class="menu">
+          <ul class="menu-list">
+            <li class="menu-profil">
+              <a href="Index.html">
+                <img src="djpony.jpg" alt="perso">
+                <p>Profil</p>
+                <p>Chargement</p>
+              </a>
+            </li>
+        
+            <li class="menu-objectifs"><a href="#">Objectifs</a></li>
+            <li class="menu-livres"><a href="#">Livres Lus</a></li>
+            <li class="menu-citations"><a href="#">Citations</a></li>
+            <li class="menu-calendrier"><a href="Calendrier.html">Calendrier</a></li>
+            <li class="menu-connexion"><a href="#">Connexion</a></li>
+        
+            <li class="menu-parametres">
+              <a href="#"><img src="editer.png" alt="parametres"></a>
+            </li>
+          </ul>
+        </nav>
+    
+        <nav class="navbar-vertical">
+          <a href="Index.html"><img src="Accueil.png" alt="Accueil"></a>
+          <a href="#">BD & Manga</a>
+          <a href="#">Biographie</a>
+          <a href="#">Contemporain</a>
+          <a href="#">Développement personnel</a>
+          <a href="#">Historique</a>
+          <a href="#">Jeune adulte</a>
+          <a href="#">Jeunesse</a>
+          <a href="#">Policier & Thriller</a>
+          <a href="#">Romance</a>
+          <a href="#">Science-Fiction & Fantaisie</a>
+          <a href="#">Tous</a>
+        </nav>
+        
+      </header>
 
-  <nav class="menu">
-
-      <ul>
-
-          <!--<li><img src="logo.jpg" alt="logo"></li> A AJUSTER.-->
-
-          <li class="menu-item1"><a href="Index.html">Accueil</a></li>
-
-          <li class="menu-item2"><a href="">Ma bibliothèque</a>
-            <ul class="sous-menu1">
-                <li><a href="">2024</a></li>
-                <li><a href="">2025</a></li>
-            </ul>
-        </li>
-
-        <li class="menu-item3"><a href="">Top de l'année</a>
-            <ul class="sous-menu2">
-                <li><a href="">2024</a></li>
-            </ul>
-        </li>
-
-          <li class="menu-item4"><a href="">Pile à lire</a></li>
-
-          <li class="menu-item5"><a href="Calendrier.html">Calendrier</a></li>
-
-          <li class="menu-item6"><a href="">Me connecter</a></li>
-
-          <li>
-            <div class="rechercher">
-              <input type="text" placeholder="Rechercher...">
-              <button class="rechercher-btn">Rechercher</button>
-            </div>
-          </li>
-
-      </ul>
-
-  </nav>
-
-  </header>
-
-  <div class="calendar-container">
-    <div class="calendar">
-        <button class="fleches" id="prevMonth">◀</button>
-        <h3 id="monthDisplay"></h3>
-        <button class="fleches" id="nextMonth">▶</button>
-    </div>
-
-    <!-- Conteneur global pour les jours de la semaine et du mois -->
-    <div class="grid-container-calendar">
-        <div class="weekDaysContainer">
-            <div>Di</div>
-            <div>Lu</div>
-            <div>Ma</div>
-            <div>Me</div>
-            <div>Je</div>
-            <div>Ve</div>
-            <div>Sa</div>
+    <div class="timer-wrapper">
+        <div id="timer">00:00:00</div>
+    
+        <div class="button-group">
+            <button id="startBtn" onclick="demarrer()">Démarrer</button>
+            <button id="stopBtn" onclick="arreter()" disabled>Arrêter</button>
+            <button id="resetBtn" onclick="reinitialiser()" disabled>Réinitialiser</button>
         </div>
-
-        <div id="daysContainer">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>10</button>
-            <button>11</button>
-            <button>12</button>
-            <button>13</button>
-            <button>14</button>
-            <button>15</button>
-            <button>16</button>
-            <button>17</button>
-            <button>18</button>
-            <button>19</button>
-            <button>20</button>
-            <button>21</button>
-            <button>22</button>
-            <button>23</button>
-            <button>24</button>
-            <button>25</button>
-            <button>26</button>
-            <button>27</button>
-            <button>28</button>
-            <button>29</button>
-            <button>30</button>
-            <button>31</button>
-            <button>32</button>
-            <button>33</button>
-            <button>34</button>
-            <button>35</button>
+    
+        <div class="button-group">
+            <input type="text" id="tempsAjouter" placeholder="Ex: 01:15">
+            <button onclick="ajouterTemps()" id="Ajoutertemps">Ajouter Temps</button>
         </div>
     </div>
-</div>
 
+<script>
+class Timer {
+    constructor(affichageElement) {
+        this.affichageElement = affichageElement;
+        this.reset();
+        this.interval = null;
+    }
 
+    start() {
+        if (!this.interval) {
+            this.startTime = Date.now() - this.elapsedTime;
+            this.interval = setInterval(() => {
+                this.elapsedTime = Date.now() - this.startTime;
+                this.afficherTemps();
+            }, 1000);
+        }
+    }
 
-    <script src="Calendrier.js"></script>
+    stop() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
 
-</body>
+    reset() {
+        this.stop();
+        this.elapsedTime = 0;
+        this.startTime = null;
+        this.afficherTemps();
+    }
+
+    ajouterTemps(listeDeTemps) {
+    let totalSecondes = 0;
+    listeDeTemps.forEach(temps => {
+        const [heures, minutes] = temps.split(':').map(Number);
+        if (isNaN(heures) || isNaN(minutes)) return; // Validation simple
+        totalSecondes += (heures * 3600) + (minutes * 60);
+    });
+
+    this.elapsedTime += totalSecondes * 1000;
+    if (this.startTime) {
+        this.startTime = Date.now() - this.elapsedTime;
+    }
+    this.afficherTemps();
+}
+
+    afficherTemps() {
+        let totalSecondes = Math.floor(this.elapsedTime / 1000);
+        const heures = Math.floor(totalSecondes / 3600);
+        const minutes = Math.floor((totalSecondes % 3600) / 60);
+        const secondes = totalSecondes % 60;
+
+        const tempsFormate = [
+            String(heures).padStart(2, '0'),
+            String(minutes).padStart(2, '0'),
+            String(secondes).padStart(2, '0')
+        ].join(':');
+
+        this.affichageElement.textContent = tempsFormate;
+    }
+}
+
+// Création du Timer
+const monTimer = new Timer(document.getElementById('timer'));
+
+// Récupération des boutons
+const startBtn = document.getElementById('startBtn');
+const stopBtn = document.getElementById('stopBtn');
+const resetBtn = document.getElementById('resetBtn');
+
+// Fonctions appelées par onclick
+function demarrer() {
+    monTimer.start();
+    startBtn.disabled = true;    // Désactiver "Démarrer"
+    stopBtn.disabled = false;    // Activer "Arrêter"
+    resetBtn.disabled = false;   // Activer "Réinitialiser"
+}
+
+function arreter() {
+    monTimer.stop();
+    startBtn.disabled = false;   // Activer "Démarrer"
+    stopBtn.disabled = true;     // Désactiver "Arrêter"
+    resetBtn.disabled = false;   // "Réinitialiser" reste actif
+}
+
+function reinitialiser() {
+    monTimer.reset();
+    startBtn.disabled = false;   // Activer "Démarrer"
+    stopBtn.disabled = true;     // Désactiver "Arrêter"
+    resetBtn.disabled = true;    // Désactiver "Réinitialiser"
+}
+
+function ajouterTemps() {
+    const input = document.getElementById('tempsAjouter');
+    const temps = input.value.trim();
+    if (temps) {
+        monTimer.ajouterTemps([temps]);
+        input.value = '';
+        // Facultatif : activer Réinitialiser si on ajoute du temps
+        resetBtn.disabled = false;
+    }
+}
+</script>
+
+    </body>
 </html>
