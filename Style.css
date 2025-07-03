@@ -112,7 +112,7 @@ body{
 
 .navbar-vertical {
     position: fixed;
-    top: 165px;
+    top: 130px;
     left: 0;
     width: 150px;
     height: 100vh; /* pleine hauteur */
@@ -159,6 +159,9 @@ body{
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .rechercher button.rechercher-btn:hover {
@@ -229,7 +232,7 @@ nav ul li:hover ul{
     background-color: #E4CFBB; 
     border: 5px solid #966a81; 
     text-align: center; 
-    color: black;
+    color: #1B0773;
     font-size: 17px;
     min-width: 150px; 
     min-height: 150px;
@@ -283,7 +286,7 @@ nav ul li:hover ul{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: #EAE0D7;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -297,6 +300,7 @@ nav ul li:hover ul{
 #timer {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #1B0773;
 }
 
 .button-group {
@@ -377,6 +381,11 @@ nav ul li:hover ul{
     border: 2px solid #7E8D7C; 
 }
 
+#Ajoutertemps{
+    background-color: #DDA455;
+    color: white;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -409,20 +418,21 @@ footer {
 
 .galerie {
     display: grid;
-    grid-template-columns: repeat(8, 1fr); /* 8 colonnes */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* colonnes adaptatives */
     gap: 16px;
-    margin-left: 170px; /* décale la galerie pour éviter le chevauchement avec la nav */
-    padding: 0x;
+    padding: 0 16px;
     margin: 0;
-    margin-left: 140px; /* si votre nav est fixe à gauche */
+    margin-left: 160px; /* si votre barre de navigation est fixe à gauche */
+    box-sizing: border-box;
   }
-  
   
   .galerie img {
-    width: 150px;
+    width: 100%; /* prend toute la largeur de la colonne */
     height: auto;
     object-fit: cover;
+    display: block;
   }
+  
   
 
   .livre-populaire{
@@ -494,4 +504,44 @@ footer {
     width: 150px;
     height: auto;
     object-fit: cover;
+  }
+
+  .navbar-vertical a img{
+    height: 35px;
+    width: 35px;
+  }
+
+  .coeur-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .coeur-btn img {
+    background-color: #E4CFBB;
+    transition: transform 0.2s ease;
+    width: 25px;
+  height: 25px;
+  }
+  
+  .coeur-btn:hover img {
+    transform: scale(1.1);
+  }
+
+  .voir-plus{
+    display: flex;
+  align-items: center;
+  gap: 10px; /* espace entre les boutons */
+  }
+  
+  .auteur-jour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: #faedcd;
+    text-align: center;
+    color: #1B0773;
   }
