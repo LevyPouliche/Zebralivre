@@ -8,15 +8,14 @@
 
 body{
     background-color: #faedcd; 
-    font-family: Arial, sans-serif; 
-    font-size: 15px;
+    font-family: 'quicksand', Arial, sans-serif; 
 }
 
 .menu{
     font-family: 'quicksand', Arial, sans-serif;
     display: flex;
     width: 100%;
-    height: 125px; /* hauteur uniforme */
+    height: 125px; 
     box-sizing: border-box;
 }
 
@@ -119,6 +118,7 @@ body{
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+    font-weight: bold;
   }
   
   .navbar-vertical a {
@@ -544,4 +544,12 @@ footer {
     background-color: #faedcd;
     text-align: center;
     color: #1B0773;
+  }
+
+  .auteur-jour img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    display: block;
   }
