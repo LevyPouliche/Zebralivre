@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+        
+    <head>
+        <meta charset="utf-8">
+        <title>Zebralivre</title>
+        <link href="Style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    </head>
+    
+<body>
+
+<header>
+
+    <nav class="menu">
+      <ul class="menu-list">
+        <li class="menu-profil">
+          <a href="Index.html">
+            <img src="djpony.jpg" alt="perso">
+            <p>Profil</p>
+            <p>Chargement</p>
+          </a>
+        </li>
+    
+        <li class="menu-objectifs"><a href="#">Objectifs</a></li>
+        <li class="menu-livres"><a href="#">Livres Lus</a></li>
+        <li class="menu-citations"><a href="Citations.html">Citations</a></li>
+        <li class="menu-calendrier"><a href="Calendrier.html">Calendrier</a></li>
+        <li class="menu-connexion"><a href="#">Connexion</a></li>
+    
+        <li class="menu-parametres">
+          <a href="#"><img src="editer.png" alt="parametres"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="navbar-vertical">
+      <a href="Index.html"><img src="Accueil.png" alt="Accueil"></a>
+      <a href="#">BD & Manga</a>
+      <a href="#">Biographie</a>
+      <a href="#">Contemporain</a>
+      <a href="#">Développement personnel</a>
+      <a href="#">Historique</a>
+      <a href="#">Jeune adulte</a>
+      <a href="#">Jeunesse</a>
+      <a href="#">Policier & Thriller</a>
+      <a href="#">Romance</a>
+      <a href="#">Science-Fiction & Fantaisie</a>
+      <a href="#">Tous</a>
+    </nav>
+    
+  </header>
+
+  <div class="rechercher">
+    <button class="rechercher-btn">Rechercher</button>
+    <input type="text" placeholder="Rechercher...">
+  </div>
+
+  <div class="galerie">
+
+    <h3>A</h3>
+
+    <div class="item">
+      <p>Edgar Allan Poe</p>
+      <p>Ce que nous voyons ou croyons voir n’est qu’un rêve dans un rêve.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Jean Anouilh</p>
+      <p>Rien n’est sérieux en ce bas monde que le rire.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Aragon</p>
+      <p>Il n’y a pas d’amour heureux.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+  </div>
+
+  <div class="galerie">
+
+    <h3>B</h3>
+
+    <div class="item">
+      <p>Honoré de Balzac</p>
+      <p>Le secret des grandes fortunes sans cause apparente, c'est un crime oublié.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Honoré de Balzac</p>
+      <p>L'amour est la seule passion qui ne souffre ni passé ni avenir.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Charles Baudelaire</p>
+      <p>Le beau est toujours bizarre.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Charles Baudelaire</p>
+      <p>Inspirer, c’est respirer à deux.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Simone de Beauvoir</p>
+      <p>On ne naît pas femme, on le devient.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Simone de Beauvoir</p>
+      <p>On ne naît pas vieux, on le devient.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Samuel Beckett</p>
+      <p>Déjà essayé. Déjà échoué. Peu importe. Essaie encore. Échoue encore. Échoue mieux.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Samuel Beckett</p>
+      <p>Je ne peux pas continuer. Je vais continuer.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Georges Bernanos</p>
+      <p>L'espérance est un risque à courir.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>George Bernard Shaw</p>
+      <p>Le pouvoir ne corrompt pas, il révèle.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+    <div class="item">
+      <p>Christian Bobin</p>
+      <p>La vie n’est pas un problème à résoudre mais un mystère à vivre.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+  </div>
+
+<script>
+    function toggleFavori(bouton) {
+      const image = bouton.querySelector('img');
+      const srcVide = "Coeur_Vide.png";
+      const srcPlein = "Coeur_Plein.png";
+    
+      if (image.src.includes(srcVide)) {
+        image.src = srcPlein;
+        image.alt = "coeur plein";
+      } else {
+        image.src = srcVide;
+        image.alt = "coeur vide";
+      }
+    }
+    </script>
+
+</body>
+<footer>
+  <p class="footer">Fixez vos objectifs dès maintenant !</p>
+
+  <div class="footer-actions">
+    <button class="footer-button">Rejoignez notre communauté !</button>
+    <a href="https://discord.gg/3tMkDExq8F" class="discord-button">
+      <img src="discord.png" alt="Logo Discord">
+    </a>
+    <a href="" class="google-button">
+      <img src="Google.png" alt="Logo Google">
+    </a>
+  </div>
+</footer>
+
+</html>
