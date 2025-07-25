@@ -184,11 +184,14 @@
     <h3>Citation du jour</h3>
     <p>Ce que nous voyons ou croyons voir n’est qu’un rêve dans un rêve.</p>
     <p>Edgar Allan Poe</p>
+    <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
   </div>
 
   <div class="auteur-jour">
     <h2>Auteur du jour</h2>
-    <img src="Images_Livres/Connelly_Michael/MConnelly.jpg">
+    <img src="Images_Livres/C/Connelly_Michael/MConnelly.jpg">
     <h3>Michael Connelly</h3>
     <p class="auteur">Michael Connelly, formé au journalisme, s’est imposé comme le maître du polar contemporain, particulièrement avec les figures de Harry Bosch, Mickey Haller et Renée Ballard. Ses œuvres, riches en authenticité urbaine, justice et psychologie, ont non seulement été récompensées, mais aussi brillamment adaptées sur grand et petit écran, avec un univers narratif en constante expansion.</p>
   </div>
@@ -238,12 +241,38 @@
   startAutoScroll();
 </script>
 
+<script>
+    function toggleFavori(bouton) {
+      const image = bouton.querySelector('img');
+      const srcVide = "Coeur_Vide.png";
+      const srcPlein = "Coeur_Plein.png";
+    
+      if (image.src.includes(srcVide)) {
+        image.src = srcPlein;
+        image.alt = "coeur plein";
+      } else {
+        image.src = srcVide;
+        image.alt = "coeur vide";
+      }
+    }
+    </script>
+
 
 
     
 </body>
 <footer>
   <p class="footer">Fixez vos objectifs dès maintenant !</p>
-  <button class="footer-button">Rejoignez notre communauté !</button>
+
+  <div class="footer-actions">
+    <button class="footer-button">Rejoignez notre communauté !</button>
+    <a href="https://discord.gg/3tMkDExq8F" class="discord-button">
+      <img src="discord.png" alt="Logo Discord">
+    </a>
+    <a href="" class="google-button">
+      <img src="Google.png" alt="Logo Google">
+    </a>
+  </div>
 </footer>
+
 </html>

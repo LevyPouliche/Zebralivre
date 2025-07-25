@@ -437,6 +437,7 @@ footer {
 
   .livre-populaire{
     text-align: center;
+    color: #1B0773;
   }
   
   .informations {
@@ -529,6 +530,12 @@ footer {
     transform: scale(1.1);
   }
 
+  .coeur-img{
+    width: 25px !important;
+  height: 25px !important;
+  object-fit: contain;
+  }
+
   .voir-plus{
     display: flex;
   align-items: center;
@@ -546,10 +553,51 @@ footer {
     color: #1B0773;
   }
 
-  .auteur-jour img {
+  .auteur-jour img{
     width: 100%;
     max-width: 150px;
     height: auto;
     object-fit: cover;
     display: block;
   }
+
+  .auteur{
+    padding: 60px; 
+  }
+
+  .discord-button {
+display: inline-flex;
+align-items: center;
+background-color: #5865F2; /* Couleur officielle Discord */
+color: white;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+font-size: 16px;
+transition:  0.3s, transform 0.2s;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.discord-button img {
+width: 30px;
+}
+
+.discord-button:hover {
+background-color: #4752C4;
+transform: scale(1.05);
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* espace entre les deux boutons */
+  margin-top: 10px;
+}
+
+.google-button img {
+width: 30px;
+}
+
+.google-button:hover {
+transform: scale(1.05);
+}
