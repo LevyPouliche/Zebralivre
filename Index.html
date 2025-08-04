@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
-        
+<html lang="fr">       
     <head>
         <meta charset="utf-8">
         <title>Zebralivre</title>
@@ -10,269 +9,201 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
-    
 <body>
-
 <header>
 
     <nav class="menu">
       <ul class="menu-list">
-        <li class="menu-profil">
-          <a href="Index.html">
-            <img src="djpony.jpg" alt="perso">
+        <li class="menu-profil"> <!-- A FAIRE, pouvoir modifier image, espace level et chargement. -->
+          <img id="avatar" class="avatar-profil" src="djpony.jpg" alt="perso">
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
             <p>Profil</p>
-            <p>Chargement</p>
-          </a>
-        </li>
-    
-        <li class="menu-objectifs"><a href="#">Objectifs</a></li>
-        <li class="menu-livres"><a href="#">Livres Lus</a></li>
-        <li class="menu-citations"><a href="Citations.html">Citations</a></li>
-        <li class="menu-calendrier"><a href="Calendrier.html">Calendrier</a></li>
-        <li class="menu-connexion"><a href="#">Connexion</a></li>
-    
-        <li class="menu-parametres">
-          <a href="#"><img src="editer.png" alt="parametres"></a>
-        </li>
-      </ul>
-    </nav>
+            <p>Chargement</p></a>
+            <ul>
+        <li><a href="#">Classements</a></li>
+        <li><a href="#">Amis</a></li>
+      </ul></li>
+      <li class="menu-objectifs"><a href="#">Objectifs</a>
+        <ul><li><a href="#">Succès</a></li></ul></li>
+      <li class="menu-livres"><a href="#">Livres Lus</a>
+        <ul>
+          <li><a href="#">Notes personnelles</a></li>
+          <li><a href="#">Avis</a></li>
+          <li><a href="#">Top de l'année</a></li>
+          <li><a href="#">PAL</a></li>
+        </ul>
+      </li>
+      <li class="menu-citations"><a href="Citations.html">Citations</a>
+        <ul>
+          <li><a href="#">Poèmes</a></li>
+          <li><a href="#">Communauté</a></li>
+        </ul></li>
+        <li class="menu-calendrier"><a href="Calendrier.html">Calendrier</a>
+          <ul>
+            <li><a href="#">Rapports</a></li>
+            <li><a href="#">Minuterie</a></li>
+            <li><a href="#">Pomodoro</a></li>
+          </ul></li>
+          <li class="menu-connexion"><a href="#">Connexion</a>
+            <ul><li><a href="#">Inscription</a></li></ul></li>
+            <li class="menu-parametres">
+              <a href="#"><img src="editer.png" alt="parametres"></a>
+                <ul>
+                  <li><a href="#">Affichages</a></li>
+                  <li><a href="#">Notifications</a></li>
+                </ul></li>
+              </ul>
+            </nav>
 
-    <nav class="navbar-vertical">
-      <a href="Index.html"><img src="Accueil.png" alt="Accueil"></a>
-      <a href="#">BD & Manga</a>
-      <a href="#">Biographie</a>
-      <a href="#">Contemporain</a>
-      <a href="#">Développement personnel</a>
-      <a href="#">Historique</a>
-      <a href="#">Jeune adulte</a>
-      <a href="#">Jeunesse</a>
-      <a href="#">Policier & Thriller</a>
-      <a href="#">Romance</a>
-      <a href="#">Science-Fiction & Fantaisie</a>
-      <a href="#">Tous</a>
-    </nav>
-    
-  </header>
+            <nav class="navbar-vertical">
+              <a href="Index.html"><img src="Accueil.png" alt="Accueil"></a>
+              <a href="#">BD & Manga</a>
+              <a href="#">Biographie</a>
+              <a href="#">Contemporain</a>
+              <a href="#">Développement personnel</a>
+              <a href="#">Historique</a>
+              <a href="#">Jeune adulte</a>
+              <a href="#">Jeunesse</a>
+              <a href="#">Policier & Thriller</a>
+              <a href="#">Romance</a>
+              <a href="#">Science-Fiction & Fantaisie</a>
+              <a href="#">Tous</a>
+            </nav> 
+          </header>
 
-  <div class="rechercher">
-    <button class="rechercher-btn">Rechercher</button>
-    <input type="text" placeholder="Rechercher...">
-  </div>
+          <div class="rechercher">
+            <button class="rechercher-btn">Rechercher</button>
+            <input type="text" placeholder="Rechercher...">
+          </div>
 
-  <div class="section-populaire">
+          <div class="section-populaire">
+            <h3 class="livre-populaire">Livres les plus populaires</h3>
+            <a href="Livres_Populaires.html">
+              <button class="informations">Voir plus</button>
+            </a></div>
 
-    <h3 class="livre-populaire">Livres les plus populaires</h3>
+            <div class="galerie-container">
+              <div class="fleche gauche" onclick="scrollGalerie(-1)">&#10094;</div>
+              <div class="galerie-carousel" id="galerie">
+                <div class="item">
+                  <img src="Images_Livres/P/Perrin_Valerie/Tata_Perrin.jpg" alt="Tata Perrin">
+                  <p>Tata - Valérie Perrin</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/M/McFadden_Freida/Prof_McFadden.jpg" alt="La prof McFadden">
+                  <p>La prof - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/N/Noir_Roxie/Faux_Fiances_Grand_Amour_Noir.jpg" alt="Faux fiance et grand amour Noir">
+                  <p>Faux fiancé et grand amour - Roxie Noir</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/M/McFadden_Freida/Femme_De_Menage_McFadden.webp" alt="La femme de menage McFadden">
+                  <p>La femme de ménage - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/M/McFadden_Freida/Secrets_Femme_Menage_McFadden.jpg" alt="Les secrets de la femme de menage McFadden">
+                  <p>Les secrets de la femme de ménage - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/G/Germain_Rafaele/Plage_Laval_Germain.jpg" alt="Plage Laval Germain">
+                  <p>Plage Laval - Raphaele Germain</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/A/Adler-Olsen_Jussi/7m2_Adler_Olsen.jpg" alt="7m2 Adler-Olsen">
+                  <p>7m2 Jussi Adler-Olsen</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/M/McFadden_Freida/Femme_De_Menage_Voit_Tout_McFadden.jpg" alt="La femme de menage voit tout - McFadden">
+                  <p>La femme de ménage voit tout - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/D/Da_Costa_Melissa/Tenir_Debout_Da_Costa.jpg" alt="Tenir debout Da Costa">
+                  <p>Tenir debout - Mélissa Da Costa</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/C/Collin_Philippe/Barman_Ritz_Collin.jpg" alt="Le barman du Ritz Collin">
+                  <p>Le barman du Ritz - Philippe Collin</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/W/Werber_Bernard/Valse_Des_Ames_Werber.jpg" alt="La valse des ames Werber">
+                  <p>La valse des âmes - Bernard Werber</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/R/Roberts_Nora/Printemps_Maryland_Roberts.jpg" alt="Un printemps au Maryland Roberts">
+                  <p>Un printemps au Maryland - Nora Roberts</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/H/Higgins_Clark_Mary/Ou_Es-tu_Maintenant_Higgins_Clark.jpg" alt="Ou es-tu maintenant Higgins Clark">
+                  <p>Où es-tu maintenant? - Mary Higgins Clark</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/M/McFadden_Freida/Psy_McFadden.jpg" alt="La psy McFadden">
+                  <p>La psy - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/T/Tomforde_Liz/Windy_City_Caught_Up_Tomforde.jpg" alt="Windy City Caught Up Tomforde">
+                  <p>Windy city 3 Caught up - Liz Tomforde</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/N/Noir_Roxie/Ennemis_Plus_Affinites_Noir.jpg" alt="Ennemis et plus si affinites Noir">
+                  <p>Ennemis et plus si affinités - Roxie Noir</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+                <div class="item">
+                  <img src="Images_Livres/S/Sabard_Clarisse/Stella_Hortense_Sabard.jpg" alt="Stella et Hortense Sabard">
+                  <p>Stella & Hortense - Clarisse Sabard</p>
+                  <button class="informations">Voir plus</button>
+                </div>
+              </div>
+              <div class="fleche droite" onclick="scrollGalerie(1)">&#10095;</div>
+            </div>
 
-    <a href="Livres_Populaires.html">
-      <button class="informations">Voir plus</button>
-    </a>
-  
-  </div>
+            <div class="auteur-jour">
+              <h3>Citation du jour</h3>
+              <p>Ce que nous voyons ou croyons voir n’est qu’un rêve dans un rêve.</p>
+              <p>Edgar Allan Poe</p>
+              <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+            </div>
 
-  <div class="galerie-container">
-    <div class="fleche gauche" onclick="scrollGalerie(-1)">&#10094;</div>
+            <div class="auteur-jour">
+              <h2>Auteur du jour</h2>
+              <img src="Images_Livres/C/Connelly_Michael/MConnelly.jpg">
+              <h3>Michael Connelly</h3>
+              <p class="auteur">Michael Connelly, formé au journalisme, s’est imposé comme le maître du polar contemporain, particulièrement avec les figures de Harry Bosch, Mickey Haller et Renée Ballard. Ses œuvres, riches en authenticité urbaine, justice et psychologie, ont non seulement été récompensées, mais aussi brillamment adaptées sur grand et petit écran, avec un univers narratif en constante expansion.</p>
+            </div>
 
-    <div class="galerie-carousel" id="galerie">
-  <div class="item">
-    <img src="Images_Livres/P/Perrin_Valerie/Tata_Perrin.jpg" alt="Tata Perrin">
-    <p>Tata - Valérie Perrin</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/M/McFadden_Freida/Prof_McFadden.jpg" alt="La prof McFadden">
-    <p>La prof - Freida McFadden</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/N/Noir_Roxie/Faux_Fiances_Grand_Amour_Noir.jpg" alt="Faux fiance et grand amour Noir">
-    <p>Faux fiancé et grand amour - Roxie Noir</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/M/McFadden_Freida/Femme_De_Menage_McFadden.webp" alt="La femme de menage McFadden">
-    <p>La femme de ménage - Freida McFadden</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/M/McFadden_Freida/Secrets_Femme_Menage_McFadden.jpg" alt="Les secrets de la femme de menage McFadden">
-    <p>Les secrets de la femme de ménage - Freida McFadden</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/G/Germain_Rafaele/Plage_Laval_Germain.jpg" alt="Plage Laval Germain">
-    <p>Plage Laval - Raphaele Germain</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/A/Adler-Olsen_Jussi/7m2_Adler_Olsen.jpg" alt="7m2 Adler-Olsen">
-    <p>7m2 Jussi Adler-Olsen</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/M/McFadden_Freida/Femme_De_Menage_Voit_Tout_McFadden.jpg" alt="La femme de menage voit tout - McFadden">
-    <p>La femme de ménage voit tout - Freida McFadden</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/D/Da_Costa_Melissa/Tenir_Debout_Da_Costa.jpg" alt="Tenir debout Da Costa">
-    <p>Tenir debout - Mélissa Da Costa</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/C/Collin_Philippe/Barman_Ritz_Collin.jpg" alt="Le barman du Ritz Collin">
-    <p>Le barman du Ritz - Philippe Collin</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/W/Werber_Bernard/Valse_Des_Ames_Werber.jpg" alt="La valse des ames Werber">
-    <p>La valse des âmes - Bernard Werber</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/R/Roberts_Nora/Printemps_Maryland_Roberts.jpg" alt="Un printemps au Maryland Roberts">
-    <p>Un printemps au Maryland - Nora Roberts</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/H/Higgins_Clark_Mary/Ou_Es-tu_Maintenant_Higgins_Clark.jpg" alt="Ou es-tu maintenant Higgins Clark">
-    <p>Où es-tu maintenant? - Mary Higgins Clark</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/M/McFadden_Freida/Psy_McFadden.jpg" alt="La psy McFadden">
-    <p>La psy - Freida McFadden</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/T/Tomforde_Liz/Windy_City_Caught_Up_Tomforde.jpg" alt="Windy City Caught Up Tomforde">
-    <p>Windy city 3 Caught up - Liz Tomforde</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/N/Noir_Roxie/Ennemis_Plus_Affinites_Noir.jpg" alt="Ennemis et plus si affinites Noir">
-    <p>Ennemis et plus si affinités - Roxie Noir</p>
-    <button class="informations">Voir plus</button>
-  </div>
-
-  <div class="item">
-    <img src="Images_Livres/S/Sabard_Clarisse/Stella_Hortense_Sabard.jpg" alt="Stella et Hortense Sabard">
-    <p>Stella & Hortense - Clarisse Sabard</p>
-    <button class="informations">Voir plus</button>
-  </div>
-</div>
-
-<div class="fleche droite" onclick="scrollGalerie(1)">&#10095;</div>
-
-  </div>
-
-  <div class="auteur-jour">
-    <h3>Citation du jour</h3>
-    <p>Ce que nous voyons ou croyons voir n’est qu’un rêve dans un rêve.</p>
-    <p>Edgar Allan Poe</p>
-    <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
-          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
-        </button>
-  </div>
-
-  <div class="auteur-jour">
-    <h2>Auteur du jour</h2>
-    <img src="Images_Livres/C/Connelly_Michael/MConnelly.jpg">
-    <h3>Michael Connelly</h3>
-    <p class="auteur">Michael Connelly, formé au journalisme, s’est imposé comme le maître du polar contemporain, particulièrement avec les figures de Harry Bosch, Mickey Haller et Renée Ballard. Ses œuvres, riches en authenticité urbaine, justice et psychologie, ont non seulement été récompensées, mais aussi brillamment adaptées sur grand et petit écran, avec un univers narratif en constante expansion.</p>
-  </div>
-
-<script>
-  const galerie = document.getElementById("galerie");
-
-  let scrollStep = 166; // ajustez selon la taille d’une image + marge
-  let scrollPosition = 0;
-  const interval = 2500;
-  let scrollTimer;
-
-  function autoScroll() {
-    const maxScrollLeft = galerie.scrollWidth - galerie.clientWidth;
-
-    if (scrollPosition + scrollStep <= maxScrollLeft) {
-      scrollPosition += scrollStep;
-      galerie.scrollTo({ left: scrollPosition, behavior: "smooth" });
-    } else {
-      clearInterval(scrollTimer); // Arrêt du défilement automatique à la fin
-    }
-  }
-
-  // Lancement initial du défilement automatique
-  function startAutoScroll() {
-    // Empêche plusieurs timers simultanés
-    if (scrollTimer) clearInterval(scrollTimer);
-    scrollTimer = setInterval(autoScroll, interval);
-  }
-
-  // Contrôle manuel avec les flèches
-  function scrollGalerie(direction) {
-    const maxScrollLeft = galerie.scrollWidth - galerie.clientWidth;
-    scrollPosition += direction * scrollStep;
-
-    if (scrollPosition < 0) scrollPosition = 0;
-    if (scrollPosition > maxScrollLeft) scrollPosition = maxScrollLeft;
-
-    galerie.scrollTo({ left: scrollPosition, behavior: "smooth" });
-
-    // Relancer le défilement automatique après interaction manuelle
-    if (scrollTimer) clearInterval(scrollTimer);
-    setTimeout(startAutoScroll, interval + 500); // délai pour laisser défiler le scroll manuel
-  }
-
-  // Démarrage initial
-  startAutoScroll();
-</script>
-
-<script>
-    function toggleFavori(bouton) {
-      const image = bouton.querySelector('img');
-      const srcVide = "Coeur_Vide.png";
-      const srcPlein = "Coeur_Plein.png";
-    
-      if (image.src.includes(srcVide)) {
-        image.src = srcPlein;
-        image.alt = "coeur plein";
-      } else {
-        image.src = srcVide;
-        image.alt = "coeur vide";
-      }
-    }
-    </script>
-
-
-
-    
-</body>
-<footer>
-  <p class="footer">Fixez vos objectifs dès maintenant !</p>
-
-  <div class="footer-actions">
-    <button class="footer-button">Rejoignez notre communauté !</button>
-    <a href="https://discord.gg/3tMkDExq8F" class="discord-button">
-      <img src="discord.png" alt="Logo Discord">
-    </a>
-    <a href="" class="google-button">
-      <img src="Google.png" alt="Logo Google">
-    </a>
-  </div>
-</footer>
-
-</html>
+            <script src="Galerie.js"></script>
+            <script src="Favoris.js"></script>
+            <script src="Avatar.js"></script>
+          </body>
+          <footer>
+            <p class="footer">Fixez vos objectifs dès maintenant !</p>
+            <div class="footer-actions">
+              <button class="footer-button">Rejoignez notre communauté !</button>
+              <a href="https://discord.gg/3tMkDExq8F" class="discord-button">
+                <img src="discord.png" alt="Logo Discord">
+              </a>
+              <a href="" class="google-button">
+                <img src="Google.png" alt="Logo Google">
+              </a>
+            </div>
+          </footer>
+          </html>
