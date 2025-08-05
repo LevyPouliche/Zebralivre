@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Image persistante (session)</title>
+  <style>
+    #preview {
+      margin-top: 20px;
+      max-width: 300px;
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Choisir une image</h2>
+
+  <input type="file" id="imageInput" accept="image/*">
+  <div>
+    <img id="preview" src="" alt="Aperçu de l’image" style="display: none;">
+  </div>
+
+  <script>
+    const imageInput = document.getElementById('imageInput');
+    const preview = document.getElementById('preview');
+
+    // Fonction d'affichage de l'image
+    function afficherImage(dataUrl) {
+      preview.src = dataUrl;
+      preview.style.display = 'block';
+    }
+
+    // Restauration depuis sessionStorage
+    const imageSauvegardee = sessionStorage.getItem('imageData');
+    if (imageSauvegardee) {
+      afficherImage(imageSauvegardee);
+    }
+
+    // Lors du changement d’image
+    imageInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const dataUrl = e.target.result;
+          afficherImage(dataUrl);
+          sessionStorage.setItem('imageData', dataUrl); // Sauvegarde dans sessionStorage
+        };
+        reader.readAsDataURL(file);
+      } else {
+        preview.style.display = 'none';
+        sessionStorage.removeItem('imageData');
+      }
+    });
+  </script>
+
+</body>
+</html>
