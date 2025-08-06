@@ -11,19 +11,16 @@ body{
     font-family: 'quicksand', Arial, sans-serif; 
 }
 
-.menu{
-    font-family: 'quicksand', Arial, sans-serif;
+.menu,
+.menu-list {
     display: flex;
     width: 100%;
-    height: 125px; 
+    height: 125px;
     box-sizing: border-box;
 }
 
 .menu-list {
-    display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 125px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -33,55 +30,59 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 125px;
-    box-sizing: border-box;
+    height: inherit; /* hérite de 125px depuis .menu-list */
     color: white;
 }
 
 .menu-list a {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: white;
-    flex-direction: column;
-  }
+}
+
 
 .menu-profil {
     width: 125px;
     height: 125px;
     background-color: #B28D91;
     color: white;
-    display: flex;
+    display: flex;                  /* Aligne le contenu */
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; 
     flex-direction: column;
+    position: relative;            /* Pour le positionnement du sous-menu */
 }
 
 .menu-profil a {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     font-size: 14px;
     overflow: visible;
-}
-  
-.menu-profil a img {
-    margin-top: 15px;
-    width: 60px;
-    height: auto;
-}
-  
-.menu-profil p{
-    padding: 0px;
-    margin: 2px;
+    text-decoration: none;         /* Facultatif : si vous souhaitez supprimer le soulignement */
+    color: inherit;                /* Hérite la couleur de .menu-profil */
 }
 
+.menu-profil .avatar-profil {
+    margin-top: 15px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.menu-profil p {
+    margin: 2px;
+    padding: 0;
+}
+
+
 .menu-objectifs   { background-color: #AF8890; }
-.menu-livres      { background-color: #AB828E; }
+.menu-livres   { background-color: #AB828E; }
 .menu-citations   { background-color: #A87D8D; }
 .menu-calendrier  { background-color: #A4778B; }
 .menu-connexion   { background-color: #9d7186; }
@@ -94,71 +95,106 @@ body{
   flex: 1;
 }
 
-.menu-parametres  { 
+.menu-parametres { 
     width: 125px;
-    background-color: #966a81; 
+    background-color: #966a81;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; 
+    flex-shrink: 0;
+    position: relative; /* Recommandé si un sous-menu doit y être aligné */
 }
 
 .menu-parametres a img {
     margin-top: 15px;
-    width: 60px;        
-    height: auto;     
+    width: 60px;
+    height: auto;
+    display: block; /* Supprime les éventuels espaces blancs sous l'image */
+}
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    list-style: none;
+    margin: 0;
+    z-index: 1000;
+    font-size: 14px;
+    text-align: center;
+}
+
+.sous-menu-profil {background-color: #B28D91;}
+.sous-menu-objectifs {background-color: #AF8890;}
+.sous-menu-livres {background-color: #AB828E;}
+.sous-menu-citations {background-color: #A87D8D;}
+.sous-menu-calendrier {background-color: #A4778B;}
+.sous-menu-connexion {background-color: #9d7186;}
+.sous-menu-parametres {background-color: #966a81;}
+
+.menu-profil:hover .sous-menu-profil,
+.menu-objectifs:hover .sous-menu-objectifs,
+.menu-livres:hover .sous-menu-livres,
+.menu-citations:hover .sous-menu-citations,
+.menu-calendrier:hover .sous-menu-calendrier,
+.menu-connexion:hover .sous-menu-connexion,
+.menu-parametres:hover .sous-menu-parametres {
+  display: block;
 }
 
 .navbar-vertical {
-    position: fixed;
-    top: 130px;
-    left: 0;
-    width: 150px;
-    height: 100vh; /* pleine hauteur */
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-  }
-  
-  .navbar-vertical a {
-    color: #966a81;
-    padding: 15px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
+  position: fixed;
+  top: 130px;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.navbar-vertical a {
+  color: #966a81;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
 .rechercher {
-    height: 60px;
-    background-color: #966a81;
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    padding: 10px 20px; 
-    box-sizing: border-box; 
+    height: 60px;
     margin: 35px 300px;
+    padding: 10px 20px;
+    background-color: #966a81;
     border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.rechercher input[type="text"],
+.rechercher button.rechercher-btn {
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
 .rechercher input[type="text"] {
     width: 60%; 
     height: 65%; 
     padding: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 10px;
     color: black;
 }
 
 .rechercher button.rechercher-btn {
     width: 40%; 
-    height: 100%; 
+    height: 100%;
     background-color: #966a81;
     color: white;
-    border: none;
-    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -166,90 +202,84 @@ body{
 
 .rechercher button.rechercher-btn:hover {
     background-color: #A87D8D;
-    color: white;
-} 
-
-li{
-    list-style:none !important; 
-    font-size:22px;
+}
+ 
+li {
+    list-style: none;
+    font-size: 22px;
     text-align: center;
 }
-     
-nav ul{
-    display: flex; 
-    padding:0;
-    margin:0;
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
-       
-nav ul li{
-    margin: auto;
-    float:none;
-    position: relative; 
-    padding:0;
-    margin:0;
-    list-style: none;
+
+nav ul li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    border-bottom: 5px solid #FFF;
 }
 
 nav ul li ul {
     display: none;
     position: absolute;
-    top: 125px; 
+    top: 125px;
     left: 0;
+    background-color: inherit; /* vous pouvez définir une couleur spécifique */
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    flex-direction: column;
 }
 
-nav ul li:hover ul, 
-nav ul li ul:hover {
-    display: block;
-    z-index: 99999;
-}
-
-nav ul li a{
-    color: #FFF;
-    text-decoration: none;
-}
-  
-li a:hover{
-    border-bottom: 5px #FFF solid;
-}
-  
-nav ul li:hover ul{ 
-    list-style: none !important;
-    z-index: 99999;
-    display: list-item !important;
-    position: absolute;
-    margin-left: -10px;
+nav ul li:hover > ul {
+    display: flex; /* ou block selon votre structure */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 35px;
-    padding: 60px; 
+    padding: 60px;
     box-sizing: border-box;
 }
 
+/* Chaque "item" est un bloc visuellement homogène */
 .item {
-    background-color: #E4CFBB; 
-    border: 5px solid #966a81; 
-    text-align: center; 
+    background-color: #E4CFBB;
+    border: 5px solid #966a81;
     color: #1B0773;
     font-size: 17px;
-    min-width: 150px; 
     min-height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    align-items: center; 
-    box-sizing: border-box; 
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
     padding: 10px;
+    text-align: center;
 }
 
+/* Image centrée et bien contenue dans son bloc */
 .item img {
-    max-width: 100%; 
-    max-height: 100%; 
-    margin: auto; 
+    max-width: 100%;
+    max-height: 100%;
     display: block;
-    background-color: #fff; 
+    background-color: #fff;
+    object-fit: contain;
 }
 
 .star-rating {
@@ -303,6 +333,17 @@ nav ul li:hover ul{
     color: #1B0773;
 }
 
+@media (max-width: 350px) {
+    .timer-wrapper {
+        padding: 20px;
+    }
+
+    #timer {
+        font-size: 36px;
+    }
+}
+
+
 .button-group {
     margin-bottom: 15px;
 }
@@ -325,6 +366,18 @@ nav ul li:hover ul{
 
 .button-group input[type="text"] {
     width: 200px;
+}
+
+@media (max-width: 400px) {
+    .button-group input[type="text"] {
+        width: 100%;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 #resetBtn:disabled{
