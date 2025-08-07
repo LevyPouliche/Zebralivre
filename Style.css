@@ -486,8 +486,6 @@ footer {
     display: block;
   }
   
-  
-
   .livre-populaire{
     text-align: center;
     color: #1B0773;
@@ -513,6 +511,14 @@ footer {
     color: white;            /* texte plus foncé */
 }
 
+@media (max-width: 600px) {
+    .informations {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+
 .section-populaire {
     display: flex;
     flex-direction: column;
@@ -520,6 +526,14 @@ footer {
     gap: 10px;            /* espace entre les éléments */
     margin: 40px 0;       /* marge verticale */
   }
+
+  @media (max-width: 600px) {
+    .section-populaire {
+        gap: 20px;
+        margin: 30px 10px;
+    }
+}
+
   
   .galerie-container {
     display: flex;
@@ -565,28 +579,17 @@ footer {
     width: 35px;
   }
 
-  .coeur-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .coeur-btn img {
+ .coeur-btn img,
+.coeur-img {
     background-color: #E4CFBB;
     transition: transform 0.2s ease;
     width: 25px;
-  height: 25px;
-  }
-  
+    height: 25px;
+    object-fit: contain;
+}
+
   .coeur-btn:hover img {
     transform: scale(1.1);
-  }
-
-  .coeur-img{
-    width: 25px !important;
-  height: 25px !important;
-  object-fit: contain;
   }
 
   .voir-plus{
@@ -627,7 +630,7 @@ border-radius: 8px;
 text-decoration: none;
 font-weight: bold;
 font-size: 16px;
-transition:  0.3s, transform 0.2s;
+transition: background-color 0.3s, transform 0.2s;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
