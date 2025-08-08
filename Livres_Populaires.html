@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
-        
+<html lang="fr">       
     <head>
         <meta charset="utf-8">
         <title>Zebralivre</title>
@@ -11,47 +10,74 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </head>
 <body>
-
 <header>
-
-    <nav class="menu">
-      <ul class="menu-list">
+  
+  <nav class="menu">
+    <ul class="menu-list">
+      <ul>
         <li class="menu-profil">
-          <a href="Index.html">
-            <img src="djpony.jpg" alt="perso">
+          <a href="#"><img class="avatar-profil" src="djpony.jpg" alt="perso">
             <p>Profil</p>
             <p>Chargement</p>
           </a>
-        </li>
-    
-        <li class="menu-objectifs"><a href="#">Objectifs</a></li>
-        <li class="menu-livres"><a href="#">Livres Lus</a></li>
-        <li class="menu-citations"><a href="Citations.html">Citations</a></li>
-        <li class="menu-calendrier"><a href="Calendrier.html">Calendrier</a></li>
-        <li class="menu-connexion"><a href="#">Connexion</a></li>
-    
-        <li class="menu-parametres">
-          <a href="#"><img src="editer.png" alt="parametres"></a>
-        </li>
-      </ul>
-    </nav>
+          <ul class="sous-menu sous-menu-profil">
+            <li><a href="#">Classements</a></li>
+            <li><a href="#">Amis</a></li>
+          </ul></li></ul>
+          <li class="sous-menu menu-objectifs">
+            <a href="#">Objectifs</a>
+            <ul class="sous-menu sous-menu-objectifs">
+              <li><a href="#">Succès</a></li>
+            </ul></li>
+            <li class="menu-livres">
+              <a href="#">Livres Lus</a>
+              <ul class="sous-menu sous-menu-livres">
+                <li><a href="#">Notes personnelles</a></li>
+                <li><a href="#">Avis</a></li>
+                <li><a href="#">Top de l'année</a></li>
+                <li><a href="#">PAL</a></li>
+              </ul></li>
+              <li class="menu-citations">
+                <a href="Citations.html">Citations</a>
+                <ul class="sous-menu sous-menu-citations">
+                  <li><a href="#">Poèmes</a></li>
+                  <li><a href="#">Communauté</a></li>
+                </ul></li>
+                <li class="menu-calendrier">
+                  <a href="Calendrier.html">Calendrier</a>
+                  <ul class="sous-menu sous-menu-calendrier">
+                    <li><a href="#">Rapports</a></li>
+                    <li><a href="#">Minuterie</a></li>
+                    <li><a href="#">Pomodoro</a></li>
+                  </ul></li>
+                  <li class="menu-connexion">
+                    <a href="#">Connexion</a>
+                    <ul class="sous-menu sous-menu-connexion">
+                      <li><a href="#">Inscription</a></li>
+                    </ul></li>
+                    <li class="menu-parametres">
+                      <a href="#"><img src="editer.png" alt="parametres"></a>
+                      <ul class="sous-menu sous-menu-parametres">
+                        <li><a href="#">Affichages</a></li>
+                        <li><a href="#">Notifications</a></li>
+                      </ul></li>
+                    </nav>
 
-    <nav class="navbar-vertical">
-      <a href="Index.html"><img src="Accueil.png" alt="Accueil"></a>
-      <a href="#">BD & Manga</a>
-      <a href="#">Biographie</a>
-      <a href="#">Contemporain</a>
-      <a href="#">Développement personnel</a>
-      <a href="#">Historique</a>
-      <a href="#">Jeune adulte</a>
-      <a href="#">Jeunesse</a>
-      <a href="#">Policier & Thriller</a>
-      <a href="#">Romance</a>
-      <a href="#">Science-Fiction & Fantaisie</a>
-      <a href="#">Tous</a>
-    </nav>
-    
-  </header>
+            <nav class="navbar-vertical">
+              <a href="Index.html"><img src="Accueil.png" alt="Accueil"></a>
+              <a href="#">BD & Manga</a>
+              <a href="#">Biographie</a>
+              <a href="#">Contemporain</a>
+              <a href="#">Développement personnel</a>
+              <a href="#">Historique</a>
+              <a href="#">Jeune adulte</a>
+              <a href="#">Jeunesse</a>
+              <a href="#">Policier & Thriller</a>
+              <a href="#">Romance</a>
+              <a href="#">Science-Fiction & Fantaisie</a>
+              <a href="#">Tous</a>
+            </nav> 
+          </header>
 
   <div class="rechercher">
     <button class="rechercher-btn">Rechercher</button>
