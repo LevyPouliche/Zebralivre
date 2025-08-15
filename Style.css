@@ -11,16 +11,19 @@ body{
     font-family: 'quicksand', Arial, sans-serif; 
 }
 
-.menu,
-.menu-list {
+.menu{
+    font-family: 'quicksand', Arial, sans-serif;
     display: flex;
     width: 100%;
-    height: 125px;
+    height: 125px; 
     box-sizing: border-box;
 }
 
 .menu-list {
+    display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 125px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -30,59 +33,55 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: inherit; /* hérite de 125px depuis .menu-list */
+    height: 125px;
+    box-sizing: border-box;
     color: white;
 }
 
 .menu-list a {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: white;
-}
-
+    flex-direction: column;
+  }
 
 .menu-profil {
     width: 125px;
     height: 125px;
     background-color: #B28D91;
     color: white;
-    display: flex;                  /* Aligne le contenu */
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0; 
     flex-direction: column;
-    position: relative;            /* Pour le positionnement du sous-menu */
 }
 
 .menu-profil a {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     font-size: 14px;
     overflow: visible;
-    text-decoration: none;         /* Facultatif : si vous souhaitez supprimer le soulignement */
-    color: inherit;                /* Hérite la couleur de .menu-profil */
 }
-
-.menu-profil .avatar-profil {
+  
+.menu-profil a img {
     margin-top: 15px;
     width: 60px;
-    height: 60px;
-    object-fit: cover;
+    height: auto;
 }
-
-.menu-profil p {
+  
+.menu-profil p{
+    padding: 0px;
     margin: 2px;
-    padding: 0;
 }
-
 
 .menu-objectifs   { background-color: #AF8890; }
-.menu-livres   { background-color: #AB828E; }
+.menu-livres      { background-color: #AB828E; }
 .menu-citations   { background-color: #A87D8D; }
 .menu-calendrier  { background-color: #A4778B; }
 .menu-connexion   { background-color: #9d7186; }
@@ -95,106 +94,76 @@ body{
   flex: 1;
 }
 
-.menu-parametres { 
+.menu-parametres  { 
     width: 125px;
-    background-color: #966a81;
+    background-color: #966a81; 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    position: relative; /* Recommandé si un sous-menu doit y être aligné */
+    flex-shrink: 0; 
 }
 
 .menu-parametres a img {
     margin-top: 15px;
-    width: 60px;
-    height: auto;
-    display: block; /* Supprime les éventuels espaces blancs sous l'image */
-}
-
-.sous-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 5px 0;
-    list-style: none;
-    margin: 0;
-    z-index: 1000;
-    font-size: 14px;
-    text-align: center;
-}
-
-.sous-menu-profil {background-color: #B28D91;}
-.sous-menu-objectifs {background-color: #AF8890;}
-.sous-menu-livres {background-color: #AB828E;}
-.sous-menu-citations {background-color: #A87D8D;}
-.sous-menu-calendrier {background-color: #A4778B;}
-.sous-menu-connexion {background-color: #9d7186;}
-.sous-menu-parametres {background-color: #966a81;}
-
-.menu-profil:hover .sous-menu-profil,
-.menu-objectifs:hover .sous-menu-objectifs,
-.menu-livres:hover .sous-menu-livres,
-.menu-citations:hover .sous-menu-citations,
-.menu-calendrier:hover .sous-menu-calendrier,
-.menu-connexion:hover .sous-menu-connexion,
-.menu-parametres:hover .sous-menu-parametres {
-  display: block;
+    width: 60px;        
+    height: auto;     
 }
 
 .navbar-vertical {
-  position: fixed;
-  top: 130px;
-  left: 0;
-  width: 150px;
-  height: 100vh;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 150px;
+    height: 100vh; 
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+  
+.navbar-vertical a {
+    color: #966a81;
+    padding: 13px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-.navbar-vertical a {
-  color: #966a81;
-  padding: 15px 20px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+.navbar-vertical a img{
+    height: 35px;
+    width: 35px;
 }
 
 .rechercher {
+    height: 60px;
+    background-color: #966a81;
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    height: 60px;
+    padding: 10px 20px; 
+    box-sizing: border-box; 
     margin: 35px 300px;
-    padding: 10px 20px;
-    background-color: #966a81;
     border-radius: 10px;
-    box-sizing: border-box;
-}
-
-.rechercher input[type="text"],
-.rechercher button.rechercher-btn {
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
 }
 
 .rechercher input[type="text"] {
     width: 60%; 
     height: 65%; 
     padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
     color: black;
 }
 
 .rechercher button.rechercher-btn {
     width: 40%; 
-    height: 100%;
+    height: 100%; 
     background-color: #966a81;
     color: white;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 16px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -202,84 +171,90 @@ body{
 
 .rechercher button.rechercher-btn:hover {
     background-color: #A87D8D;
-}
- 
-li {
-    list-style: none;
-    font-size: 22px;
+    color: white;
+} 
+
+li{
+    list-style:none !important; 
+    font-size:22px;
     text-align: center;
 }
-
-nav ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
+     
+nav ul{
+    display: flex; 
+    padding:0;
+    margin:0;
 }
-
-nav ul li {
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li a {
-    color: #FFF;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-}
-
-nav ul li a:hover {
-    border-bottom: 5px solid #FFF;
+       
+nav ul li{
+    margin: auto;
+    float:none;
+    position: relative; 
+    padding:0;
+    margin:0;
+    list-style: none;
 }
 
 nav ul li ul {
     display: none;
     position: absolute;
-    top: 125px;
+    top: 125px; 
     left: 0;
-    background-color: inherit; /* vous pouvez définir une couleur spécifique */
-    padding: 0;
-    margin: 0;
-    z-index: 9999;
-    flex-direction: column;
 }
 
-nav ul li:hover > ul {
-    display: flex; /* ou block selon votre structure */
+nav ul li:hover ul, 
+nav ul li ul:hover {
+    display: block;
+    z-index: 99999;
+}
+
+nav ul li a{
+    color: #FFF;
+    text-decoration: none;
+}
+  
+li a:hover{
+    border-bottom: 5px #FFF solid;
+}
+  
+nav ul li:hover ul{ 
+    list-style: none !important;
+    z-index: 99999;
+    display: list-item !important;
+    position: absolute;
+    margin-left: -10px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(6, 1fr); 
     gap: 35px;
-    padding: 60px;
+    padding: 60px; 
     box-sizing: border-box;
 }
 
-/* Chaque "item" est un bloc visuellement homogène */
 .item {
-    background-color: #E4CFBB;
-    border: 5px solid #966a81;
+    background-color: #E4CFBB; 
+    border: 5px solid #966a81; 
+    text-align: center; 
     color: #1B0773;
     font-size: 17px;
+    min-width: 150px; 
     min-height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing: border-box; 
     padding: 10px;
-    text-align: center;
 }
 
-/* Image centrée et bien contenue dans son bloc */
 .item img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 100%; 
+    max-height: 100%; 
+    margin: auto; 
     display: block;
-    background-color: #fff;
-    object-fit: contain;
+    background-color: #fff; 
 }
 
 .star-rating {
@@ -322,27 +297,15 @@ nav ul li:hover > ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    margin: 140px auto 0 auto; /* 140px en haut pour laisser un peu d’air sous le menu */
+    margin: 140px auto 0 auto; 
     text-align: center;
 }
-
 
 #timer {
     font-size: 48px;
     margin-bottom: 20px;
     color: #1B0773;
 }
-
-@media (max-width: 350px) {
-    .timer-wrapper {
-        padding: 20px;
-    }
-
-    #timer {
-        font-size: 36px;
-    }
-}
-
 
 .button-group {
     margin-bottom: 15px;
@@ -366,18 +329,6 @@ nav ul li:hover > ul {
 
 .button-group input[type="text"] {
     width: 200px;
-}
-
-@media (max-width: 400px) {
-    .button-group input[type="text"] {
-        width: 100%;
-    }
-
-    .button-group {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
 }
 
 #resetBtn:disabled{
@@ -471,134 +422,124 @@ footer {
 
 .galerie {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* colonnes adaptatives */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
     gap: 16px;
     padding: 0 16px;
     margin: 0;
-    margin-left: 160px; /* si votre barre de navigation est fixe à gauche */
+    margin-left: 160px; 
     box-sizing: border-box;
-  }
+}
   
-  .galerie img {
-    width: 100%; /* prend toute la largeur de la colonne */
+.galerie img {
+    width: 100%; 
     height: auto;
     object-fit: cover;
     display: block;
-  }
+}
   
-  .livre-populaire{
+.livre-populaire{
     text-align: center;
     color: #1B0773;
-  }
+}
   
-  .informations {
-    display: inline-block;         /* garantit que le bouton s'ajuste à son contenu */
-    width: auto;                   /* utile mais déjà par défaut avec inline-block */
-    height: auto;                  /* idem, s'adapte au texte */
+.informations {
+    display: inline-block;       
+    width: auto;                 
+    height: auto;                
     background-color: #966a81;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
-    padding: 8px 16px;             /* ajoute de l'espace autour du texte */
+    padding: 8px 16px;          
     text-align: center;
-    white-space: nowrap;          /* empêche le texte de se couper sur plusieurs lignes */
+    white-space: nowrap;        
 }
 
 .informations:hover {
-    background-color: #B28D91; /* couleur plus claire au survol */
-    color: white;            /* texte plus foncé */
+    background-color: #B28D91; 
+    color: white;         
 }
-
-@media (max-width: 600px) {
-    .informations {
-        font-size: 16px;
-        padding: 12px 20px;
-    }
-}
-
 
 .section-populaire {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centre horizontalement le contenu */
-    gap: 10px;            /* espace entre les éléments */
-    margin: 40px 0;       /* marge verticale */
-  }
-
-  @media (max-width: 600px) {
-    .section-populaire {
-        gap: 20px;
-        margin: 30px 10px;
-    }
+    align-items: center; 
+    gap: 10px;      
+    margin: 40px 0;       
 }
-
   
-  .galerie-container {
+.galerie-container {
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: 140px; /* si votre nav est fixe à gauche */
+    margin-left: 140px;
     overflow: hidden;
-  }
+}
   
-  .fleche {
+.fleche {
     font-size: 32px;
     color: #966a81;
     cursor: pointer;
     user-select: none;
     padding: 10px;
-  }
+}
   
-  .fleche.gauche {
+.fleche.gauche {
     margin-right: 10px;
-  }
+}
   
-  .fleche.droite {
+.fleche.droite {
     margin-left: 10px;
-  }
+}
 
-  .galerie-carousel {
+.galerie-carousel {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 16px;
     padding: 10px;
     width: 100%;
-  }
+}
 
-  .galerie-carousel img {
+.galerie-carousel img {
     width: 150px;
     height: auto;
     object-fit: cover;
-  }
+}
 
-  .navbar-vertical a img{
-    height: 35px;
-    width: 35px;
-  }
-
- .coeur-btn img,
-.coeur-img {
+.coeur-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.coeur-btn img {
     background-color: #E4CFBB;
     transition: transform 0.2s ease;
     width: 25px;
     height: 25px;
+}
+  
+.coeur-btn:hover img {
+    transform: scale(1.1);
+}
+
+.coeur-img{
+    width: 25px !important;
+    height: 25px !important;
     object-fit: contain;
 }
 
-  .coeur-btn:hover img {
-    transform: scale(1.1);
-  }
-
-  .voir-plus{
+.voir-plus{
     display: flex;
-  align-items: center;
-  gap: 10px; /* espace entre les boutons */
-  }
+    align-items: center;
+    gap: 10px; 
+}
   
-  .auteur-jour{
+.auteur-jour{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -607,53 +548,95 @@ footer {
     background-color: #faedcd;
     text-align: center;
     color: #1B0773;
-  }
+}
 
-  .auteur-jour img{
+.auteur-jour img{
     width: 100%;
     max-width: 150px;
     height: auto;
     object-fit: cover;
     display: block;
-  }
-
-  .auteur{
-    padding: 60px; 
-  }
-
-  .discord-button {
-display: inline-flex;
-align-items: center;
-background-color: #5865F2; /* Couleur officielle Discord */
-color: white;
-border-radius: 8px;
-text-decoration: none;
-font-weight: bold;
-font-size: 16px;
-transition: background-color 0.3s, transform 0.2s;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.discord-button img {
-width: 30px;
+.auteur{
+    padding: 60px; 
+}
+
+.discord-button img, .google-button img {
+    width: 30px;
 }
 
 .discord-button:hover {
-background-color: #4752C4;
-transform: scale(1.05);
+    background-color: #4752C4;
+    transform: scale(1.05);
 }
 
 .footer-actions {
   display: flex;
   align-items: center;
-  gap: 12px; /* espace entre les deux boutons */
+  gap: 12px; 
   margin-top: 10px;
 }
 
-.google-button img {
-width: 30px;
+.google-button:hover {
+    transform: scale(1.05);
 }
 
-.google-button:hover {
-transform: scale(1.05);
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    background-color: #38a3a5;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#daysContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    grid-gap: 5px;
+}
+
+#daysContainer div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fleches{
+    background-color: #38a3a5;
+    border: none;
+    color: #fff;
+}
+
+/* Conteneur des jours de la semaine sous le mois */
+.weekDaysContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour chaque jour de la semaine */
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Ajouter l'ombre lors du survol */
+#daysContainer div:hover {
+    box-shadow: 0 4px 15px rgba(56, 163, 165, 0.7); /* Bleu semi-transparent */
+}
+
+/* Style pour la journée actuelle */
+.today {
+    background-color: #fff !important; /* Couleur de fond jaune forcée */
+    border: 2px solid #38a3a5 !important; /* Bordure orange forcée */
+    font-weight: bolder;
+    color: #38a3a5 !important; /* Texte en noir forcé */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
 }
