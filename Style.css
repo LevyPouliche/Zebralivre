@@ -640,3 +640,57 @@ footer {
     color: #38a3a5 !important; /* Texte en noir forcé */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 200px;
+  max-height: 200px; /* Limite d’affichage (env. 5 éléments) */
+  overflow-y: auto;  /* Ajoute le scroll si nécessaire */
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Ajout d'une pseudo-flèche quand ça dépasse */
+.dropdown-content::after {
+  content: "▼";
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 14px;
+  color: gray;
+  pointer-events: none; /* clics passent à travers */
+}
+
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
