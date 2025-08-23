@@ -583,6 +583,7 @@ footer {
 }
 
 .calendar {
+    margin-left: 220px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -595,6 +596,7 @@ footer {
 }
 
 #daysContainer {
+    margin-left: 220px;
     display: grid;
     grid-template-columns: repeat(7, 40px);
     grid-gap: 5px;
@@ -617,15 +619,17 @@ footer {
     color: #fff;
 }
 
-/* Conteneur des jours de la semaine sous le mois */
 .weekDaysContainer {
+    margin-left: 220px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 colonnes pour chaque jour de la semaine */
+    grid-template-columns: repeat(7, 40px); /* même largeur que #daysContainer */
+    grid-gap: 5px; 
     text-align: center;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 
 /* Ajouter l'ombre lors du survol */
 #daysContainer div:hover {
