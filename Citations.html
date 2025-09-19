@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
         
@@ -63,7 +64,7 @@
 
     <h3>A</h3>
 
-    <div class="item">
+    <div class="item" data-id="1">
       <p>Edgar Allan Poe</p>
       <p>Ce que nous voyons ou croyons voir n’est qu’un rêve dans un rêve.</p>
       <div class="voir-plus">
@@ -74,7 +75,7 @@
         </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-id="2">
       <p>Jean Anouilh</p>
       <p>Rien n’est sérieux en ce bas monde que le rire.</p>
       <div class="voir-plus">
@@ -85,7 +86,7 @@
         </div>
     </div>
 
-    <div class="item">
+    <div class="item" data-id="3">
       <p>Aragon</p>
       <p>Il n’y a pas d’amour heureux.</p>
       <div class="voir-plus">
@@ -102,7 +103,7 @@
 
     <h3>B</h3>
 
-    <div class="item">
+    <div class="item" data-id="4">
       <p>Honoré de Balzac</p>
       <p>Le secret des grandes fortunes sans cause apparente, c'est un crime oublié.</p>
       <div class="voir-plus">
@@ -112,8 +113,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="5">
       <p>Honoré de Balzac</p>
       <p>L'amour est la seule passion qui ne souffre ni passé ni avenir.</p>
       <div class="voir-plus">
@@ -123,8 +123,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="6">
       <p>Charles Baudelaire</p>
       <p>Le beau est toujours bizarre.</p>
       <div class="voir-plus">
@@ -134,8 +133,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="7">
       <p>Charles Baudelaire</p>
       <p>Inspirer, c’est respirer à deux.</p>
       <div class="voir-plus">
@@ -145,8 +143,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="8">
       <p>Simone de Beauvoir</p>
       <p>On ne naît pas femme, on le devient.</p>
       <div class="voir-plus">
@@ -156,8 +153,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="9">
       <p>Simone de Beauvoir</p>
       <p>On ne naît pas vieux, on le devient.</p>
       <div class="voir-plus">
@@ -167,8 +163,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="10">
       <p>Samuel Beckett</p>
       <p>Déjà essayé. Déjà échoué. Peu importe. Essaie encore. Échoue encore. Échoue mieux.</p>
       <div class="voir-plus">
@@ -178,8 +173,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="11">
       <p>Samuel Beckett</p>
       <p>Je ne peux pas continuer. Je vais continuer.</p>
       <div class="voir-plus">
@@ -189,8 +183,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="12">
       <p>Georges Bernanos</p>
       <p>L'espérance est un risque à courir.</p>
       <div class="voir-plus">
@@ -200,8 +193,7 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="13">
       <p>George Bernard Shaw</p>
       <p>Le pouvoir ne corrompt pas, il révèle.</p>
       <div class="voir-plus">
@@ -211,10 +203,106 @@
         </button>
         </div>
     </div>
-
-    <div class="item">
+    <div class="item" data-id="14">
       <p>Christian Bobin</p>
       <p>La vie n’est pas un problème à résoudre mais un mystère à vivre.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item" data-id="15">
+      <p>Boileau</p>
+      <p>Hâtez-vous lentement, et sans perdre courage, vingt fois sur le métier remettez votre ouvrage.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item" data-id="16">
+      <p>Jorge Luis Borges</p>
+      <p>Nous sommes notre mémoire, ce chimérique musée des formes changeantes, ce monceau de miroirs brisés.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item" data-id="17">
+      <p>Jorge Luis Borges</p>
+      <p>La mort n'est qu'une habitude.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item" data-id="18">
+      <p>Ray Bradbury</p>
+      <p>Il n'y a pas besoin de brûler des livres pour détruire une culture. Il suffit d'empêcher les gens de les lire.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+
+  </div>
+
+  <div class="galerie">
+
+    <h3>C</h3>
+
+    <div class="item" data-id="19">
+      <p>Italo Calvino</p>
+      <p>Un classique est un livre qui n'a jamais fini de dire ce qu'il a à dire.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item" data-id="20">
+      <p>Albert Camus</p>
+      <p>La vraie générosité envers l'avenir consiste a tout donner au présent.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item" data-id="21">
+      <p>Albert Camus</p>
+      <p>Le destin n'est pas une question de chance, mais de choix.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item" data-id="22">
+      <p>Albert Camus</p>
+      <p>Il n’y a qu’un problème philosophique vraiment sérieux : c’est le suicide.</p>
+      <div class="voir-plus">
+        <button class="informations">Partager</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item" data-id="23">
+      <p>Albert Camus</p>
+      <p>La liberté est un bagne aussi longtemps qu’un seul homme est asservi sur la terre.</p>
       <div class="voir-plus">
         <button class="informations">Partager</button>
         <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
