@@ -710,3 +710,13 @@ footer {
     text-align: center;
     color: #1B0773;
 }
+
+#citations-page .item {
+    min-height: 220px;
+}
+
+#citations-page.grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;          /* vous gardez le même espacement */
+    padding: 60px;
+}
