@@ -720,3 +720,27 @@ footer {
     gap: 35px;          /* vous gardez le même espacement */
     padding: 60px;
 }
+
+ progress {
+  -webkit-appearance: none; /* désactiver le style natif WebKit */
+  appearance: none;         /* idem */
+  width: 75%;
+  height: 0.75rem;
+  margin-top: 15px;
+}
+
+/* WebKit : Chrome, Edge, Safari */
+progress::-webkit-progress-bar {
+  background-color: #E4CFBB; /* fond */
+  border-radius: 6px;
+}
+progress::-webkit-progress-value {
+  background-color: #AA6369; /* barre */
+  border-radius: 6px;
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+  background-color: #AA6369; /* barre */
+  border-radius: 6px;
+}
