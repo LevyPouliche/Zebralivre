@@ -15,31 +15,43 @@
   <nav class="menu">
     <ul class="menu-list">
       <ul>
-        <li class="menu-profil">
-          <a href="#"><img class="avatar-profil" src="djpony.jpg" alt="perso">
-            <p>Profil</p>
-<progress id="barre" value="0" max="100">0%</progress>
-          </a>
-          <ul class="sous-menu sous-menu-profil">
-            <li><a href="#">Classements</a></li>
-            <li><a href="#">Amis</a></li>
-          </ul></li></ul>
-          <li class="sous-menu menu-objectifs">
-            <a href="#">Objectifs</a>
-            <ul class="sous-menu sous-menu-objectifs">
-              <li><a href="#">Succès</a></li>
-            </ul></li>
-            <li class="menu-livres">
-              <a href="#">Livres Lus</a>
-              <ul class="sous-menu sous-menu-livres">
-                <li><a href="#">Notes personnelles</a></li>
-                <li><a href="#">Avis</a></li>
-                <li><a href="#">Top de l'année</a></li>
-                <li><a href="#">PAL</a></li>
-              </ul></li>
+  <li class="menu-profil">
+    <a href="#">
+      <img class="avatar-profil" src="djpony.jpg" alt="perso">
+      <p>Profil</p>
+      <progress id="barre" value="0" max="100">0%</progress>
+    </a>
+
+    <!-- Le sous-menu doit être en dehors du <a> -->
+    <ul class="sous-menu-profil">
+      <li><a href="#">Classements</a></li>
+      <li><a href="#">Amis</a></li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li class="menu-objectifs">
+    <a href="#">Objectifs</a>
+    <ul class="sous-menu-objectifs">
+      <li><a href="#">Succès</a></li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li class="menu-livres">
+    <a href="#">Livres Lus</a>
+    <ul class="sous-menu-livres">
+      <li><a href="#">Notes personnelles</a></li>
+      <li><a href="#">Avis</a></li>
+      <li><a href="#">Top de l'année</a></li>
+      <li><a href="#">PAL</a></li>
+    </ul>
+  </li>
+</ul>
+
               <li class="menu-citations">
                 <a href="Citations.html">Citations</a>
-                <ul class="sous-menu sous-menu-citations">
+                <ul class="sous-menu-citations">
                   <li><a href="#">Poèmes</a></li>
                   <li><a href="#">Communauté</a></li>
                 </ul></li>

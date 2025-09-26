@@ -59,6 +59,7 @@ body{
     align-items: center;
     flex-shrink: 0; 
     flex-direction: column;
+    position: relative;
 }
 
 .menu-profil a {
@@ -80,6 +81,29 @@ body{
     margin: 2px;
 }
 
+/* sous-menu caché par défaut */
+.sous-menu-profil {
+    display: none;              /* masqué tant qu'on ne survole pas le parent */
+    position: absolute;         /* se positionne par rapport au <li> parent */
+    top: 100%;                  /* juste en dessous du bloc Profil */
+    left: 0;
+    width: 125px;               /* même largeur que le parent pour l'alignement */
+    background-color: #B28D91;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    /* on peut aussi utiliser flex pour centrer les éléments du sous-menu */
+    display: none; /* on le remet ici pour être sûr */
+}
+
+/* au survol du bloc profil, on affiche le sous-menu */
+.menu-profil:hover .sous-menu-profil {
+    display: flex;              /* on garde la logique flex comme le parent */
+    flex-direction: column;     /* pour empiler les <li> */
+    align-items: stretch;       /* chaque lien prend toute la largeur */
+}
+
 .menu-objectifs   { background-color: #AF8890; }
 .menu-livres      { background-color: #AB828E; }
 .menu-citations   { background-color: #A87D8D; }
@@ -92,6 +116,68 @@ body{
 .menu-calendrier,
 .menu-connexion {
   flex: 1;
+  position: relative;
+}
+
+
+/* sous-menu caché par défaut */
+.sous-menu-objectifs {
+    display: none;              /* masqué tant qu'on ne survole pas le parent */
+    position: absolute;         /* se positionne par rapport au parent */
+    top: 100%;                  /* juste en dessous du bloc Objectifs */
+    left: 0;
+    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    background-color: #AF8890;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* au survol du bloc Objectifs, on affiche le sous-menu */
+.menu-objectifs:hover .sous-menu-objectifs {
+    display: flex;              /* si vous souhaitez le même rendu en flex */
+    flex-direction: column;     /* empile les éléments verticalement */
+    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
+}
+
+/* liens internes du sous-menu */
+.sous-menu-objectifs li a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* sous-menu caché par défaut */
+.sous-menu-livres {
+    display: none;              /* masqué tant qu'on ne survole pas le parent */
+    position: absolute;         /* se positionne par rapport au parent */
+    top: 100%;                  /* juste en dessous du bloc Objectifs */
+    left: 0;
+    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    background-color: #AB828E;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* au survol du bloc Objectifs, on affiche le sous-menu */
+.menu-livres:hover .sous-menu-livres {
+    display: flex;              /* si vous souhaitez le même rendu en flex */
+    flex-direction: column;     /* empile les éléments verticalement */
+    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
+}
+
+/* liens internes du sous-menu */
+.sous-menu-livres li a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
 }
 
 .menu-parametres  { 
