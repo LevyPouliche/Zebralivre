@@ -180,6 +180,126 @@ body{
     text-align: center;
 }
 
+/* sous-menu caché par défaut */
+.sous-menu-citations {
+    display: none;              /* masqué tant qu'on ne survole pas le parent */
+    position: absolute;         /* se positionne par rapport au parent */
+    top: 100%;                  /* juste en dessous du bloc Objectifs */
+    left: 0;
+    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    background-color: #A87D8D;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* au survol du bloc Objectifs, on affiche le sous-menu */
+.menu-citations:hover .sous-menu-citations {
+    display: flex;              /* si vous souhaitez le même rendu en flex */
+    flex-direction: column;     /* empile les éléments verticalement */
+    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
+}
+
+/* liens internes du sous-menu */
+.sous-menu-citations li a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* sous-menu caché par défaut */
+.sous-menu-calendrier {
+    display: none;              /* masqué tant qu'on ne survole pas le parent */
+    position: absolute;         /* se positionne par rapport au parent */
+    top: 100%;                  /* juste en dessous du bloc Objectifs */
+    left: 0;
+    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    background-color: #A4778B;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* au survol du bloc Objectifs, on affiche le sous-menu */
+.menu-calendrier:hover .sous-menu-calendrier {
+    display: flex;              /* si vous souhaitez le même rendu en flex */
+    flex-direction: column;     /* empile les éléments verticalement */
+    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
+}
+
+/* liens internes du sous-menu */
+.sous-menu-calendrier li a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* sous-menu caché par défaut */
+.sous-menu-connexion {
+    display: none;              /* masqué tant qu'on ne survole pas le parent */
+    position: absolute;         /* se positionne par rapport au parent */
+    top: 100%;                  /* juste en dessous du bloc Objectifs */
+    left: 0;
+    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    background-color: #9d7186;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* au survol du bloc Objectifs, on affiche le sous-menu */
+.menu-connexion:hover .sous-menu-connexion {
+    display: flex;              /* si vous souhaitez le même rendu en flex */
+    flex-direction: column;     /* empile les éléments verticalement */
+    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
+}
+
+/* liens internes du sous-menu */
+.sous-menu-connexion li a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* sous-menu caché par défaut */
+.sous-menu-parametres {
+    display: none;              /* masqué tant qu'on ne survole pas le parent */
+    position: absolute;         /* se positionne par rapport au parent */
+    top: 100%;                  /* juste en dessous du bloc Objectifs */
+    left: 0;
+    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    background-color: #966a81;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* au survol du bloc Objectifs, on affiche le sous-menu */
+.menu-parametres:hover .sous-menu-parametres {
+    display: flex;              /* si vous souhaitez le même rendu en flex */
+    flex-direction: column;     /* empile les éléments verticalement */
+    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
+}
+
+/* liens internes du sous-menu */
+.sous-menu-parametres li a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
 .menu-parametres  { 
     width: 125px;
     background-color: #966a81; 
