@@ -81,27 +81,22 @@ body{
     margin: 2px;
 }
 
-/* sous-menu caché par défaut */
 .sous-menu-profil {
-    display: none;              /* masqué tant qu'on ne survole pas le parent */
-    position: absolute;         /* se positionne par rapport au <li> parent */
-    top: 100%;                  /* juste en dessous du bloc Profil */
+    display: none;              
+    position: absolute;        
+    top: 100%;                 
     left: 0;
-    width: 125px;               /* même largeur que le parent pour l'alignement */
+    width: 125px;               
     background-color: #B28D91;
     list-style: none;
     margin: 0;
     padding: 0;
-
-    /* on peut aussi utiliser flex pour centrer les éléments du sous-menu */
-    display: none; /* on le remet ici pour être sûr */
 }
 
-/* au survol du bloc profil, on affiche le sous-menu */
 .menu-profil:hover .sous-menu-profil {
-    display: flex;              /* on garde la logique flex comme le parent */
-    flex-direction: column;     /* pour empiler les <li> */
-    align-items: stretch;       /* chaque lien prend toute la largeur */
+    display: flex;              
+    flex-direction: column;     
+    align-items: stretch;       
 }
 
 .menu-objectifs   { background-color: #AF8890; }
@@ -120,10 +115,9 @@ body{
 }
 
 
-/* sous-menu caché par défaut */
 .sous-menu-objectifs {
-    display: none;              /* masqué tant qu'on ne survole pas le parent */
-    position: absolute;         /* se positionne par rapport au parent */
+    display: none;              
+    position: absolute;         
     top: 100%;                  /* juste en dessous du bloc Objectifs */
     left: 0;
     width: 125px;               /* adaptez si vous voulez une largeur différente */
@@ -949,4 +943,21 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background-color: #AA6369; /* barre */
   border-radius: 6px;
+}
+
+#registerForm, #loginForm{
+    flex: 1 1 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: #faedcd;
+    text-align: center;
+}
+
+.formulaire{
+    padding-left: 150px;
+    display: flex;
+    flex-wrap: wrap;
 }
