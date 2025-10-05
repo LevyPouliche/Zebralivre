@@ -120,7 +120,7 @@ body{
     position: absolute;         
     top: 100%;                  /* juste en dessous du bloc Objectifs */
     left: 0;
-    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    width: 100%;               /* adaptez si vous voulez une largeur différente */
     background-color: #AF8890;
     list-style: none;
     margin: 0;
@@ -134,15 +134,20 @@ body{
     align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
 }
 
-/* liens internes du sous-menu */
 .sous-menu-objectifs li a {
-    display: block;
+    display: flex;                 /* active Flexbox */
+    justify-content: center;       /* centre horizontalement */
+    align-items: center;           /* centre verticalement */
+    width: 100%;                   /* occupe toute la largeur du sous-menu */
+    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
     padding: 8px 12px;
     color: white;
     text-decoration: none;
     font-size: 18px;
     text-align: center;
+    box-sizing: border-box;
 }
+
 
 /* sous-menu caché par défaut */
 .sous-menu-livres {
@@ -150,7 +155,7 @@ body{
     position: absolute;         /* se positionne par rapport au parent */
     top: 100%;                  /* juste en dessous du bloc Objectifs */
     left: 0;
-    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    width: 100%;            /* adaptez si vous voulez une largeur différente */
     background-color: #AB828E;
     list-style: none;
     margin: 0;
@@ -166,12 +171,17 @@ body{
 
 /* liens internes du sous-menu */
 .sous-menu-livres li a {
-    display: block;
+    display: flex;                 /* active Flexbox */
+    justify-content: center;       /* centre horizontalement */
+    align-items: center;           /* centre verticalement */
+    width: 100%;                   /* occupe toute la largeur du sous-menu */
+    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
     padding: 8px 12px;
     color: white;
     text-decoration: none;
     font-size: 18px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* sous-menu caché par défaut */
@@ -180,7 +190,7 @@ body{
     position: absolute;         /* se positionne par rapport au parent */
     top: 100%;                  /* juste en dessous du bloc Objectifs */
     left: 0;
-    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    width: 100%;               /* adaptez si vous voulez une largeur différente */
     background-color: #A87D8D;
     list-style: none;
     margin: 0;
@@ -194,15 +204,20 @@ body{
     align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
 }
 
-/* liens internes du sous-menu */
 .sous-menu-citations li a {
-    display: block;
+    display: flex;                 /* active Flexbox */
+    justify-content: center;       /* centre horizontalement */
+    align-items: center;           /* centre verticalement */
+    width: 100%;                   /* occupe toute la largeur du sous-menu */
+    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
     padding: 8px 12px;
     color: white;
     text-decoration: none;
     font-size: 18px;
     text-align: center;
+    box-sizing: border-box;
 }
+
 
 /* sous-menu caché par défaut */
 .sous-menu-calendrier {
@@ -210,7 +225,7 @@ body{
     position: absolute;         /* se positionne par rapport au parent */
     top: 100%;                  /* juste en dessous du bloc Objectifs */
     left: 0;
-    width: 125px;               /* adaptez si vous voulez une largeur différente */
+   width: 100%;              /* adaptez si vous voulez une largeur différente */
     background-color: #A4778B;
     list-style: none;
     margin: 0;
@@ -226,12 +241,17 @@ body{
 
 /* liens internes du sous-menu */
 .sous-menu-calendrier li a {
-    display: block;
+    display: flex;                 /* active Flexbox */
+    justify-content: center;       /* centre horizontalement */
+    align-items: center;           /* centre verticalement */
+    width: 100%;                   /* occupe toute la largeur du sous-menu */
+    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
     padding: 8px 12px;
     color: white;
     text-decoration: none;
     font-size: 18px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* sous-menu caché par défaut */
@@ -240,7 +260,7 @@ body{
     position: absolute;         /* se positionne par rapport au parent */
     top: 100%;                  /* juste en dessous du bloc Objectifs */
     left: 0;
-    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    width: 100%;               /* adaptez si vous voulez une largeur différente */
     background-color: #9d7186;
     list-style: none;
     margin: 0;
@@ -256,12 +276,17 @@ body{
 
 /* liens internes du sous-menu */
 .sous-menu-connexion li a {
-    display: block;
+    display: flex;                 /* active Flexbox */
+    justify-content: center;       /* centre horizontalement */
+    align-items: center;           /* centre verticalement */
+    width: 100%;                   /* occupe toute la largeur du sous-menu */
+    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
     padding: 8px 12px;
     color: white;
     text-decoration: none;
     font-size: 18px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* sous-menu caché par défaut */
@@ -270,7 +295,7 @@ body{
     position: absolute;         /* se positionne par rapport au parent */
     top: 100%;                  /* juste en dessous du bloc Objectifs */
     left: 0;
-    width: 125px;               /* adaptez si vous voulez une largeur différente */
+    width: 100%;               /* adaptez si vous voulez une largeur différente */
     background-color: #966a81;
     list-style: none;
     margin: 0;
@@ -286,12 +311,17 @@ body{
 
 /* liens internes du sous-menu */
 .sous-menu-parametres li a {
-    display: block;
+    display: flex;                 /* active Flexbox */
+    justify-content: center;       /* centre horizontalement */
+    align-items: center;           /* centre verticalement */
+    width: 100%;                   /* occupe toute la largeur du sous-menu */
+    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
     padding: 8px 12px;
     color: white;
     text-decoration: none;
     font-size: 18px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .menu-parametres  { 
