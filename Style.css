@@ -1,110 +1,55 @@
+/*Minimisé*/
 /*Petite taille, format portrait, adapté au tactile.*/
 @media screen and (max-width:768px) and (orientation: portrait) and (pointer: coarse){
 }
-
+/*Minimisé*/
 /*Grande taille, format paysage.*/
 @media screen and (min-width: 1024px) and (orientation: landscape){
 }
-
+/*Minimisé*/
 body{
     background-color: #faedcd; 
     font-family: 'quicksand', Arial, sans-serif; 
 }
-
+/*Minimisé*/
 .menu{
-    font-family: 'quicksand', Arial, sans-serif;
     display: flex;
     width: 100%;
     height: 125px; 
     box-sizing: border-box;
-}
-
-.menu-list {
-    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
     flex-direction: row;
-    width: 100%;
-    height: 125px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.menu-list li {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 125px;
-    box-sizing: border-box;
     color: white;
-}
-
-.menu-list a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
     text-decoration: none;
-    color: white;
-    flex-direction: column;
-  }
-
-.menu-profil {
-    width: 125px;
+}
+/*Minimisé*/
+.menu-list {
+    width: 100%;
     height: 125px;
-    background-color: #B28D91;
-    color: white;
-    display: flex;
+}
+/*Minimisé*/
+.menu-list li {
+    height: 125px;
+}
+/*Minimisé*/
+.menu-list a {
     justify-content: center;
-    align-items: center;
-    flex-shrink: 0; 
+    height: 100%;
     flex-direction: column;
-    position: relative;
 }
-
-.menu-profil a {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 14px;
-    overflow: visible;
-}
-  
-.menu-profil a img {
-    margin-top: 15px;
-    width: 60px;
-    height: auto;
-}
-  
-.menu-profil p{
-    padding: 0px;
-    margin: 2px;
-}
-
-.sous-menu-profil {
-    display: none;              
-    position: absolute;        
-    top: 100%;                 
-    left: 0;
-    width: 125px;               
-    background-color: #B28D91;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu-profil:hover .sous-menu-profil {
-    display: flex;              
-    flex-direction: column;     
-    align-items: stretch;       
-}
-
-.menu-objectifs   { background-color: #AF8890; }
-.menu-livres      { background-color: #AB828E; }
-.menu-citations   { background-color: #A87D8D; }
-.menu-calendrier  { background-color: #A4778B; }
-.menu-connexion   { background-color: #9d7186; }
-
+/*Minimisé*/
+.menu-profil, .sous-menu-profil { background-color: #B28D91; }
+.menu-objectifs, .sous-menu-objectifs { background-color: #AF8890; }
+.menu-livres, .sous-menu-livres { background-color: #AB828E; }
+.menu-citations, .sous-menu-citations { background-color: #A87D8D; }
+.menu-calendrier, .sous-menu-calendrier { background-color: #A4778B; }
+.menu-connexion, .sous-menu-connexion { background-color: #9d7186; }
+.menu-parametres, .sous-menu-parametres { background: #966a81; }
+/*Minimisé*/
 .menu-objectifs,
 .menu-livres,
 .menu-citations,
@@ -113,230 +58,78 @@ body{
   flex: 1;
   position: relative;
 }
-
-
-.sous-menu-objectifs {
-    display: none;              
-    position: absolute;         
-    top: 100%;                  /* juste en dessous du bloc Objectifs */
-    left: 0;
-    width: 100%;               /* adaptez si vous voulez une largeur différente */
-    background-color: #AF8890;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* au survol du bloc Objectifs, on affiche le sous-menu */
-.menu-objectifs:hover .sous-menu-objectifs {
-    display: flex;              /* si vous souhaitez le même rendu en flex */
-    flex-direction: column;     /* empile les éléments verticalement */
-    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
-}
-
-.sous-menu-objectifs li a {
-    display: flex;                 /* active Flexbox */
-    justify-content: center;       /* centre horizontalement */
-    align-items: center;           /* centre verticalement */
-    width: 100%;                   /* occupe toute la largeur du sous-menu */
-    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
-    padding: 8px 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-
-/* sous-menu caché par défaut */
-.sous-menu-livres {
-    display: none;              /* masqué tant qu'on ne survole pas le parent */
-    position: absolute;         /* se positionne par rapport au parent */
-    top: 100%;                  /* juste en dessous du bloc Objectifs */
-    left: 0;
-    width: 100%;            /* adaptez si vous voulez une largeur différente */
-    background-color: #AB828E;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* au survol du bloc Objectifs, on affiche le sous-menu */
-.menu-livres:hover .sous-menu-livres {
-    display: flex;              /* si vous souhaitez le même rendu en flex */
-    flex-direction: column;     /* empile les éléments verticalement */
-    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
-}
-
-/* liens internes du sous-menu */
-.sous-menu-livres li a {
-    display: flex;                 /* active Flexbox */
-    justify-content: center;       /* centre horizontalement */
-    align-items: center;           /* centre verticalement */
-    width: 100%;                   /* occupe toute la largeur du sous-menu */
-    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
-    padding: 8px 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-/* sous-menu caché par défaut */
-.sous-menu-citations {
-    display: none;              /* masqué tant qu'on ne survole pas le parent */
-    position: absolute;         /* se positionne par rapport au parent */
-    top: 100%;                  /* juste en dessous du bloc Objectifs */
-    left: 0;
-    width: 100%;               /* adaptez si vous voulez une largeur différente */
-    background-color: #A87D8D;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* au survol du bloc Objectifs, on affiche le sous-menu */
-.menu-citations:hover .sous-menu-citations {
-    display: flex;              /* si vous souhaitez le même rendu en flex */
-    flex-direction: column;     /* empile les éléments verticalement */
-    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
-}
-
-.sous-menu-citations li a {
-    display: flex;                 /* active Flexbox */
-    justify-content: center;       /* centre horizontalement */
-    align-items: center;           /* centre verticalement */
-    width: 100%;                   /* occupe toute la largeur du sous-menu */
-    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
-    padding: 8px 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-
-/* sous-menu caché par défaut */
-.sous-menu-calendrier {
-    display: none;              /* masqué tant qu'on ne survole pas le parent */
-    position: absolute;         /* se positionne par rapport au parent */
-    top: 100%;                  /* juste en dessous du bloc Objectifs */
-    left: 0;
-   width: 100%;              /* adaptez si vous voulez une largeur différente */
-    background-color: #A4778B;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* au survol du bloc Objectifs, on affiche le sous-menu */
-.menu-calendrier:hover .sous-menu-calendrier {
-    display: flex;              /* si vous souhaitez le même rendu en flex */
-    flex-direction: column;     /* empile les éléments verticalement */
-    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
-}
-
-/* liens internes du sous-menu */
-.sous-menu-calendrier li a {
-    display: flex;                 /* active Flexbox */
-    justify-content: center;       /* centre horizontalement */
-    align-items: center;           /* centre verticalement */
-    width: 100%;                   /* occupe toute la largeur du sous-menu */
-    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
-    padding: 8px 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-/* sous-menu caché par défaut */
-.sous-menu-connexion {
-    display: none;              /* masqué tant qu'on ne survole pas le parent */
-    position: absolute;         /* se positionne par rapport au parent */
-    top: 100%;                  /* juste en dessous du bloc Objectifs */
-    left: 0;
-    width: 100%;               /* adaptez si vous voulez une largeur différente */
-    background-color: #9d7186;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* au survol du bloc Objectifs, on affiche le sous-menu */
-.menu-connexion:hover .sous-menu-connexion {
-    display: flex;              /* si vous souhaitez le même rendu en flex */
-    flex-direction: column;     /* empile les éléments verticalement */
-    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
-}
-
-/* liens internes du sous-menu */
-.sous-menu-connexion li a {
-    display: flex;                 /* active Flexbox */
-    justify-content: center;       /* centre horizontalement */
-    align-items: center;           /* centre verticalement */
-    width: 100%;                   /* occupe toute la largeur du sous-menu */
-    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
-    padding: 8px 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-/* sous-menu caché par défaut */
-.sous-menu-parametres {
-    display: none;              /* masqué tant qu'on ne survole pas le parent */
-    position: absolute;         /* se positionne par rapport au parent */
-    top: 100%;                  /* juste en dessous du bloc Objectifs */
-    left: 0;
-    width: 100%;               /* adaptez si vous voulez une largeur différente */
-    background-color: #966a81;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* au survol du bloc Objectifs, on affiche le sous-menu */
-.menu-parametres:hover .sous-menu-parametres {
-    display: flex;              /* si vous souhaitez le même rendu en flex */
-    flex-direction: column;     /* empile les éléments verticalement */
-    align-items: stretch;       /* chaque lien occupe la largeur du sous-menu */
-}
-
-/* liens internes du sous-menu */
-.sous-menu-parametres li a {
-    display: flex;                 /* active Flexbox */
-    justify-content: center;       /* centre horizontalement */
-    align-items: center;           /* centre verticalement */
-    width: 100%;                   /* occupe toute la largeur du sous-menu */
-    height: 100%;                  /* utile si vous fixez une hauteur aux éléments */
-    padding: 8px 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.menu-parametres  { 
-    width: 125px;
-    background-color: #966a81; 
+/*Minimisé*/
+.menu-profil a,
+.menu-objectifs a,
+.menu-livres a,
+.menu-citations a, 
+.menu-calendrier a, 
+.menu-connexion a, 
+.menu-parametres a {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0; 
+    align-items: center; 
+    font-size: 20px;
 }
-
+/*Minimisé*/
+.menu-profil,
+.menu-parametres {
+    width: 125px;
+    height: 125px;
+}
+/*Minimisé*/ 
+.menu-profil a img {
+    margin-top: 15px;
+    width: 60px;
+    height: auto;
+}
+/*Minimisé*/  
+.menu-profil p{
+    padding: 0px;
+    margin: 2px;
+}
+/*Minimisé*/ 
 .menu-parametres a img {
     margin-top: 15px;
     width: 60px;        
     height: auto;     
+}
+/*Minimisé*/ 
+.sous-menu-profil, 
+.sous-menu-objectifs,
+.sous-menu-livres,
+.sous-menu-citations,
+.sous-menu-calendrier,
+.sous-menu-connexion,
+.sous-menu-parametres {
+    display: none;              
+    position: absolute;        
+    top: 100%;                 
+    left: 0;
+    width: 100%;               
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*Minimisé*/ 
+.menu-profil:hover .sous-menu-profil, 
+.menu-objectifs:hover .sous-menu-objectifs,
+.menu-livres:hover .sous-menu-livres,
+.menu-citations:hover .sous-menu-citations,
+.menu-calendrier:hover .sous-menu-calendrier,
+.menu-connexion:hover .sous-menu-connexion {
+    display: flex;              
+    flex-direction: column;     
+    align-items: stretch;       
+}
+/*Minimisé*/ 
+.sous-menu-profil li a,
+.sous-menu-objectifs li a,
+.sous-menu-livres li a,
+.sous-menu-citations li a,
+.sous-menu-calendrier li a,
+.sous-menu-connexion li a,
+.sous-menu-parametres li a {
+    font-size: 18px;
 }
 
 .navbar-vertical {
