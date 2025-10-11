@@ -131,7 +131,7 @@ body{
 .sous-menu-parametres li a {
     font-size: 18px;
 }
-
+/*Minimisé*/
 .navbar-vertical {
     position: fixed;
     top: 120px;
@@ -143,19 +143,19 @@ body{
     flex-direction: column;
     font-weight: bold;
 }
-  
+/*Minimisé*/
 .navbar-vertical a {
     color: #966a81;
     padding: 13px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
-
+/*Minimisé*/
 .navbar-vertical a img{
     height: 35px;
     width: 35px;
 }
-
+/*Minimisé*/
 .rechercher {
     height: 60px;
     background-color: #966a81;
@@ -167,7 +167,7 @@ body{
     margin: 35px 300px;
     border-radius: 10px;
 }
-
+/*Minimisé*/
 .rechercher input[type="text"] {
     width: 60%; 
     height: 65%; 
@@ -177,7 +177,7 @@ body{
     border-radius: 10px;
     color: black;
 }
-
+/*Minimisé*/
 .rechercher button.rechercher-btn {
     width: 40%; 
     height: 100%; 
@@ -191,71 +191,110 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
+/*Minimisé*/
 .rechercher button.rechercher-btn:hover {
     background-color: #A87D8D;
     color: white;
 } 
-
+/*Minimisé*/
 li{
     list-style:none !important; 
     font-size:22px;
     text-align: center;
 }
-     
+/*Minimisé*/    
 nav ul{
     display: flex; 
-    padding:0;
-    margin:0;
-}
-       
-nav ul li{
+    padding: 0;
     margin: auto;
-    float:none;
-    position: relative; 
-    padding:0;
-    margin:0;
-    list-style: none;
 }
-
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 125px; 
-    left: 0;
-}
-
-nav ul li:hover ul, 
-nav ul li ul:hover {
-    display: block;
-    z-index: 99999;
-}
-
+/*Minimisé*/ 
 nav ul li a{
     color: #FFF;
     text-decoration: none;
 }
-  
+/*Minimisé*/   
 li a:hover{
     border-bottom: 5px #FFF solid;
 }
-  
-nav ul li:hover ul{ 
-    list-style: none !important;
-    z-index: 99999;
-    display: list-item !important;
-    position: absolute;
-    margin-left: -10px;
+/*Minimisé*/ 
+.section-populaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px;      
+    margin: 40px 0; 
+    text-align: center;
+    color: #1B0773;      
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-    gap: 35px;
-    padding: 60px; 
-    box-sizing: border-box;
+.section-populaire img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
-
+/*Minimisé*/ 
+.informations {
+    display: inline-block;       
+    width: auto;                 
+    height: auto;                
+    background-color: #966a81;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 16px;          
+    text-align: center;
+    white-space: nowrap;        
+}
+/*Minimisé*/ 
+.informations:hover {
+    background-color: #B28D91; 
+    color: white;         
+}
+/*Minimisé*/ 
+.galerie-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 140px;
+    overflow: hidden;
+}
+/*Minimisé*/ 
+.fleche {
+    font-size: 32px;
+    color: #966a81;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+}
+/*Minimisé*/ 
+.fleche.gauche {
+    margin-right: 10px;
+}
+/*Minimisé*/   
+.fleche.droite {
+    margin-left: 10px;
+}
+/*Minimisé*/ 
+.galerie-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 10px;
+    width: 100%;
+}
+/*Minimisé*/ 
+.galerie-carousel img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+/*Minimisé*/ 
 .item {
     background-color: #E4CFBB; 
     border: 5px solid #966a81; 
@@ -271,14 +310,97 @@ nav ul li:hover ul{
     box-sizing: border-box; 
     padding: 10px;
 }
-
+/*Minimisé*/ 
 .item img {
     max-width: 100%; 
     max-height: 100%; 
     margin: auto; 
     display: block;
-    background-color: #fff; 
+    background-color: #E4CFBB; 
 }
+/*Minimisé*/ 
+.youtube{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: #faedcd;
+    text-align: center;
+    color: #1B0773;
+}
+/*Minimisé*/ 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: #faedcd;
+    text-align: center;
+}
+/*Minimisé*/
+.footer-button {
+    padding: 0.75em 1.5em;
+    background-color: #966a81;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+/*Minimisé*/
+.footer-button:hover {
+    background-color: #A87D8D;
+    color: white;
+}
+/*Minimisé*/
+.discord-button img, .google-button img {
+    width: 30px;
+}
+/*Minimisé*/
+.discord-button:hover {
+    background-color: #4752C4;
+    transform: scale(1.05);
+}
+/*Minimisé*/
+.google-button:hover {
+    transform: scale(1.05);
+}
+/*Minimisé*/
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+  margin-top: 10px;
+}
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 16px;
+    padding: 0 16px;
+    margin: 0;
+    margin-left: 160px; 
+    box-sizing: border-box;
+}
+  
+.galerie img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 35px;
+    padding: 60px; 
+    box-sizing: border-box;
+}
+
+
 
 .star-rating {
     display: flex;
@@ -413,125 +535,7 @@ nav ul li:hover ul{
     color: white;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    background-color: #faedcd;
-    text-align: center;
-}
   
-.footer {
-    font-family: 'quicksand', Arial, sans-serif;
-    margin-bottom: 1em;
-}
-  
-.footer-button {
-    padding: 0.75em 1.5em;
-    background-color: #966a81;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.footer-button:hover {
-    background-color: #A87D8D;
-    color: white;
-}
-
-.galerie {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-    gap: 16px;
-    padding: 0 16px;
-    margin: 0;
-    margin-left: 160px; 
-    box-sizing: border-box;
-}
-  
-.galerie img {
-    width: 100%; 
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-  
-.livre-populaire{
-    text-align: center;
-    color: #1B0773;
-}
-  
-.informations {
-    display: inline-block;       
-    width: auto;                 
-    height: auto;                
-    background-color: #966a81;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 8px 16px;          
-    text-align: center;
-    white-space: nowrap;        
-}
-
-.informations:hover {
-    background-color: #B28D91; 
-    color: white;         
-}
-
-.section-populaire {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    gap: 10px;      
-    margin: 40px 0;       
-}
-  
-.galerie-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-left: 140px;
-    overflow: hidden;
-}
-  
-.fleche {
-    font-size: 32px;
-    color: #966a81;
-    cursor: pointer;
-    user-select: none;
-    padding: 10px;
-}
-  
-.fleche.gauche {
-    margin-right: 10px;
-}
-  
-.fleche.droite {
-    margin-left: 10px;
-}
-
-.galerie-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 16px;
-    padding: 10px;
-    width: 100%;
-}
-
-.galerie-carousel img {
-    width: 150px;
-    height: auto;
-    object-fit: cover;
-}
-
 .coeur-btn {
     background: none;
     border: none;
@@ -562,49 +566,11 @@ footer {
     gap: 10px; 
 }
   
-.auteur-jour{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    background-color: #faedcd;
-    text-align: center;
-    color: #1B0773;
-
-}
-
-.auteur-jour img{
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-
 .auteur{
     padding: 60px; 
 }
 
-.discord-button img, .google-button img {
-    width: 30px;
-}
 
-.discord-button:hover {
-    background-color: #4752C4;
-    transform: scale(1.05);
-}
-
-.footer-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px; 
-  margin-top: 10px;
-}
-
-.google-button:hover {
-    transform: scale(1.05);
-}
 
 .calendar {
     margin-left: 220px;
@@ -723,16 +689,7 @@ footer {
   display: block;
 }
 
-.youtube{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    background-color: #faedcd;
-    text-align: center;
-    color: #1B0773;
-}
+
 
 #citations-page .item {
     min-height: 220px;
