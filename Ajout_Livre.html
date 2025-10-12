@@ -335,85 +335,10 @@
       <option value="Revue">Revue</option>
       <option value="Jeunesse">Jeunesse</option>
     </select><br>
-    <label for="Pays_Auteur">Pays de l'auteur</label>
-    <select id="Pays_Auteur" name="Pays_Auteur" required>
-      <option value="">Sélectionnez un pays</option>
-      <option value="af">Afghanistan</option>
-      <option value="za">Afrique du Sud</option>
-      <option value="ax">Aland, îles</option>
-      <option value="al">Albanie</option>
-      <option value="dz">Algérie</option>
-      <option value="de">Allemagne</option>
-      <option value="ad">Andorre</option>
-      <option value="ao">Angola</option>
-      <option value="ai">Anguilla</option>
-      <option value="aq">Antarctique</option>
-      <option value="ag">Antigua-et-Barbuda</option>
-      <option value="sa">Arabie Saoudite</option>
-      <option value="ar">Argentine</option>
-      <option value="am">Arménie</option>
-      <option value="aw">Aruba</option>
-      <option value="au">Australie</option>
-      <option value="az">Azerbaidjan</option>
-      <option value="bs">Bahamas</option>
-      <option value="bh">Bahrein</option>
-      <option value="bd">Bangladesh</option>
-      <option value="bb">Barbade</option>
-      <option value="by">Bélarus</option>
-      <option value="be">Belgique</option>
-      <option value="bz">Belize</option>
-      <option value="bj">Bénin</option>
-      <option value="bm">Bermudes</option>
-      <option value="bt">Bhoutan</option>
-      <option value="bo">Bolivie</option>
-      <option value="bq">Bonaire</option>
-      <option value="ba">Bosnie-Herzégovine</option>
-      <option value="bw">Botswana</option>
-      <option value="bv">Bouvet, île</option>
-      <option value="br">Brésil</option>
-      <option value="bn">Brunei darussalam</option>
-      <option value="bg">Bulgarie</option>
-      <option value="bf">Burkina Faso</option>
-      <option value="bi">Burundi</option>
-      <option value="ky">Caimans, îles</option>
-      <option value="kh">Cambodge</option>
-      <option value="cm">Cameroun</option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
   </form>
 </div>
 
-<!--Scrips-->
-<script>
-  const select = document.getElementById("Annee_Publication");
-  const anneeActuelle = new Date().getFullYear();
-  const premiereAnnee = 1000; // ou une autre année de départ
-
-  for (let annee = anneeActuelle; annee >= premiereAnnee; annee--) {
-    const option = document.createElement("option");
-    option.value = annee;
-    option.textContent = annee;
-    select.appendChild(option);
-  }
-</script>
+<script src="Annee.js"></script>
 <script src="Galerie.js"></script>
 <script src="Favoris.js"></script>
 <script src="Avatar.js"></script>
