@@ -75,6 +75,7 @@ body{
 .menu-parametres {
     width: 125px;
     height: 125px;
+    position: relative;
 }
 /*Minimisé*/ 
 .menu-profil a img {
@@ -93,6 +94,17 @@ body{
     width: 60px;        
     height: auto;     
 }
+/*Minimisé*/ 
+.sous-menu-profil,
+.sous-menu-objectifs,
+.sous-menu-livres,
+.sous-menu-citations,
+.sous-menu-calendrier,
+.sous-menu-connexion,
+.sous-menu-parametres {
+  z-index: 999;
+}
+
 /*Minimisé*/ 
 .sous-menu-profil, 
 .sous-menu-objectifs,
@@ -116,7 +128,8 @@ body{
 .menu-livres:hover .sous-menu-livres,
 .menu-citations:hover .sous-menu-citations,
 .menu-calendrier:hover .sous-menu-calendrier,
-.menu-connexion:hover .sous-menu-connexion {
+.menu-connexion:hover .sous-menu-connexion
+.menu-parametres:hover .sous-menu-parametres {
     display: flex;              
     flex-direction: column;     
     align-items: stretch;       
