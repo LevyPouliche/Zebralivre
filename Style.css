@@ -787,3 +787,25 @@ input[type="text"] {
   background-color: #006d77;
   color: white;
 }
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espace entre l’icône et le texte */
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 8px 12px;
+  width: fit-content; /* ajuste la largeur au contenu */
+}
+
+.badge-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.badge-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
