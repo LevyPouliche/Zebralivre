@@ -53,20 +53,40 @@
         
       </header>
 
-    <div class="timer-wrapper">
-        <div id="timer">00:00:00</div>
-    
-        <div class="button-group">
-            <button id="startBtn" onclick="demarrer()">Démarrer</button>
-            <button id="stopBtn" onclick="arreter()" disabled>Arrêter</button>
-            <button id="resetBtn" onclick="reinitialiser()" disabled>Réinitialiser</button>
-        </div>
-    
-        <div class="button-group">
-            <input type="text" id="tempsAjouter" placeholder="Ex: 01:15">
-            <button onclick="ajouterTemps()" id="Ajoutertemps">Ajouter Temps</button>
-        </div>
+  <div class="timer-wrapper">
+
+    <div id="timer">00:00:00</div>
+
+    <div class="button-group">
+        <select id="mesLivres" onchange="selectionLivre()">
+    <option value="">Mes livres</option>
+    <option value="livre1">Livre 1</option>
+    <option value="livre2">Livre 2</option>
+    <option value="livre3">Livre 3</option>
+</select>
+
+
+        <button id="ajoutLivre" onclick="envoyerLivre()">
+            <img src="Images/ChatGPT Image 29 nov. 2025, 12_08_53.png" alt="Ajouter un livre">
+        </button>
     </div>
+
+     <div class="button-group">
+        <button id="startBtn" onclick="demarrer()" disabled>Démarrer</button>
+        <button id="stopBtn" onclick="arreter()" disabled>Arrêter</button>
+        <button id="resetBtn" onclick="reinitialiser()" disabled>Réinitialiser</button>
+    </div>
+
+    <div class="button-group">
+        <input type="text" id="tempsAjouter" placeholder="Ex: 01:15" disabled>
+        <button onclick="ajouterTemps()" id="Ajoutertemps" disabled>Ajouter Temps</button>
+    </div>
+
+    <!-- Zone d'affichage du livre sélectionné -->
+    <div id="livreSelectionne" style="margin-top: 15px; font-weight: bold;"></div>
+
+</div>
+
 
 <script>
 class Timer {
@@ -171,6 +191,46 @@ function ajouterTemps() {
         resetBtn.disabled = false;
     }
 }
+
+function envoyerLivre() {
+    const select = document.getElementById("mesLivres");
+    const livreChoisi = select.value;
+
+    if (!livreChoisi) {
+        alert("Veuillez sélectionner un livre.");
+        return;
+    }
+
+    // Affiche le livre sélectionné dans la div
+    const affichage = document.getElementById("livreSelectionne");
+    affichage.textContent = livreChoisi;
+}
+
+function selectionLivre() {
+    const select = document.getElementById("mesLivres");
+    const livreChoisi = select.value;
+
+    const inputTemps = document.getElementById("tempsAjouter");
+    const boutonTemps = document.getElementById("Ajoutertemps");
+    const boutonStart = document.getElementById("startBtn");
+
+    if (livreChoisi) {
+        // Activer temps + bouton démarrer
+        inputTemps.disabled = false;
+        boutonTemps.disabled = false;
+        boutonStart.disabled = false;
+    } else {
+        // Désactiver si aucun livre
+        inputTemps.disabled = true;
+        boutonTemps.disabled = true;
+        boutonStart.disabled = true;
+    }
+}
+
+
+
+
+
 </script>
 
     </body>
