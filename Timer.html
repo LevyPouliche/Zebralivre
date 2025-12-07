@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
     <header>
@@ -87,151 +88,12 @@
 
 </div>
 
-
-<script>
-class Timer {
-    constructor(affichageElement) {
-        this.affichageElement = affichageElement;
-        this.reset();
-        this.interval = null;
-    }
-
-    start() {
-        if (!this.interval) {
-            this.startTime = Date.now() - this.elapsedTime;
-            this.interval = setInterval(() => {
-                this.elapsedTime = Date.now() - this.startTime;
-                this.afficherTemps();
-            }, 1000);
-        }
-    }
-
-    stop() {
-        if (this.interval) {
-            clearInterval(this.interval);
-            this.interval = null;
-        }
-    }
-
-    reset() {
-        this.stop();
-        this.elapsedTime = 0;
-        this.startTime = null;
-        this.afficherTemps();
-    }
-
-    ajouterTemps(listeDeTemps) {
-    let totalSecondes = 0;
-    listeDeTemps.forEach(temps => {
-        const [heures, minutes] = temps.split(':').map(Number);
-        if (isNaN(heures) || isNaN(minutes)) return; // Validation simple
-        totalSecondes += (heures * 3600) + (minutes * 60);
-    });
-
-    this.elapsedTime += totalSecondes * 1000;
-    if (this.startTime) {
-        this.startTime = Date.now() - this.elapsedTime;
-    }
-    this.afficherTemps();
-}
-
-    afficherTemps() {
-        let totalSecondes = Math.floor(this.elapsedTime / 1000);
-        const heures = Math.floor(totalSecondes / 3600);
-        const minutes = Math.floor((totalSecondes % 3600) / 60);
-        const secondes = totalSecondes % 60;
-
-        const tempsFormate = [
-            String(heures).padStart(2, '0'),
-            String(minutes).padStart(2, '0'),
-            String(secondes).padStart(2, '0')
-        ].join(':');
-
-        this.affichageElement.textContent = tempsFormate;
-    }
-}
-
-// Création du Timer
-const monTimer = new Timer(document.getElementById('timer'));
-
-// Récupération des boutons
-const startBtn = document.getElementById('startBtn');
-const stopBtn = document.getElementById('stopBtn');
-const resetBtn = document.getElementById('resetBtn');
-
-// Fonctions appelées par onclick
-function demarrer() {
-    monTimer.start();
-    startBtn.disabled = true;    // Désactiver "Démarrer"
-    stopBtn.disabled = false;    // Activer "Arrêter"
-    resetBtn.disabled = false;   // Activer "Réinitialiser"
-}
-
-function arreter() {
-    monTimer.stop();
-    startBtn.disabled = false;   // Activer "Démarrer"
-    stopBtn.disabled = true;     // Désactiver "Arrêter"
-    resetBtn.disabled = false;   // "Réinitialiser" reste actif
-}
-
-function reinitialiser() {
-    monTimer.reset();
-    startBtn.disabled = false;   // Activer "Démarrer"
-    stopBtn.disabled = true;     // Désactiver "Arrêter"
-    resetBtn.disabled = true;    // Désactiver "Réinitialiser"
-}
-
-function ajouterTemps() {
-    const input = document.getElementById('tempsAjouter');
-    const temps = input.value.trim();
-    if (temps) {
-        monTimer.ajouterTemps([temps]);
-        input.value = '';
-        // Facultatif : activer Réinitialiser si on ajoute du temps
-        resetBtn.disabled = false;
-    }
-}
-
-function envoyerLivre() {
-    const select = document.getElementById("mesLivres");
-    const livreChoisi = select.value;
-
-    if (!livreChoisi) {
-        alert("Veuillez sélectionner un livre.");
-        return;
-    }
-
-    // Affiche le livre sélectionné dans la div
-    const affichage = document.getElementById("livreSelectionne");
-    affichage.textContent = livreChoisi;
-}
-
-function selectionLivre() {
-    const select = document.getElementById("mesLivres");
-    const livreChoisi = select.value;
-
-    const inputTemps = document.getElementById("tempsAjouter");
-    const boutonTemps = document.getElementById("Ajoutertemps");
-    const boutonStart = document.getElementById("startBtn");
-
-    if (livreChoisi) {
-        // Activer temps + bouton démarrer
-        inputTemps.disabled = false;
-        boutonTemps.disabled = false;
-        boutonStart.disabled = false;
-    } else {
-        // Désactiver si aucun livre
-        inputTemps.disabled = true;
-        boutonTemps.disabled = true;
-        boutonStart.disabled = true;
-    }
-}
+<div id="resumeJours" style="margin-top:20px; font-weight:bold;"></div>
 
 
+<canvas id="barChart"></canvas>
 
-
-
-</script>
+<script src="Timer.js"></script>
 
     </body>
 </html>
