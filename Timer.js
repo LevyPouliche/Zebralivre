@@ -17,32 +17,32 @@ function chargerHeures() {
 
     let heuresTravaillees = new Array(jours.length).fill(0);
 
-    // Création du graphique
-    const barChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: jours,
-            datasets: [{
-                label: "Nombre d'heures",
-                data: heuresTravaillees,
-                backgroundColor: "rgba(54, 162, 235, 0.6)",
-                borderColor: "rgba(54, 162, 235, 1)",
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    max: 24,
-                    title: {
-                        display: true,
-                        text: "Heures"
-                    }
+   // Création du graphique
+const barChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: jours,
+        datasets: [{
+            label: "Nombre d'heures",
+            data: heuresTravaillees,
+            backgroundColor: "rgba(56,163,165,0.5)",   // Couleur demandée
+            borderColor: "#38A3A5",                   // Bordure demandée
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 24,
+                title: {
+                    display: true,
+                    text: "Heures"
                 }
             }
         }
-    });
+    }
+});
 
 function ajouterTempsAuJour(secondes) {
     let heures = secondes / 3600;
@@ -222,3 +222,7 @@ function selectionLivre() {
         boutonStart.disabled = true;
     }
 }
+
+
+
+

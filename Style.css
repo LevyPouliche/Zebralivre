@@ -729,9 +729,24 @@ footer {
 
 .button-group {
     display: flex;
-    align-items: center; 
-    gap: 10px;           /* espace entre les éléments */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
 }
+
+#resumeJours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    color: #38a3a5;
+    font-weight: 300;
+}
+
+
 
 
 

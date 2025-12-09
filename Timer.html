@@ -14,7 +14,6 @@
     </head>
 
     <header>
-
         <nav class="menu">
           <ul class="menu-list">
             <li class="menu-profil">
@@ -24,13 +23,11 @@
                 <p>Chargement</p>
               </a>
             </li>
-        
             <li class="menu-objectifs"><a href="#">Objectifs</a></li>
             <li class="menu-livres"><a href="#">Livres Lus</a></li>
             <li class="menu-citations"><a href="#">Citations</a></li>
             <li class="menu-calendrier"><a href="Calendrier.html">Calendrier</a></li>
             <li class="menu-connexion"><a href="#">Connexion</a></li>
-        
             <li class="menu-parametres">
               <a href="#"><img src="editer.png" alt="parametres"></a>
             </li>
@@ -54,25 +51,24 @@
         
       </header>
 
-  <div class="timer-wrapper">
+<div class="timer-wrapper">
 
     <div id="timer">00:00:00</div>
 
     <div class="button-group">
         <select id="mesLivres" onchange="selectionLivre()">
-    <option value="">Mes livres</option>
-    <option value="livre1">Livre 1</option>
-    <option value="livre2">Livre 2</option>
-    <option value="livre3">Livre 3</option>
-</select>
-
+            <option value="">Mes livres</option>
+            <option value="livre1">Livre 1</option>
+            <option value="livre2">Livre 2</option>
+            <option value="livre3">Livre 3</option>
+        </select>
 
         <button id="ajoutLivre" onclick="envoyerLivre()">
             <img src="Images/ChatGPT Image 29 nov. 2025, 12_08_53.png" alt="Ajouter un livre">
         </button>
     </div>
 
-     <div class="button-group">
+    <div class="button-group">
         <button id="startBtn" onclick="demarrer()" disabled>Démarrer</button>
         <button id="stopBtn" onclick="arreter()" disabled>Arrêter</button>
         <button id="resetBtn" onclick="reinitialiser()" disabled>Réinitialiser</button>
@@ -83,15 +79,24 @@
         <button onclick="ajouterTemps()" id="Ajoutertemps" disabled>Ajouter Temps</button>
     </div>
 
-    <!-- Zone d'affichage du livre sélectionné -->
     <div id="livreSelectionne" style="margin-top: 15px; font-weight: bold;"></div>
 
 </div>
 
-<div id="resumeJours" style="margin-top:20px; font-weight:bold;"></div>
+<!-- Affichage des dates de la semaine -->
+<h3 id="datesSemaine" style="text-align:center; margin-top:20px;"></h3>
 
+<!-- Curseurs de semaine -->
+<div class="button-group" style="justify-content:center; margin-top:10px;">
+    <button onclick="semainePrecedente()">◀ Semaine précédente</button>
+    <button onclick="semaineSuivante()">Semaine suivante ▶</button>
+</div>
+
+<!-- Résumé des jours -->
+<div class="button-group" id="resumeJours" style="margin-top:20px; text-align:center;"></div>
 
 <canvas id="barChart"></canvas>
+
 
 <script src="Timer.js"></script>
 
