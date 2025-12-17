@@ -80,11 +80,13 @@ body{
     margin: 2px;
 }
 
-.menu-objectifs   { background-color: #AF8890; }
-.menu-livres      { background-color: #AB828E; }
-.menu-citations   { background-color: #A87D8D; }
-.menu-calendrier  { background-color: #A4778B; }
-.menu-connexion   { background-color: #9d7186; }
+.menu-objectifs, .sous-menu-objectifs { background-color: #AF8890; }
+.menu-livres, .sous-menu-livres { background-color: #AB828E; }
+.menu-citations, .sous-menu-citations   { background-color: #A87D8D; }
+.menu-calendrier, .sous-menu-calendrier  { background-color: #A4778B; }
+.menu-connexion, .sous-menu-connexion   { background-color: #9d7186; }
+.sous-menu-profil { background-color: #9f787d; }
+.sous-menu-parametres   { background-color: #7f5366; }
 
 .menu-objectifs,
 .menu-livres,
