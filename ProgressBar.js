@@ -1,14 +1,56 @@
-const barre  = document.getElementById('barre');
-const input  = document.getElementById('valeur');
-const bouton = document.getElementById('maj');
+const barre = document.getElementById('barre');
+const niveauTexte = document.getElementById('niveauTexte');
 
-function setProgress(percent) {
-  // borne entre 0 et 100
-  const p = Math.max(0, Math.min(100, percent));
-  barre.value = p;
-  barre.textContent = p + '%'; // texte alternatif si <progress> n’est pas supporté
+// Données
+let niveau = 1;
+let xp = 0;
+
+// XP nécessaire pour le niveau courant
+function xpRequise() {
+  return 100 * niveau;
 }
 
-bouton.addEventListener('click', () => {
-  setProgress(Number(input.value));
-});
+// Mise à jour visuelle
+function setProgress() {
+  const maxXP = xpRequise();
+  barre.max = maxXP;
+  barre.value = xp;
+  barre.textContent = Math.round((xp / maxXP) * 100) + '%';
+
+  niveauTexte.textContent = "Niveau " + niveau;
+}
+
+// Ajout d'XP
+function ajouterXP(valeur) {
+  xp += valeur;
+
+  while (xp >= xpRequise()) {
+    xp -= xpRequise();
+    niveau++;
+  }
+
+  sauvegarder();
+  setProgress();
+}
+
+// Sauvegarde locale
+function sauvegarder() {
+  localStorage.setItem('progression', JSON.stringify({
+    niveau: niveau,
+    xp: xp
+  }));
+}
+
+// Chargement
+function charger() {
+  const data = localStorage.getItem('progression');
+  if (data) {
+    const obj = JSON.parse(data);
+    niveau = obj.niveau;
+    xp = obj.xp;
+  }
+  setProgress();
+}
+
+// Initialisation
+charger();
