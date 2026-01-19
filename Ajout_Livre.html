@@ -11,96 +11,78 @@
     </head>
 <body>
 <header>
+  
+  <nav class="menu">
+    <ul class="menu-list">
+      <ul>
+        <li class="menu-profil">
+          <a href="#" id="profil-link">
+            <img class="avatar-profil" id="avatar" src="Images/djpony.jpg" alt="perso">
+            <p>Poupou</p>
+            <div class="niveau">
+              <span id="niveauTexte"></span>
+            </div>
+            <progress id="barre" value="0" max="100"></progress>
+          </a>
+          <input type="file" id="avatarInput" accept="image/*" hidden>
+          <ul class="sous-menu sous-menu-profil">
+            <li><a href="#">Classements</a></li>
+            <li><a href="#">Amis</a></li>
+          </ul></li></ul>
+          <li class="sous-menu menu-objectifs">
+            <a href="#">Objectifs</a>
+            <ul class="sous-menu sous-menu-objectifs">
+              <li><a href="#">Succès</a></li>
+            </ul></li>
+            <li class="menu-livres">
+              <a href="#">Livres Lus</a>
+              <ul class="sous-menu sous-menu-livres">
+                <li><a href="#">Notes personnelles</a></li>
+                <li><a href="#">Avis</a></li>
+                <li><a href="#">Top de l'année</a></li>
+                <li><a href="#">PAL</a></li>
+              </ul></li>
+              <li class="menu-citations">
+                <a href="Citations.html">Citations</a>
+                <ul class="sous-menu sous-menu-citations">
+                  <li><a href="#">Poèmes</a></li>
+                  <li><a href="#">Communauté</a></li>
+                </ul></li>
+                <li class="menu-calendrier">
+                  <a href="Calendrier.html">Calendrier</a>
+                  <ul class="sous-menu sous-menu-calendrier">
+                    <li><a href="#">Rapports</a></li>
+                    <li><a href="Timer.html">Minuterie</a></li>
+                    <li><a href="#">Pomodoro</a></li>
+                  </ul></li>
+                  <li class="menu-connexion">
+                    <a href="#">Connexion</a>
+                    <ul class="sous-menu sous-menu-connexion">
+                      <li><a href="#">Inscription</a></li>
+                    </ul></li>
+                    <li class="menu-parametres">
+                      <a href="#"><img src="Images/editer.png" alt="parametres"></a>
+                      <ul class="sous-menu sous-menu-parametres">
+                        <li><a href="#">Affichages</a></li>
+                        <li><a href="#">Notifications</a></li>
+                      </ul></li>
+                    </nav>
 
-<nav class="menu">
-  <ul class="menu-list">
-
-    <!-- Profil -->
-    <li class="menu-profil">
-      <a href="#">
-        <img class="avatar-profil" src="djpony.jpg" alt="perso">
-        <p>Profil</p>
-        <progress id="barre" value="0" max="100">0%</progress>
-      </a>
-      <ul class="sous-menu-profil">
-        <li><a href="#">Classements</a></li>
-        <li><a href="#">Amis</a></li>
-      </ul>
-    </li>
-
-    <!-- Objectifs -->
-    <li class="menu-objectifs">
-      <a href="#">Objectifs</a>
-      <ul class="sous-menu-objectifs">
-        <li><a href="#">Succès</a></li>
-      </ul>
-    </li>
-
-    <!-- Livres -->
-    <li class="menu-livres">
-      <a href="#">Livres Lus</a>
-      <ul class="sous-menu-livres">
-        <li><a href="#">Notes personnelles</a></li>
-        <li><a href="#">Avis</a></li>
-        <li><a href="#">Top de l'année</a></li>
-        <li><a href="#">PAL</a></li>
-      </ul>
-    </li>
-
-    <!-- Citations -->
-    <li class="menu-citations">
-      <a href="Citations.html">Citations</a>
-      <ul class="sous-menu-citations">
-        <li><a href="#">Poèmes</a></li>
-        <li><a href="#">Communauté</a></li>
-      </ul>
-    </li>
-
-    <!-- Calendrier -->
-    <li class="menu-calendrier">
-      <a href="Calendrier.html">Calendrier</a>
-      <ul class="sous-menu-calendrier">
-        <li><a href="#">Rapports</a></li>
-        <li><a href="#">Minuterie</a></li>
-        <li><a href="#">Pomodoro</a></li>
-      </ul>
-    </li>
-
-    <!-- Connexion -->
-    <li class="menu-connexion">
-      <a href="Connexion.html">Connexion</a>
-      <ul class="sous-menu-connexion">
-        <li><a href="Inscription.html">Inscription</a></li>
-      </ul>
-    </li>
-
-    <!-- Paramètres -->
-    <li class="menu-parametres">
-      <a href="#"><img src="editer.png" alt="parametres"></a>
-      <ul class="sous-menu-parametres">
-        <li><a href="#">Affichages</a></li>
-        <li><a href="#">Notifications</a></li>
-      </ul>
-    </li>
-
-  </ul>
-</nav>
-
-<nav class="navbar-vertical">
-  <a href="Index.html"><img src="Accueil.png" alt="Accueil"></a>
-  <a href="#">BD & Manga</a>
-  <a href="#">Biographie</a>
-  <a href="#">Contemporain</a>
-  <a href="#">Développement personnel</a>
-  <a href="#">Historique</a>
-  <a href="#">Jeune adulte</a>
-  <a href="#">Jeunesse</a>
-  <a href="#">Policier & Thriller</a>
-  <a href="#">Romance</a>
-  <a href="#">Science-Fiction & Fantaisie</a>
-  <a href="#">Tous</a>
-</nav> 
-</header>
+            <nav class="navbar-vertical">
+              <a href="Index.html"><img src="Images/Accueil.png" alt="Accueil"></a>
+              <a href="#">BD & Manga</a>
+              <a href="#">Biographie</a>
+              <a href="#">Contemporain</a>
+              <a href="#">Développement personnel</a>
+              <a href="#">Historique</a>
+              <a href="#">Jeune adulte</a>
+              <a href="#">Jeunesse</a>
+              <a href="#">Policier & Thriller</a>
+              <a href="#">Romance</a>
+              <a href="#">Science-Fiction & Fantaisie</a>
+              <a href="#">Tous</a>
+            </nav> 
+          </header>
 
 <div class="rechercher">
   <button class="rechercher-btn">Rechercher</button>
@@ -108,10 +90,11 @@
 </div>
 
 <div class="formulaire">
+  <h3>Formulaire d'ajout de livre</h3>
   <form id="ajoutLivre">
-    <input type="text" id="Titre" placeholder="Titre" required> <br>
-    <input type="text" id="Sous-Titre" placeholder="Sous-titre"> <br>
-    <input type="text" id="Collection" placeholder="Collection"> <br>
+    <input type="text" id="Titre" placeholder="Titre" required> 
+    <input type="text" id="Sous-Titre" placeholder="Sous-titre"> 
+    <input type="text" id="Collection" placeholder="Collection"> 
     <label for="langue">Langue</label>
     <select name="langue" id="langue" required>
       <option value="aa">Afar</option>
@@ -300,6 +283,14 @@
       <option value="zh">Chinois</option>
       <option value="zu">Zoulou</option>
     </select><br>
+    <label for="imageLivre">Image du livre</label>
+<input
+    type="file"
+    id="imageLivre"
+    name="imageLivre"
+    accept="image/*">
+    <img id="preview" alt="Aperçu de l’image" style="display:none; max-width:150px;">
+    <form id="ajoutLivre" enctype="multipart/form-data">
     <input type="number" id="Nombre_Pages" placeholder="Nombre de pages"> <br>
     <label for="Annee_Publication">Année de publication</label>
     <select id="Annee_Publication" name="Annee_Publication">
@@ -335,6 +326,7 @@
       <option value="Revue">Revue</option>
       <option value="Jeunesse">Jeunesse</option>
     </select><br>
+    <button type="submit" class="informations">Envoyer</button>
   </form>
 </div>
 
@@ -343,6 +335,7 @@
 <script src="Favoris.js"></script>
 <script src="Avatar.js"></script>
 <script src="ProgressBar.js"></script>
+<script src="Image.js"></script>
             
  </body>
   <footer>
