@@ -788,3 +788,11 @@ progress::-moz-progress-bar {
     max-width: 100%;
 }
 
+#Resume {
+    width: 100%;
+    max-width: 400px;
+    min-height: 150px;
+    padding: 8px;
+    resize: vertical;      /* permet d’agrandir uniquement en hauteur */
+    box-sizing: border-box;
+}

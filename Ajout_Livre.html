@@ -296,7 +296,14 @@
     <select id="Annee_Publication" name="Annee_Publication">
       <option value="">Année de publication</option>
     </select> <br>
-    <input type="text" id="Resume" placeholder="Résumé"> <br>
+    <label for="Resume">Résumé</label>
+<textarea
+    id="Resume"
+    name="Resume"
+    placeholder="Écrivez le résumé du livre ici..."
+    rows="6">
+</textarea>
+
     <input type="text" id="Auteur" placeholder="Auteur" required> <br>
     <label for="Genre_Litteraire">Genre littéraire :</label>
     <select id="Genre_Litteraire" name="Genre_Litteraire" required>
@@ -336,6 +343,7 @@
 <script src="Avatar.js"></script>
 <script src="ProgressBar.js"></script>
 <script src="Image.js"></script>
+<script src="Annee.js"></script>
             
  </body>
   <footer>
