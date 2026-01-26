@@ -6,8 +6,21 @@
 @media screen and (min-width: 1024px) and (orientation: landscape){
 }
 
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .navbar-vertical {
+    width: 100%;
+  }
+  .main-content {
+    width: 100%;
+  }
+}
+
+
 body{
-    background-color: #faedcd; 
+    background-color: #f7f3f1; /* au lieu du beige actuel */ 
     font-family: 'quicksand', Arial, sans-serif; 
 }
 
@@ -121,13 +134,16 @@ body{
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    color: #7d626b;
+  font-size: 0.9rem;
 }
   
 .navbar-vertical a {
-    color: #966a81;
+    color: #7d626b;
     padding: 13px;
     text-decoration: none;
     transition: background-color 0.3s;
+    margin-bottom: 8px;
 }
 
 .navbar-vertical a img{
@@ -175,6 +191,8 @@ body{
     background-color: #A87D8D;
     color: white;
 } 
+
+
 
 li{
     list-style:none !important; 
@@ -772,15 +790,13 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: #38a3a5;
+  background-color: #9b6b7a;
   border-radius: 5px;
   transition: width 0.3s ease;
 }
 
-/* Firefox */
-progress::-moz-progress-bar {
-  background-color: #38a3a5;
-  border-radius: 5px;
+progress::-webkit-progress-bar {
+  background-color: #e9dde2;
 }
 
 .chart-container {
@@ -796,3 +812,233 @@ progress::-moz-progress-bar {
     resize: vertical;      /* permet d’agrandir uniquement en hauteur */
     box-sizing: border-box;
 }
+
+.message-communaute {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.message-communaute strong {
+    color: #38a3a5;
+}
+
+/* RESET SIMPLE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* CONTENEUR PROFIL */
+.profil {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #faf7f5;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+
+.profil-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 -6px 20px rgba(155,107,122,0.15);
+}
+
+/* Avatar */
+.avatar-zone {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #e9dde2;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+
+/* Identité */
+.identite {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pseudo {
+  font-size: 1.8rem;
+  color: #3a2f2a;
+}
+
+/* Niveau */
+.niveau-zone {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.niveau-titre {
+  font-weight: 600;
+  color: #a16c5b;
+}
+
+progress {
+  width: 260px;
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Progress bar style */
+progress::-webkit-progress-bar {
+  background-color: #f3e9e6;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #d8a48f;
+  border-radius: 10px;
+   background: linear-gradient(
+    to right,
+    #9b6b7a,
+    #c28ca1
+  );
+}
+
+.xp-info {
+  font-size: 0.85rem;
+  color: #7a6a65;
+}
+
+.profil-section {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.profil-section h2 {
+  font-size: 1.3rem;
+  color: #3a2f2a;
+}
+
+.livres-highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.coups-de-coeur .livre {
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.coups-de-coeur .livre::after {
+  content: "❤";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 0.9rem;
+  color: #c06b84;
+}
+
+
+.coups-de-coeur .livre:hover {
+  transform: translateY(-4px);
+}
+
+.livres-liste {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.livres-liste .livre {
+  min-width: 140px;
+  background: #f8f4f2;
+  padding: 14px;
+  border-radius: 14px;
+  text-align: center;
+  color: #5a4a45;
+  font-weight: 500;
+}
+.badge-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 16px;
+}
+
+.badge {
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge.obtenu {
+  background: #fde6c8;
+  color: #8a5a1f;
+}
+
+.badge.verrouille {
+  background: #f2f2f2;
+  color: #b0b0b0;
+}
+
+.avis-carte {
+  background: #f9f5f3;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.livre-titre {
+  font-weight: 600;
+  color: #3a2f2a;
+}
+
+.avis-texte {
+  font-size: 0.9rem;
+  color: #6f5f5a;
+}
+
+.coups-de-coeur,
+.lectures {
+  background-color: #fff7f4;
+}
+
+.coups-de-coeur .livre {
+  background: linear-gradient(145deg, #fff4ef, #ffffff);
+}
+
+.main-content {
+  width: 100%;
+  max-width: 900px; /* limite pour grands écrans */
+  margin: 0 auto; /* centrer */
+  padding: 20px;
+  box-sizing: border-box; /* inclut padding dans la largeur */
+}
+
+

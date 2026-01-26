@@ -1,27 +1,37 @@
-const avatar = document.getElementById("avatar");
-  const avatarInput = document.getElementById("avatarInput");
+const avatarInput = document.getElementById('avatarInput');
+const avatars = document.querySelectorAll('.avatar-sync');
 
-  // Charger l’avatar sauvegardé au démarrage
-  const savedAvatar = localStorage.getItem("avatarProfil");
-  if (savedAvatar) {
-    avatar.src = savedAvatar;
-  }
+// Cliquer sur n’importe quel avatar déclenche l’input
+avatars.forEach(img => {
+    img.addEventListener('click', () => {
+        avatarInput.click();
+    });
+});
 
-  // Ouvrir le sélecteur au clic
-  avatar.addEventListener("click", function (e) {
-    e.preventDefault();
-    avatarInput.click();
-  });
+// Charger l'avatar depuis localStorage dès le chargement de la page
+window.addEventListener('DOMContentLoaded', () => {
+    const savedAvatar = localStorage.getItem('userAvatar');
+    if (savedAvatar) {
+        avatars.forEach(img => img.src = savedAvatar);
+    }
+});
 
-  // Sauvegarder l’image sélectionnée
-  avatarInput.addEventListener("change", function () {
-    const file = this.files[0];
-    if (!file) return;
+// Quand l'utilisateur choisit un fichier
+avatarInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
 
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      avatar.src = e.target.result;
-      localStorage.setItem("avatarProfil", e.target.result);
-    };
-    reader.readAsDataURL(file);
-  });
+        reader.onload = function(e) {
+            const imageSrc = e.target.result;
+
+            // Mettre à jour tous les avatars en même temps
+            avatars.forEach(img => img.src = imageSrc);
+
+            // Sauvegarder dans localStorage
+            localStorage.setItem('userAvatar', imageSrc);
+        }
+
+        reader.readAsDataURL(file);
+    }
+});
