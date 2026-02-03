@@ -290,3 +290,27 @@ footer .footer-button {
 footer .footer-button:hover {
   background-color: #A87D8D;
 }
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Images des boutons sociaux */
+.discord-button img,
+.google-button img {
+  width: 30px;
+}
+
+/* Hover commun pour tous les boutons */
+.discord-button:hover,
+.google-button:hover {
+  transform: scale(1.05);
+}
+
+/* Couleur spécifique pour Discord */
+.discord-button:hover {
+  background-color: #4752C4;
+}
