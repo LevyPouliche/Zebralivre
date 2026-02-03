@@ -1,0 +1,262 @@
+/* Mobile / tablette */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .navbar-vertical,
+  .main-content {
+    width: 100%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* styles desktop spécifiques */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f3f1;
+    font-family: 'quicksand', Arial, sans-serif; 
+}
+
+.menu {
+  font-family: 'Quicksand', Arial, sans-serif;
+  display: flex;
+  width: 100%;
+  height: 125px;
+}
+
+.menu-list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-list li,
+.menu-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+
+.menu-list a {
+  width: 100%;
+  text-decoration: none;
+  flex-direction: column;
+}
+
+.menu-profil,
+.menu-parametres {
+  width: 125px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.menu-profil a,
+.menu-parametres a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-profil img,
+.menu-parametres img {
+  width: 60px;
+  margin-top: 15px;
+}
+
+.menu-profil p,
+.menu-parametres p {
+  margin: 2px;
+}
+
+/* Couleurs des menus */
+.menu-profil,
+.sous-menu-profil {
+    background-color: #B28D91;
+}
+
+.menu-objectifs,
+.sous-menu-objectifs {
+  background-color: #AF8890;
+}
+
+.menu-livres,
+.sous-menu-livres {
+  background-color: #AB828E;
+}
+
+.menu-citations,
+.sous-menu-citations {
+  background-color: #A87D8D;
+}
+
+.menu-calendrier,
+.sous-menu-calendrier {
+  background-color: #A4778B;
+}
+
+.menu-connexion,
+.sous-menu-connexion {
+  background-color: #9D7186;
+}
+
+.menu-parametres,
+.sous-menu-parametres {
+  background-color: #966a81;
+}
+
+/* Répartition équitable dans le menu principal */
+.menu-objectifs,
+.menu-livres,
+.menu-citations,
+.menu-calendrier,
+.menu-connexion {
+  flex: 1;
+}
+
+.navbar-vertical {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #7D626B;
+}
+
+.navbar-vertical a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  margin-bottom: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.navbar-vertical img {
+  width: 35px;
+  height: 35px;
+}
+
+.rechercher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 10px 20px;
+  margin: 35px 300px;
+  background-color: #966a81;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.rechercher input[type="text"] {
+  width: 60%;
+  height: 65%;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  color: black;
+}
+
+.rechercher button.rechercher-btn {
+  width: 40%;
+  height: 100%;
+  background-color: #966a81;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.rechercher button.rechercher-btn:hover {
+  background-color: #A87D8D;
+}
+
+/* Styles généraux pour toutes les listes */
+li {
+  list-style: none !important;
+  font-size: 22px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation principale */
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* Éléments de menu */
+nav ul li {
+  position: relative;
+}
+
+/* Sous-menus */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 125px;
+  left: 0;
+}
+
+/* Liens du menu principal */
+nav ul li a {
+  color: #FFF;
+  text-decoration: none;
+  transition: border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+  border-bottom: 5px solid #FFF;
+}
+
+/* Affichage des sous-menus au survol */
+nav ul li:hover > ul {
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  z-index: 9999;
+  list-style: none;
+}
+
+/* Empêche les sous-menus de disparaître si survol direct */
+nav ul li ul:hover {
+  display: block;
+}
