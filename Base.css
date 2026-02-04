@@ -314,3 +314,101 @@ footer .footer-button:hover {
 .discord-button:hover {
   background-color: #4752C4;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 35px;
+    padding: 60px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 150px;
+    min-height: 150px;
+    padding: 10px;
+
+    background-color: #E4CFBB;
+    border: 5px solid #966a81;
+    color: #1B0773;
+    font-size: 17px;
+    text-align: center;
+}
+
+.item img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+
+    padding: 0 16px;
+    margin-left: 160px;
+}
+
+.galerie img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.galerie-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    margin-left: 140px;
+    overflow: hidden;
+}
+
+.fleche {
+    padding: 10px;
+    font-size: 32px;
+    color: #966a81;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fleche.gauche {
+    margin-inline-end: 10px;
+}
+
+.fleche.droite {
+    margin-inline-start: 10px;
+}
+
+.galerie-carousel {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    padding: 10px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.galerie-carousel img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.galerie-carousel {
+    scrollbar-width: none;        /* Firefox */
+}
+
+.galerie-carousel::-webkit-scrollbar {
+    display: none;                /* Chrome / Safari */
+}
