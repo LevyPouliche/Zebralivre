@@ -1,3 +1,7 @@
+document.getElementById('exportStyles').addEventListener('click', () => {
+    // ici tout le script qui génère le JSON
+});
+
 (() => {
     // -----------------------------
     // 1. Tous les IDs
