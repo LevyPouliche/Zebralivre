@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">       
+    <head>
+        <meta charset="utf-8">
+        <title>Zebralivre</title>
+        <link href="Style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    </head>
+<body>
+<header>
+  
+  <nav class="menu">
+    <ul class="menu-list">
+      <ul>
+        <li class="menu-profil">
+          <a href="#" id="profil-link">
+            <img class="avatar-profil" id="avatar" src="Images/djpony.jpg" alt="perso">
+            <p>Poupou</p>
+            <div class="niveau">
+              <span id="niveauTexte"></span>
+            </div>
+            <progress id="barre" value="0" max="100"></progress>
+          </a>
+          <input type="file" id="avatarInput" accept="image/*" hidden>
+          <ul class="sous-menu sous-menu-profil">
+            <li><a href="#">Classements</a></li>
+            <li><a href="#">Amis</a></li>
+          </ul></li></ul>
+          <li class="sous-menu menu-objectifs">
+            <a href="#">Objectifs</a>
+            <ul class="sous-menu sous-menu-objectifs">
+              <li><a href="#">Succès</a></li>
+            </ul></li>
+            <li class="menu-livres">
+              <a href="#">Livres Lus</a>
+              <ul class="sous-menu sous-menu-livres">
+                <li><a href="#">Notes personnelles</a></li>
+                <li><a href="#">Avis</a></li>
+                <li><a href="#">Top de l'année</a></li>
+                <li><a href="#">PAL</a></li>
+              </ul></li>
+              <li class="menu-citations">
+                <a href="Citations.html">Citations</a>
+                <ul class="sous-menu sous-menu-citations">
+                  <li><a href="#">Poèmes</a></li>
+                  <li><a href="#">Communauté</a></li>
+                </ul></li>
+                <li class="menu-calendrier">
+                  <a href="Calendrier.html">Calendrier</a>
+                  <ul class="sous-menu sous-menu-calendrier">
+                    <li><a href="#">Rapports</a></li>
+                    <li><a href="Timer.html">Minuterie</a></li>
+                    <li><a href="#">Pomodoro</a></li>
+                  </ul></li>
+                  <li class="menu-connexion">
+                    <a href="#">Connexion</a>
+                    <ul class="sous-menu sous-menu-connexion">
+                      <li><a href="#">Inscription</a></li>
+                    </ul></li>
+                    <li class="menu-parametres">
+                      <a href="#"><img src="Images/editer.png" alt="parametres"></a>
+                      <ul class="sous-menu sous-menu-parametres">
+                        <li><a href="#">Affichages</a></li>
+                        <li><a href="#">Notifications</a></li>
+                      </ul></li>
+                    </nav>
+
+            <nav class="navbar-vertical">
+              <a href="Index.html"><img src="Images/Accueil.png" alt="Accueil"></a>
+              <a href="#">BD & Manga</a>
+              <a href="#">Biographie</a>
+              <a href="#">Contemporain</a>
+              <a href="#">Développement personnel</a>
+              <a href="#">Historique</a>
+              <a href="#">Jeune adulte</a>
+              <a href="#">Jeunesse</a>
+              <a href="#">Policier & Thriller</a>
+              <a href="#">Romance</a>
+              <a href="#">Science-Fiction & Fantaisie</a>
+              <a href="#">Tous</a>
+            </nav> 
+          </header>
+
+<div class="rechercher">
+  <button class="rechercher-btn">Rechercher</button>
+  <input type="text" placeholder="Rechercher...">
+</div>
+
+<div class="formulaire">
+  <h3>Formulaire d'ajout de livre</h3>
+  <form id="ajoutLivre">
+    <input type="text" id="Titre" placeholder="Titre" required> 
+    <input type="text" id="Sous-Titre" placeholder="Sous-titre"> 
+    <input type="text" id="Collection" placeholder="Collection"> 
+    <label for="langue">Langue</label>
+    <select name="langue" id="langue" required>
+      <option value="aa">Afar</option>
+      <option value="ab">Abkhaze</option>
+      <option value="ae">Avestique</option>
+      <option value="af">Afrikaans</option>
+      <option value="ak">Akan</option>
+      <option value="am">Amharique</option>
+      <option value="an">Aragonais</option>
+      <option value="ar">Arabe</option>
+      <option value="as">Assamais</option>
+      <option value="av">Avar</option>
+      <option value="ay">Aymara</option>
+      <option value="az">Azéri</option>
+      <option value="ba">Bachkir</option>
+      <option value="be">Biélorusse</option>
+      <option value="bg">Bulgare</option>
+      <option value="bh">Bihari</option>
+      <option value="bi">Bichelamar</option>
+      <option value="bm">Bambara</option>
+      <option value="bn">Bengali</option>
+      <option value="bo">Tibétain</option>
+      <option value="br">Breton</option>
+      <option value="bs">Bosnien</option>
+      <option value="ca">Catalan</option>
+      <option value="ce">Tchétchène</option>
+      <option value="ch">Chamorro</option>
+      <option value="co">Corse</option>
+      <option value="cr">Cri</option>
+      <option value="cs">Tchèque</option>
+      <option value="cu">Vieux-slave</option>
+      <option value="cv">Tchouvache</option>
+      <option value="cy">Gallois</option>
+      <option value="da">Danois</option>
+      <option value="de">Allemand</option>
+      <option value="dv">Maldivien</option>
+      <option value="dz">Dzongkha</option>
+      <option value="ee">Ewe</option>
+      <option value="el">Grec Moderne</option>
+      <option value="en">Anglais</option>
+      <option value="eo">Espéranto</option>
+      <option value="es">Espagnol</option>
+      <option value="et">Estonien</option>
+      <option value="eu">Basque</option>
+      <option value="fa">Persan</option>
+      <option value="ff">Peul</option>
+      <option value="fi">Finnois</option>
+      <option value="fj">Fidjien</option>
+      <option value="fo">Féroien</option>
+      <option value="fr">Français</option>
+      <option value="fy">Frison occidental</option>
+      <option value="ga">Irlandais</option>
+      <option value="gd">écossais</option>
+      <option value="gl">Galicien</option>
+      <option value="gn">Guarani</option>
+      <option value="gu">Gujarati</option>
+      <option value="gv">Mannois</option>
+      <option value="ha">Haoussa</option>
+      <option value="he">Hébreu</option>
+      <option value="hi">Hindi</option>
+      <option value="ho">Hiri Motu</option>
+      <option value="hr">Croate</option>
+      <option value="ht">Créole Haitien</option>
+      <option value="hu">Hongrois</option>
+      <option value="hy">Arménien</option>
+      <option value="hz">Héréro</option>
+      <option value="ia">Interlingua</option>
+      <option value="id">Indonésien</option>
+      <option value="ie">Occidental</option>
+      <option value="ig">Igbo</option>
+      <option value="ii">Yi</option>
+      <option value="ik">Inupiak</option>
+      <option value="io">Ido</option>
+      <option value="is">Islandais</option>
+      <option value="it">Italien</option>
+      <option value="iu">Inuktitut</option>
+      <option value="ja">Japonais</option>
+      <option value="jv">Javanais</option>
+      <option value="ka">Géorgien</option>
+      <option value="kg">Kikongo</option>
+      <option value="ki">Kikuyu</option>
+      <option value="kj">Kuanyama</option>
+      <option value="kk">Kazakh</option>
+      <option value="kl">Groenlandais</option>
+      <option value="km">Khmer</option>
+      <option value="kn">Kannada</option>
+      <option value="ko">Coréen</option>
+      <option value="kr">Kanouri</option>
+      <option value="ks">Cachemiri</option>
+      <option value="ku">Kurde</option>
+      <option value="kv">Komi</option>
+      <option value="kw">Cornique</option>
+      <option value="ky">Kirghiz</option>
+      <option value="la">Latin</option>
+      <option value="lb">Luxembourgeois</option>
+      <option value="lg">Ganda</option>
+      <option value="li">Limbourgeois</option>
+      <option value="ln">Lingala</option>
+      <option value="lo">Lao</option>
+      <option value="lt">Lituanien</option>
+      <option value="lu">Luba</option>
+      <option value="lv">Letton</option>
+      <option value="mg">Malgache</option>
+      <option value="mh">Marshallais</option>
+      <option value="mi">Maori de Nouvelle-Zélande</option>
+      <option value="mk">Macédonien</option>
+      <option value="ml">Malayalam</option>
+      <option value="mn">Mongol</option>
+      <option value="mo">Moldave</option>
+      <option value="mr">Marathi</option>
+      <option value="ms">Malais</option>
+      <option value="mt">Maltais</option>
+      <option value="my">Birman</option>
+      <option value="na">Nauruan</option>
+      <option value="nb">Norvégien bokmal</option>
+      <option value="ne">Népalais</option>
+      <option value="ng">Ndonga</option>
+      <option value="nl">Néerlandais</option>
+      <option value="nn">Norvégien nynorsk</option>
+      <option value="no">Norvégien</option>
+      <option value="nr">Nrebele</option>
+      <option value="nv">Navajo</option>
+      <option value="ny">Chichewa</option>
+      <option value="oc">Occitan</option>
+      <option value="oj">Ojibwé</option>
+      <option value="om">Oromo</option>
+      <option value="or">Oriya</option>
+      <option value="os">Ossète</option>
+      <option value="pa">Pendjabi</option>
+      <option value="pi">Pali</option>
+      <option value="pl">Polonais</option>
+      <option value="ps">Pachto</option>
+      <option value="pt">Portuguais</option>
+      <option value="qu">Quechua</option>
+      <option value="rm">Romanche</option>
+      <option value="rn">Kirundi</option>
+      <option value="ro">Roumain</option>
+      <option value="ru">Russe</option>
+      <option value="rw">Kinyarwanda</option>
+      <option value="sa">Sanskrit</option>
+      <option value="sc">Sarde</option>
+      <option value="sd">Sindhi</option>
+      <option value="se">Same du Nord</option>
+      <option value="sg">Sango</option>
+      <option value="sh">Serbo-Croate</option>
+      <option value="si">Cingalais</option>
+      <option value="sk">Slovaque</option>
+      <option value="sl">Slovène</option>
+      <option value="sm">Samoan</option>
+      <option value="sn">Shona</option>
+      <option value="so">Somali</option>
+      <option value="sq">Albanais</option>
+      <option value="sr">Serbe</option>
+      <option value="ss">Swati</option>
+      <option value="st">Sotho du Sud</option>
+      <option value="su">Soundanais</option>
+      <option value="sv">Suédois</option>
+      <option value="sw">Swahili</option>
+      <option value="ta">Tamoul</option>
+      <option value="te">Télougou</option>
+      <option value="tg">Tadjik</option>
+      <option value="th">Thai</option>
+      <option value="ti">Tigrigna</option>
+      <option value="tk">Turkmène</option>
+      <option value="tl">Tagalog</option>
+      <option value="tn">Tswana</option>
+      <option value="to">Tongien</option>
+      <option value="tr">Turc</option>
+      <option value="ts">Tsonga</option>
+      <option value="tt">Tatar</option>
+      <option value="tw">Twi</option>
+      <option value="ty">Tahitien</option>
+      <option value="ug">Ouighour</option>
+      <option value="uk">Ukrainien</option>
+      <option value="ur">Ourdou</option>
+      <option value="uz">Ouzbek</option>
+      <option value="ve">Venda</option>
+      <option value="vi">Vietnamien</option>
+      <option value="vo">Volapuk</option>
+      <option value="wa">Wallon</option>
+      <option value="wo">Wolof</option>
+      <option value="xh">Xhosa</option>
+      <option value="yi">Yiddish</option>
+      <option value="yo">Yoruba</option>
+      <option value="za">Zhang</option>
+      <option value="zh">Chinois</option>
+      <option value="zu">Zoulou</option>
+    </select><br>
+    <label for="imageLivre">Image du livre</label>
+<input
+    type="file"
+    id="imageLivre"
+    name="imageLivre"
+    accept="image/*">
+    <img id="preview" alt="Aperçu de l’image" style="display:none; max-width:150px;">
+    <form id="ajoutLivre" enctype="multipart/form-data">
+    <input type="number" id="Nombre_Pages" placeholder="Nombre de pages"> <br>
+    <label for="Annee_Publication">Année de publication</label>
+    <select id="Annee_Publication" name="Annee_Publication">
+      <option value="">Année de publication</option>
+    </select> <br>
+    <label for="Resume">Résumé</label>
+<textarea
+    id="Resume"
+    name="Resume"
+    placeholder="Écrivez le résumé du livre ici..."
+    rows="6">
+</textarea>
+
+    <input type="text" id="Auteur" placeholder="Auteur" required> <br>
+    <label for="Genre_Litteraire">Genre littéraire :</label>
+    <select id="Genre_Litteraire" name="Genre_Litteraire" required>
+      <option value="">Sélectionnez un genre</option>
+      <option value="Classisme">Classisme</option>
+      <option value="Fantastique">Fantastique</option>
+      <option value="Science-Fiction">Science-Fiction</option>
+      <option value="Policier">Policier</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Historique">Historique</option>
+      <option value="Chick-Lit">Chick-Lit</option>
+      <option value="Feel Good">Feel Good</option>
+      <option value="Romance">Romance</option>
+      <option value="Nouvelle">Nouvelle</option>
+      <option value="Conte">Conte</option>
+      <option value="Fable">Fable</option>
+      <option value="Poesie">Poésie</option>
+      <option value="Theatre">Théâtre</option>
+      <option value="Essai">Essai</option>
+      <option value="Discours">Discours</option>
+      <option value="Philosophique">Philosophique</option>
+      <option value="Autobiographique">Autobiographique</option>
+      <option value="Biographique">Biographique</option>
+      <option value="Manga">Manga</option>
+      <option value="Bande Dessinee">Bande Dessinée</option>
+      <option value="Graphique">Graphique</option>
+      <option value="Revue">Revue</option>
+      <option value="Jeunesse">Jeunesse</option>
+    </select><br>
+    <button type="submit" class="informations">Envoyer</button>
+  </form>
+</div>
+
+<button id="exportStyles">Exporter JSON</button>
+<script type="module" src="Main.js"></script>
+
+            
+ </body>
+  <footer>
+    <p class="section-populaire">Fixez vos objectifs dès maintenant !</p>
+    <div class="footer-actions">
+      <button class="footer-button">Rejoignez notre communauté !</button>
+      <a href="https://discord.gg/3tMkDExq8F" class="discord-button">
+      <img src="discord.png" alt="Logo Discord"></a>
+      <a href="" class="google-button">
+      <img src="Google.png" alt="Logo Google"></a>
+    </div>
+  </footer>
+  </html>
