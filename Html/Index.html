@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">       
+    <head>
+        <meta charset="utf-8">
+        <title>Zebralivre</title>
+        <link href="Style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    </head>
+<body>
+<header>
+  
+  <nav class="menu">
+    <ul class="menu-list">
+      <ul>
+        <li class="menu-profil">
+          <a href="#" id="profil-link">
+            <img class="avatar-profil" id="avatar" src="Images/djpony.jpg" alt="perso">
+            <p>Poupou</p>
+            <div class="niveau">
+              <span id="niveauTexte"></span>
+            </div>
+            <progress id="barre" value="0" max="100"></progress>
+          </a>
+          <input type="file" id="avatarInput" accept="image/*" hidden>
+          <ul class="sous-menu sous-menu-profil">
+            <li><a href="#">Classements</a></li>
+            <li><a href="#">Amis</a></li>
+          </ul></li></ul>
+          <li class="sous-menu menu-objectifs">
+            <a href="#">Objectifs</a>
+            <ul class="sous-menu sous-menu-objectifs">
+              <li><a href="#">Succès</a></li>
+            </ul></li>
+            <li class="menu-livres">
+              <a href="#">Livres Lus</a>
+              <ul class="sous-menu sous-menu-livres">
+                <li><a href="#">Notes personnelles</a></li>
+                <li><a href="#">Avis</a></li>
+                <li><a href="#">Top de l'année</a></li>
+                <li><a href="#">PAL</a></li>
+              </ul></li>
+              <li class="menu-citations">
+                <a href="Citations.html">Citations</a>
+                <ul class="sous-menu sous-menu-citations">
+                  <li><a href="#">Poèmes</a></li>
+                  <li><a href="#">Communauté</a></li>
+                </ul></li>
+                <li class="menu-calendrier">
+                  <a href="Calendrier.html">Calendrier</a>
+                  <ul class="sous-menu sous-menu-calendrier">
+                    <li><a href="#">Rapports</a></li>
+                    <li><a href="Timer.html">Minuterie</a></li>
+                    <li><a href="#">Pomodoro</a></li>
+                  </ul></li>
+                  <li class="menu-connexion">
+                    <a href="#">Connexion</a>
+                    <ul class="sous-menu sous-menu-connexion">
+                      <li><a href="#">Inscription</a></li>
+                    </ul></li>
+                    <li class="menu-parametres">
+                      <a href="#"><img src="Images/editer.png" alt="parametres"></a>
+                      <ul class="sous-menu sous-menu-parametres">
+                        <li><a href="#">Affichages</a></li>
+                        <li><a href="#">Notifications</a></li>
+                      </ul></li>
+                    </nav>
+
+            <nav class="navbar-vertical">
+              <a href="Index.html"><img src="Images/Accueil.png" alt="Accueil"></a>
+              <a href="#">BD & Manga</a>
+              <a href="#">Biographie</a>
+              <a href="#">Contemporain</a>
+              <a href="#">Développement personnel</a>
+              <a href="#">Historique</a>
+              <a href="#">Jeune adulte</a>
+              <a href="#">Jeunesse</a>
+              <a href="#">Policier & Thriller</a>
+              <a href="#">Romance</a>
+              <a href="#">Science-Fiction & Fantaisie</a>
+              <a href="#">Tous</a>
+            </nav> 
+          </header>
+
+          <div class="rechercher">
+            <button class="rechercher-btn">Rechercher</button>
+            <input type="text" placeholder="Rechercher...">
+          </div>
+
+          <div class="section-populaire">
+            <h3 class="livre-populaire">Livres les plus populaires</h3>
+            <a href="Livres_Populaires.html">
+              <button class="informations">Voir plus</button>
+            </a></div>
+
+            <div class="galerie-container">
+              <div class="fleche gauche" onclick="scrollGalerie(-1)">&#10094;</div>
+              <div class="galerie-carousel" id="galerie">
+                <div class="item">
+                  <img src="Images/P/Perrin_Valérie/Tata_Perrin.jpg" alt="Tata Perrin">
+                  <p>Tata - Valérie Perrin</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/M/McFadden_Freida/Prof_Mc_Fadden.jpg" alt="La prof McFadden">
+                  <p>La prof - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/N/Noir_Roxie/Faux_Fiance_Noir.jpg" alt="Faux fiance et grand amour Noir">
+                  <p>Faux fiancé et grand amour - Roxie Noir</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/M/McFadden_Freida/Femme_Menage_Mc_Fadden.jpg" alt="La femme de menage McFadden">
+                  <p>La femme de ménage - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/M/McFadden_Freida/Secrets_Femme_Menage_Mc_Fadden.jpg" alt="Les secrets de la femme de menage McFadden">
+                  <p>Les secrets de la femme de ménage - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/G/Germain_Rafaele/Plage_Laval_Germain.jpg" alt="Plage Laval Germain">
+                  <p>Plage Laval - Raphaele Germain</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/A/Adler-Olsen_Jusi/7m2_Adler-Olsen.jpg" alt="7m2 Adler-Olsen">
+                  <p>7m2 Jussi Adler-Olsen</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/M/McFadden_Freida/Femme_Menage_Voit_Tout_McFadden.jpg" alt="La femme de menage voit tout - McFadden">
+                  <p>La femme de ménage voit tout - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/D/Da_Costa_Melissa/Tenir_Debout_Da_Costa.jpg" alt="Tenir debout Da Costa">
+                  <p>Tenir debout - Mélissa Da Costa</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/C/Collins_Philippe/Barman_Ritz_Collins.jpg" alt="Le barman du Ritz Collin">
+                  <p>Le barman du Ritz - Philippe Collin</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/W/Werber_Bernard/Valse_Ames_Werber.jpg" alt="La valse des ames Werber">
+                  <p>La valse des âmes - Bernard Werber</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/R/Roberts_Nora/Printemps_Maryland_Roberts.jpg" alt="Un printemps au Maryland Roberts">
+                  <p>Un printemps au Maryland - Nora Roberts</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/H/Higgins_Clark_Mary/Ou_Tu_Maintenant_Higgins_Clark.jpg" alt="Ou es-tu maintenant Higgins Clark">
+                  <p>Où es-tu maintenant? - Mary Higgins Clark</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/M/McFadden_Freida/Psy_McFadden.jpg" alt="La psy McFadden">
+                  <p>La psy - Freida McFadden</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/T/Tomforde_Liz/Windy_City_Caug_Up_Tomforde.jpg" alt="Windy City Caught Up Tomforde">
+                  <p>Windy city 3 Caught up - Liz Tomforde</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/N/Noir_Roxie/Ennemis_Plus_Affinites_Noir.jpg" alt="Ennemis et plus si affinites Noir">
+                  <p>Ennemis et plus si affinités - Roxie Noir</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+                <div class="item">
+                  <img src="Images/S/Sabard_Clarisse/Stella_Hortense_Sabard.jpg" alt="Stella et Hortense Sabard">
+                  <p>Stella & Hortense - Clarisse Sabard</p>
+                  <button class="informations">Voir plus</button>
+                  <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+                </div>
+              </div>
+              <div class="fleche droite" onclick="scrollGalerie(1)">&#10095;</div>
+            </div>
+
+            <div class="auteur-jour">
+              <h3>Citation du jour</h3>
+              <p>Ce que nous voyons ou croyons voir n’est qu’un rêve dans un rêve.</p>
+              <p>Edgar Allan Poe</p>
+              <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+                <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+              </button>
+            </div>
+
+            <div class="auteur-jour">
+              <h2>Auteur du jour</h2>
+              <img src="Images/C/Connelly_Michael/Michael_Connelly.webp">
+              <h3>Michael Connelly</h3>
+              <p class="auteur">Michael Connelly, formé au journalisme, s’est imposé comme le maître du polar contemporain, particulièrement avec les figures de Harry Bosch, Mickey Haller et Renée Ballard. Ses œuvres, riches en authenticité urbaine, justice et psychologie, ont non seulement été récompensées, mais aussi brillamment adaptées sur grand et petit écran, avec un univers narratif en constante expansion.</p>
+            </div>
+
+    <button id="exportStyles">Exporter JSON</button>
+<script type="module" src="Main.js"></script>
+
+          </body>
+
+          <footer>
+            <p class="footer">Fixez vos objectifs dès maintenant !</p>
+            <div class="footer-actions">
+              <button class="footer-button">Rejoignez notre communauté !</button>
+              <a href="https://discord.gg/3tMkDExq8F" class="discord-button">
+                <img src="Images/discord.png" alt="Logo Discord">
+              </a>
+              <a href="" class="google-button">
+                <img src="Images/Google.png" alt="Logo Google">
+              </a>
+            </div>
+          </footer>
+
+
+          </html>
+
