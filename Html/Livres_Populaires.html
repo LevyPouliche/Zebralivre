@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="fr">
+        
+    <head>
+        <meta charset="utf-8">
+        <title>Zebralivre</title>
+        <link href="Style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    </head>
+<body>
+
+<header>
+  
+  <nav class="menu">
+    <ul class="menu-list">
+      <ul>
+        <li class="menu-profil">
+          <a href="#" id="profil-link">
+            <img class="avatar-profil" id="avatar" src="Images/djpony.jpg" alt="perso">
+            <p>Poupou</p>
+            <div class="niveau">
+              <span id="niveauTexte"></span>
+            </div>
+            <progress id="barre" value="0" max="100"></progress>
+          </a>
+          <input type="file" id="avatarInput" accept="image/*" hidden>
+          <ul class="sous-menu sous-menu-profil">
+            <li><a href="#">Classements</a></li>
+            <li><a href="#">Amis</a></li>
+          </ul></li></ul>
+          <li class="sous-menu menu-objectifs">
+            <a href="#">Objectifs</a>
+            <ul class="sous-menu sous-menu-objectifs">
+              <li><a href="#">Succès</a></li>
+            </ul></li>
+            <li class="menu-livres">
+              <a href="#">Livres Lus</a>
+              <ul class="sous-menu sous-menu-livres">
+                <li><a href="#">Notes personnelles</a></li>
+                <li><a href="#">Avis</a></li>
+                <li><a href="#">Top de l'année</a></li>
+                <li><a href="#">PAL</a></li>
+              </ul></li>
+              <li class="menu-citations">
+                <a href="Citations.html">Citations</a>
+                <ul class="sous-menu sous-menu-citations">
+                  <li><a href="#">Poèmes</a></li>
+                  <li><a href="#">Communauté</a></li>
+                </ul></li>
+                <li class="menu-calendrier">
+                  <a href="Calendrier.html">Calendrier</a>
+                  <ul class="sous-menu sous-menu-calendrier">
+                    <li><a href="#">Rapports</a></li>
+                    <li><a href="Timer.html">Minuterie</a></li>
+                    <li><a href="#">Pomodoro</a></li>
+                  </ul></li>
+                  <li class="menu-connexion">
+                    <a href="#">Connexion</a>
+                    <ul class="sous-menu sous-menu-connexion">
+                      <li><a href="#">Inscription</a></li>
+                    </ul></li>
+                    <li class="menu-parametres">
+                      <a href="#"><img src="Images/editer.png" alt="parametres"></a>
+                      <ul class="sous-menu sous-menu-parametres">
+                        <li><a href="#">Affichages</a></li>
+                        <li><a href="#">Notifications</a></li>
+                      </ul></li>
+                    </nav>
+
+            <nav class="navbar-vertical">
+              <a href="Index.html"><img src="Images/Accueil.png" alt="Accueil"></a>
+              <a href="#">BD & Manga</a>
+              <a href="#">Biographie</a>
+              <a href="#">Contemporain</a>
+              <a href="#">Développement personnel</a>
+              <a href="#">Historique</a>
+              <a href="#">Jeune adulte</a>
+              <a href="#">Jeunesse</a>
+              <a href="#">Policier & Thriller</a>
+              <a href="#">Romance</a>
+              <a href="#">Science-Fiction & Fantaisie</a>
+              <a href="#">Tous</a>
+            </nav> 
+          </header>
+
+  <div class="rechercher">
+    <button class="rechercher-btn">Rechercher</button>
+    <input type="text" placeholder="Rechercher...">
+  </div>
+
+  <h3 class="livre-populaire">75 Livres les plus populaires</h3>
+  <div class="galerie">
+    <div class="item">
+      <img src="Images/P/Perrin_Valérie/Tata_Perrin.jpg" alt="Tata Perrin">
+      <p>Tata - Valérie Perrin</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/M/McFadden_Freida/Prof_Mc_Fadden.jpg" alt="La prof McFadden">
+      <p>La prof - Freida McFadden</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/N/Noir_Roxie/Faux_Fiance_Noir.jpg" alt="Faux fiance et grand amour Noir">
+      <p>Faux fiancé et grand amour - Roxie Noir</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/M/McFadden_Freida/Femme_Menage_Mc_Fadden.jpg" alt="La femme de menage McFadden">
+      <p>La femme de ménage - Freida McFadden</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/M/McFadden_Freida/Secrets_Femme_Menage_Mc_Fadden.jpg" alt="Les secrets de la femme de menage McFadden">
+      <p>Les secrets de la femme de ménage - Freida McFadden</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/G/Germain_Rafaele/Plage_Laval_Germain.jpg" alt="Plage Laval Germain">
+      <p>Plage Laval - Raphaele Germain</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/A/Adler-Olsen_Jusi/7m2_Adler-Olsen.jpg" alt="7m2 Adler-Olsen">
+      <p>7m2 Jussi Adler-Olsen</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/M/McFadden_Freida/Femme_Menage_Voit_Tout_McFadden.jpg" alt="La femme de menage voit tout - McFadden">
+      <p>La femme de ménage voit tout - Freida McFadden</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/D/Da_Costa_Melissa/Tenir_Debout_Da_Costa.jpg" alt="Tenir debout Da Costa">
+      <p>Tenir debout - Mélissa Da Costa</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/C/Collins_Philippe/Barman_Ritz_Collins.jpg" alt="Le barman du Ritz Collin">
+      <p>Le barman du Ritz - Philippe Collin</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/W/Werber_Bernard/Valse_Ames_Werber.jpg" alt="La valse des ames Werber">
+      <p>La valse des âmes - Bernard Werber</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/R/Roberts_Nora/Printemps_Maryland_Roberts.jpg" alt="Un printemps au Maryland Roberts">
+      <p>Un printemps au Maryland - Nora Roberts</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/H/Higgins_Clark_Mary/Ou_Tu_Maintenant_Higgins_Clark.jpg" alt="Ou es-tu maintenant Higgins Clark">
+      <p>Où es-tu maintenant? - Mary Higgins Clark</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/M/McFadden_Freida/Psy_McFadden.jpg" alt="La psy McFadden">
+      <p>La psy - Freida McFadden</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/T/Tomforde_Liz/Windy_City_Caug_Up_Tomforde.jpg" alt="Windy City Caught Up Tomforde">
+      <p>Windy city 3 Caught up - Liz Tomforde</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/N/Noir_Roxie/Ennemis_Plus_Affinites_Noir.jpg" alt="Ennemis et plus si affinites Noir">
+      <p>Ennemis et plus si affinités - Roxie Noir</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/S/Sabard_Clarisse/Stella_Hortense_Sabard.jpg" alt="Stella et Hortense Sabard">
+      <p>Stella & Hortense - Clarisse Sabard</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/K/Kori_Ana/Comme_Caresse_Joue_Kori.jpg" alt="Comme une caresse sur la joue Kori">
+      <p>Comme une caresse sur la joue - Ana Kori</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/D/Dicker_Joel/Tres_Catastrophique_Visite_Dicker.jpg" alt="La tres catastrophique visite du zoo Dicker">
+      <p>La très catastrophique visite du zoo - Joel Dicker</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/P/Perfumo_Cristian/Meurtres_Glacier_Perfumo.jpg" alt="Meurtres sur le glacier Perfumo">
+      <p>Meurtres sur le glacier - Cristian Perfumo</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/M/Mara_Andrea/Toutes_Fautes_Mara.jpg" alt="Toutes ses fautes Mara">
+      <p>Toutes ses fautes - Andrea Mara</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/S/S.Wild_Laura/Bodyguards_S.Wild.jpg" alt="Bodyguards S.Wild">
+      <p>Bodyguards Laura S.Wild</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/D/Da_Costa_Melissa/Tout_Bleu_Ciel_Da_Costa.jpg" alt="Tout le bleu du ciel Da Costa">
+      <p>Tout le bleu du ciel - Mélissa Da Costa</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/A/A.Michaud_Andree/Baignades_A.Michaud.jpg" alt="Baignades A.Michaud">
+      <p>Baignades - Andrée A.Michaud</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/Y/Yarros_Rebecca/Iron_Flame_Yarros.jpg" alt="Iron Flame Yarros">
+      <p>Iron Flame Rebecca Yarros</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/B/Brouillet_Chrystine/Regard_Autres_Brouillet.jpg" alt="Le regard des autres Brouillet">
+      <p>Le regard des autres - Chrystine Brouillet</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/Y/Yong, Philippe/Yeux_Clos_Yong.jpg" alt="Les yeux clos Yong">
+      <p>Les yeux clos Philippe Yong</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/D/Delcroix_Angelina/Memoires_Expert_Psychiatre_Delcroix.jpg" alt="Memoires dun expert psychiatre Delcroix">
+      <p>Mémoires d'un expert psychiatre - Angélina Delcroix</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/D/Da_Empoli_Giuliano/Heure_Predateurs_Da_Empoli.jpg" alt="Lheure des predateurs Da Empoli">
+      <p>L'heure des prédateurs - Guiliano Da Empoli</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/H/Hoover_Colleen/Verity_Hoover.jpg" alt="Verity Hoover">
+      <p>Verity - Colleen Hoover</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/V/Vareille_Marie/Derniere_Allumette_Vareille.jpg" alt="La derniere allumette Vareille">
+      <p>La dernière allumette - Marie Vareille</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/J/J.Maas/Palais_Epines_Roses_J.Maas.jpg" alt="Un palais depines et de roses J.Maas">
+      <p>Un palais d'épines et de roses - Sarah J.Maas</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/K/Kiefer_Lena/Westwell_Kiefer.jpg" alt="West Well Kiefer">
+      <p>Westwell - Lena Kiefer</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/G/Gobeil_Sylvie/Marie-Paule_Gobeil.jpg" alt="Marie-Paule Gobeil">
+      <p>Marie-Paule - Sylvie Gobeil</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/S/S.Syla_A/Capturee_S.Syla.jpg" alt="Capturee Syla">
+      <p>Capturée - A.S Syla</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/L/Laurens_Camille/Promesse_Laurens.jpg" alt="Ta promesse Laurens">
+      <p>Ta promesse - Camille Laurens</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/R/Rivens_Sarah/Lakestone_Rivens.jpg" alt="Lakestone Rivens">
+      <p>Lakestone - Sarah Rivens</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/S/Silver_Elsie/Gagner_Tout_Prix_Silver.jpg" alt="Gagner a tout prix Silver">
+      <p>Gagner à tout prix - Elsie Silver</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/M/Mara_Andrea/Rien_Vu_Mara.jpg" alt="Ils nont rien vu Mara">
+      <p>Ils n'ont rien vu - Andrea Mara</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/B/Boxho_Philippe/Morts_Parole_Boxho.jpg" alt="Les morts ont la parole Boxho">
+      <p>Les morts ont la parole - Philippe Boxho</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/W/Walsh_Chloe/Boys_Tommen_Walsh.jpg" alt="Boys of Tommen Walsh">
+      <p>Boys of Tommen - Chloé Walsh</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/A/Atwood_Margaret/Servante_Ecarlate_Atwood.png" alt="La servante ecarlate Atwood">
+      <p>La servante écarlate Margaret Atwood</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/R/Riley_Lucinda/Sept_Soeurs_Riley.jpg" alt="Les sept soeurs Riley">
+      <p>Les sept soeurs - Lucinda Riley</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/G/Gardner_Lisa/Derriere_Moi_Gardner.jpg" alt="Juste derriere moi Gardner">
+      <p>Juste derrière moi - Lisa Gardner</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/O/Olsen_Gregg/Elle_Fait_Olsen.jpg" alt="Ce quelle a fait Olsen">
+      <p>Ce qu'elle a fait - Gregg Olsen</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/T/Topez_Aria/Imbalance_Topez.jpg" alt="Imbalance Topez">
+      <p>Imbalance - Aria Topez</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/G/Grimaldi_Virginie/Possibles_Grimaldi.jpg" alt="Les possibles Grimaldi">
+      <p>Les possibles - Virginie Grimaldi</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/G/Grimaldi_Virginie/Parfum_Bonheur.jpg" alt="Le parfum du bonheur est plus fort sous la pluie Grimaldi">
+      <p>Le parfum du bonheur est plus fort sous la pluie - Virginie Grimaldi</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/B/Blaine_Emily/Unis_Ciel_Blaine.jpg" alt="Unis jusquau ciel Blaine">
+      <p>Unis jusqu'au ciel - Emily Blaine</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/M/Moncomble_Morgane/Hiver_Resister_Moncomble.jpg" alt="Un hiver pour te resister Moncomble">
+      <p>Un hiver pour te résister - Morgane Moncomble</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/Z/Zauner_Michelle/Pleurer_Supermarche_Zauner.jpg" alt="Pleurer au supermarche Zauner">
+      <p>Pleurer au supermarché - Michelle Zauner</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/R/Riley_Lucinda/Soeur_Ombre_Riley.jpg" alt="La soeur de lombre Riley">
+      <p>La soeur de l'ombre - Lucinda Riley</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/W/Wallerand_Chloe/Devils_Sons_Wallerand.jpg" alt="The devils sons Wallerand">
+      <p>The devil's sons - Chloé Wallerand</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/H/Huon_Anne-Gaelle/Etoiles_Nuit_Huon.jpg" alt="Ce que les etoiles doivent a la nuit Huon">
+      <p>Ce que les étoiles doivent à la nuit - Anne-Gaelle Huon</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/H/Henry_Emily/Happy_Place_Henry.jpg" alt="Happy place Henry">
+      <p>Happy place - Emily Henry</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/D/Da_Costa_Melissa/Revenais_Autres_Da_Costa.jpg" alt="Je revenais des autres Da Costa">
+      <p>Je revenais des autres - Mélissa Da Costa</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/G/Giannone_Francesca/Porteuse_Lettres_Giannone.jpg" alt="La porteuse de lettres Giannone">
+      <p>La porteuse de lettres - Francesca Giannone</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/S/Steel_Danielle/Liaison_Steel.jpg" alt="Liaison Steel">
+      <p>Liaison - Danielle Steel</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/L/Lucy_Rachel/Detours_Emportent_Lucy.jpg" alt="La ou les detours memportent Lucy">
+      <p>Là où les détours m'emportent - Rachel Lucy</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/H/Henry_Emily/People_Met_Vacation_Henry.jpg" alt="People we meet on vacation Henry">
+      <p>People we meet on vacation - Emily Henry</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/H/Hoover_Colleen/Premiere_Vue_Hoover.jpg" alt="A premiere vue Hoover">
+      <p>À première vue - Colleen Hoover</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/B/Burke_Darcy/Veuve_Imaginaire_Burke.jpg" alt="La veuve imaginaire Burke">
+      <p>La veuve imaginaire - Darcy Burke</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/C/Connelly_Michael/Ombre_Doute_Connelly.jpg" alt="Sans lombre dun doute Connelly">
+      <p>Sans l'ombre d'un doute - Michael Connelly</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/D/Dulude_Sébastien/Amiante_Dulude.jpg" alt="Amiante Dulude">
+      <p>Amiante - Sébastien Dulude</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/B/Burke_Darcy/Duc_Inflexible_Burke.jpg" alt="Le duc inflexible Burke">
+      <p>Le duc inflexible - Darcy Burke</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/R/Riley_Lucinda/Rose_Minuit_Riley.jpg" alt="La rose de minuit Riley">
+      <p>La rose de minuit - Lucinda Riley</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/B/Burke_Darcy/Comte_Noel_Burke.jpg" alt="Un comte de Noel Burke">
+      <p>Un comte de Noel - Darcy Burke</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/Y/Yarros_Rebecca/Wilder_Yarros.jpg" alt="Wilder Yarros">
+      <p>Wilder - Rebecca Yarros</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/A/Atwood_Margaret/Testaments_Atwood.jpg" alt="Les testaments Atwood">
+      <p>Les testaments - Margaret Atwood</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/G/Grebe_Camilla/Tenebres_Morkret_Grebe.jpg" alt="Les tenebres de Morkret Grebe">
+      <p>Les ténèbres de Morkret - Camila Grebe</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/P/Pare-Poupart_Simon/Ordures_Pare-Poupart.jpg" alt="Ordures Pare-Poupart">
+      <p>Ordures! Simon Paré-Poupart</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/L/Lemieux_Jean/Mort_Chemin_Arsene_Lemieux.jpg" alt="Le mort du chemin des Arsenes Lemieux">
+      <p>Le mort du chemin des Arsènes - Jean Lemieux</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/B/Blaine_Emily/Haut_Liste_Blaine.png" alt="Tout en haut de ma liste Blaine">
+      <p>Tout en haut de ma liste - Emily Blaine</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    <div class="item">
+      <img src="Images/V/Verilli_Sandra/Romance_Mission_Verilli.jpg" alt="Romance en mission Verilli">
+      <p>Romance en mission - Sandra Verilli</p>
+      <div class="voir-plus">
+        <button class="informations">Voir plus</button>
+        <button class="coeur-btn" type="button" type="button" onclick="toggleFavori(this)">
+          <img src="Images/Coeur_Vide.png" alt="coeur vide" class="coeur-img">
+        </button>
+        </div>
+    </div>
+    
+  </div>
+
+        <button id="exportStyles">Exporter JSON</button>
+<script type="module" src="Main.js"></script>
+
+  
+</body>
+<footer>
+  <p class="footer">Fixez vos objectifs dès maintenant !</p>
+  <button class="footer-button">Rejoignez notre communauté !</button>
+</footer>
+
+</html>
+
