@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">       
+    <head>
+        <meta charset="utf-8">
+        <title>Zebralivre</title>
+        <link href="Style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    </head>
+<body>
+<header>
+
+<nav class="menu">
+  <ul class="menu-list">
+
+    <!-- Profil -->
+    <li class="menu-profil">
+      <a href="#">
+        <img class="avatar-profil" src="djpony.jpg" alt="perso">
+        <p>Profil</p>
+        <progress id="barre" value="0" max="100">0%</progress>
+      </a>
+      <ul class="sous-menu-profil">
+        <li><a href="#">Classements</a></li>
+        <li><a href="#">Amis</a></li>
+      </ul>
+    </li>
+
+    <!-- Objectifs -->
+    <li class="menu-objectifs">
+      <a href="#">Objectifs</a>
+      <ul class="sous-menu-objectifs">
+        <li><a href="#">Succès</a></li>
+      </ul>
+    </li>
+
+    <!-- Livres -->
+    <li class="menu-livres">
+      <a href="#">Livres Lus</a>
+      <ul class="sous-menu-livres">
+        <li><a href="#">Notes personnelles</a></li>
+        <li><a href="#">Avis</a></li>
+        <li><a href="#">Top de l'année</a></li>
+        <li><a href="#">PAL</a></li>
+      </ul>
+    </li>
+
+    <!-- Citations -->
+    <li class="menu-citations">
+      <a href="Citations.html">Citations</a>
+      <ul class="sous-menu-citations">
+        <li><a href="#">Poèmes</a></li>
+        <li><a href="#">Communauté</a></li>
+      </ul>
+    </li>
+
+    <!-- Calendrier -->
+    <li class="menu-calendrier">
+      <a href="Calendrier.html">Calendrier</a>
+      <ul class="sous-menu-calendrier">
+        <li><a href="#">Rapports</a></li>
+        <li><a href="#">Minuterie</a></li>
+        <li><a href="#">Pomodoro</a></li>
+      </ul>
+    </li>
+
+    <!-- Connexion -->
+    <li class="menu-connexion">
+      <a href="Connexion.html">Connexion</a>
+      <ul class="sous-menu-connexion">
+        <li><a href="Inscription.html">Inscription</a></li>
+      </ul>
+    </li>
+
+    <!-- Paramètres -->
+    <li class="menu-parametres">
+      <a href="#"><img src="editer.png" alt="parametres"></a>
+      <ul class="sous-menu-parametres">
+        <li><a href="#">Affichages</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
+<nav class="navbar-vertical">
+  <a href="Index.html"><img src="Accueil.png" alt="Accueil"></a>
+  <a href="#">BD & Manga</a>
+  <a href="#">Biographie</a>
+  <a href="#">Contemporain</a>
+  <a href="#">Développement personnel</a>
+  <a href="#">Historique</a>
+  <a href="#">Jeune adulte</a>
+  <a href="#">Jeunesse</a>
+  <a href="#">Policier & Thriller</a>
+  <a href="#">Romance</a>
+  <a href="#">Science-Fiction & Fantaisie</a>
+  <a href="#">Tous</a>
+</nav> 
+</header>
+
+<div class="rechercher">
+  <button class="rechercher-btn">Rechercher</button>
+  <input type="text" id="searchInput" placeholder="Rechercher...">
+</div>
+
+<div id="resultats" style="display:none;"></div>
+
+<div class="section-populaire">
+  <h2>Ajouter des objectifs</h2>
+
+  <div class="input-group">
+    <input type="text" id="checkboxText" placeholder="Entrez le texte...">
+    <button id="addCheckbox" class="informations">Ajouter</button>
+  </div>
+
+  <div class="checkbox-list" id="checkboxList"></div>
+
+  <div class="actions">
+    <button id="clearChecked" class="informations">Supprimer les objectifs réalisés</button>
+    <button id="clearAll" class="informations">Tout supprimer</button>
+  </div>
+</div>
+
+    <button id="exportStyles">Exporter JSON</button>
+<script type="module" src="Main.js"></script>
+
+</body>
+
+<footer>
+    <p class="section-populaire">Fixez vos objectifs dès maintenant !</p>
+    <div class="footer-actions">
+      <button class="footer-button">Rejoignez notre communauté !</button>
+      <a href="https://discord.gg/3tMkDExq8F" class="discord-button">
+      <img src="discord.png" alt="Logo Discord"></a>
+      <a href="" class="google-button">
+      <img src="Google.png" alt="Logo Google"></a>
+    </div>
+  </footer>
+  
+  </html>
