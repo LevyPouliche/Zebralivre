@@ -1,0 +1,173 @@
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 140px auto 0;
+  padding: 30px;
+  text-align: center;
+  background-color: #EAE0D7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#timer {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #1B0773;
+}
+
+.button-group {
+  margin-bottom: 15px;
+}
+
+.button-group button,
+.button-group input[type="text"] {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button-group button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.button-group input[type="text"] {
+  width: 200px;
+}
+
+#resetBtn,
+#stopBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/* Couleurs spécifiques */
+#resetBtn {
+  background-color: #865B75;
+  border-color: #865B75;
+}
+
+#stopBtn {
+  background-color: #AA6369;
+  border-color: #AA6369;
+}
+
+/* Hover uniquement si pas disabled */
+#resetBtn:hover:not(:disabled) {
+  background-color: #966A81;
+  border-color: #966A81;
+}
+
+/* Etat disabled */
+#resetBtn:disabled {
+  background-color: white;
+  color: #865B75;
+  border-color: #865B75;
+  cursor: not-allowed;
+}
+
+/* Styles communs à tous les boutons du timer */
+#resetBtn,
+#stopBtn,
+#startBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/* Couleurs par bouton */
+#resetBtn {
+  background-color: #865B75;
+  border-color: #865B75;
+}
+
+#stopBtn {
+  background-color: #AA6369;
+  border-color: #AA6369;
+}
+
+#startBtn {
+  background-color: #728270;
+  border-color: #728270;
+}
+
+/* Hover */
+#resetBtn:hover:not(:disabled) {
+  background-color: #966A81;
+  border-color: #966A81;
+}
+
+#stopBtn:hover:not(:disabled) {
+  background-color: #B17176;
+  border-color: #B17176;
+}
+
+#startBtn:hover:not(:disabled) {
+  /* Aucun hover spécifique défini, on peut le garder ou le mettre si besoin */
+}
+
+/* Etat disabled */
+#resetBtn:disabled {
+  background-color: white;
+  color: #865B75;
+  border-color: #865B75;
+  cursor: not-allowed;
+}
+
+#stopBtn:disabled {
+  background-color: white;
+  color: #AA6369;
+  border-color: #AA6369;
+  cursor: not-allowed;
+}
+
+#startBtn:disabled {
+  background-color: white;
+  color: #728270;
+  border-color: #728270;
+  cursor: not-allowed;
+}
+
+#startBtn:hover:not(:disabled) {
+    background-color: #7E8D7C; 
+    border-color: #7E8D7C;
+    color: white;  
+}
+
+/* Bouton Ajouter Temps */
+#Ajoutertemps {
+    background-color: #DDA455;
+    color: white;
+    border: 2px solid #DDA455;
+    transition: all 0.2s ease;
+}
+
+#Ajoutertemps:hover:not(:disabled) {
+    background-color: #C8943D; /* légèrement plus foncé pour le hover */
+    border-color: #C8943D;
+    color: white;
+}
+
+#Ajoutertemps:disabled {
+    background-color: white;
+    color: #DDA455;
+    border: 2px solid #DDA455;
+}
