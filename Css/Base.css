@@ -1,0 +1,30 @@
+.badge-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 16px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 70px;
+    border-radius: 16px;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center; /* garantit le centrage si texte multi-lignes */
+}
+
+/* Badge obtenu */
+.badge.obtenu {
+    background-color: #fde6c8;
+    color: #8a5a1f;
+}
+
+/* Badge verrouillé */
+.badge.verrouille {
+    background-color: #f2f2f2;
+    color: #b0b0b0;
+}
