@@ -48,21 +48,11 @@
         <span class="error"></span>
       </div>
 
-      <!-- Pays (version fonctionnelle) -->
-      <div class="form-group">
-        <label for="country">Pays</label>
-        <select id="country" required>
-          <option value="">— Sélectionnez un pays —</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="BE">Belgique</option>
-          <option value="CH">Suisse</option>
-          <option value="LU">Luxembourg</option>
-          <option value="US">États-Unis</option>
-          <option value="UK">Royaume-Uni</option>
-        </select>
-        <span class="error"></span>
-      </div>
+      <div 
+  class="country-selector"
+  data-input-name="country"
+  data-default="CA"
+></div>
 
       <div class="form-group">
         <label for="langue">Langue</label>
@@ -86,6 +76,6 @@
   <p class="footer">Fixez vos objectifs dès maintenant !</p>
 </footer>
 
-<script src="register.js"></script>
+<script src="Pays.js"></script>
 </body>
 </html>
