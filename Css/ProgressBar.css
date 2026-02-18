@@ -1,0 +1,30 @@
+/* Style général de la barre */
+#barre {
+  width: 100%;
+  height: 12px;           /* barre fine pour rester discrète */
+  border-radius: 6px;     /* coins arrondis */
+  background-color: #f0f0f0; /* gris clair de fond */
+  overflow: hidden;
+  -webkit-appearance: none; /* pour uniformiser sur Chrome/Safari */
+  appearance: none;
+}
+
+/* Barre remplie (différente selon le navigateur) */
+#barre::-webkit-progress-value {
+  background: linear-gradient(90deg, #40E0D0, #BA55D3); /* turquoise → rose-mauve */
+  border-radius: 6px;
+}
+
+#barre::-moz-progress-bar {
+  background: linear-gradient(90deg, #40E0D0, #BA55D3);
+  border-radius: 6px;
+}
+
+/* Optionnel : style du texte sur la barre */
+#barre::after {
+  content: attr(value) '%';
+  position: absolute;
+  right: 8px;
+  font-size: 10px;
+  color: #555;
+}
