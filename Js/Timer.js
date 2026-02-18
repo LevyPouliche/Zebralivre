@@ -105,6 +105,13 @@ class Timer {
 
         // mise à jour du graphique
         ajouterTempsAuJour(secondes);
+
+        // --- AJOUT XP PAR MINUTE ---
+        // 1 XP par minute de lecture
+        let xpAAjouter = Math.floor(secondes / 60);
+        if (xpAAjouter > 0) {
+            ajouterXP(xpAAjouter); // Appel de votre fonction existante
+        }
     }
 }
 
