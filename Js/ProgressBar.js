@@ -1,13 +1,18 @@
 const barre = document.getElementById('barre');
 const niveauTexte = document.getElementById('niveauTexte');
+const xpTotalTexte = document.getElementById('xpTotalTexte'); // nouvel élément affichant le total d'XP
 
 // Données
-let niveau = 1;
+let niveau = 0;   // On commence au niveau 0
 let xp = 0;
+let xpCumul = 0;  // Total cumulé à vie
 
 // XP nécessaire pour le niveau courant
 function xpRequise() {
-  return 100 * niveau;
+  if (niveau === 0) {
+    return 60; // Palier spécial 0 → 1
+  }
+  return Math.round(120 * Math.pow(niveau, 1.6));
 }
 
 // Mise à jour visuelle
@@ -18,14 +23,17 @@ function setProgress() {
   barre.textContent = Math.round((xp / maxXP) * 100) + '%';
 
   niveauTexte.textContent = "Niveau " + niveau;
+  xpTotalTexte.textContent = "XP total : " + xpCumul + " XP"; // affichage total
 }
 
 // Ajout d'XP
 function ajouterXP(valeur) {
   xp += valeur;
+  xpCumul += valeur; // cumule l'XP à vie
 
   while (xp >= xpRequise()) {
-    xp -= xpRequise();
+    const xpMax = xpRequise();
+    xp -= xpMax;
     niveau++;
   }
 
@@ -37,7 +45,8 @@ function ajouterXP(valeur) {
 function sauvegarder() {
   localStorage.setItem('progression', JSON.stringify({
     niveau: niveau,
-    xp: xp
+    xp: xp,
+    xpCumul: xpCumul
   }));
 }
 
@@ -48,6 +57,7 @@ function charger() {
     const obj = JSON.parse(data);
     niveau = obj.niveau;
     xp = obj.xp;
+    xpCumul = obj.xpCumul || 0;
   }
   setProgress();
 }
