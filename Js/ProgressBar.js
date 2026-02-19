@@ -17,13 +17,18 @@ function xpRequise() {
 
 // Mise à jour visuelle
 function setProgress() {
-  const maxXP = xpRequise();
-  barre.max = maxXP;
-  barre.value = xp;
-  barre.textContent = Math.round((xp / maxXP) * 100) + '%';
+    const maxXP = xpRequise();
+    barre.max = maxXP;
+    barre.value = xp;
 
-  niveauTexte.textContent = "Niveau " + niveau;
-  xpTotalTexte.textContent = "XP total : " + xpCumul + " XP"; // affichage total
+    niveauTexte.textContent = "Niveau " + niveau;
+
+    // Appliquer la variable CSS correspondant au niveau
+    const couleur = getComputedStyle(document.documentElement)
+        .getPropertyValue(`--lvl-${niveau}`) || "#006D6F";
+
+    barre.style.backgroundColor = couleur.trim();
+    niveauTexte.style.color = couleur.trim();
 }
 
 // Ajout d'XP
