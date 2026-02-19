@@ -1,4 +1,27 @@
 /* Style général de la barre */
+:root {
+  --lvl-0:  #006D6F;
+  --lvl-1:  #087578;
+  --lvl-2:  #107D81;
+  --lvl-3:  #18858A;
+  --lvl-4:  #208D93;
+  --lvl-5:  #28959C;
+  --lvl-6:  #309DA5;
+  --lvl-7:  #38A5AE;
+  --lvl-8:  #40ADB7;
+  --lvl-9:  #48B5C0;
+  --lvl-10: #50BDC9;
+  --lvl-11: #58C5D2;
+  --lvl-12: #60CDDB;
+  --lvl-13: #68D5E4;
+  --lvl-14: #70DDED;
+  --lvl-15: #78E5F6;
+  --lvl-16: #80EDFF;
+  --lvl-17: #8CF0FF;
+  --lvl-18: #98F3FF;
+  --lvl-19: #A4F6FF;
+}
+
 #barre {
   width: 100%;
   height: 12px;           /* barre fine pour rester discrète */
