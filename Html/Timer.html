@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <body>
         
     <head>
         <meta charset="utf-8">
         <title>Calendrier</title>
-        <link href="Style.css" rel="stylesheet">
+        <link href="Pomodoro.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
+    <body>
 
     <header>
         <nav class="menu">
@@ -83,22 +83,9 @@
 
 </div>
 
-<!-- Affichage des dates de la semaine -->
-<h3 id="datesSemaine" style="text-align:center; margin-top:20px;"></h3>
-
-<!-- Curseurs de semaine -->
-<div class="button-group" style="justify-content:center; margin-top:10px;">
-    <button onclick="semainePrecedente()">◀ Semaine précédente</button>
-    <button onclick="semaineSuivante()">Semaine suivante ▶</button>
-</div>
-
-<!-- Résumé des jours -->
-<div class="button-group" id="resumeJours" style="margin-top:20px; text-align:center;"></div>
-
-<canvas id="barChart"></canvas>
-
         <button id="exportStyles">Exporter JSON</button>
-<script type="module" src="Main.js"></script>
+        <script src="ProgressBar.js"></script>
+<script src="Timer.js"></script>
 
     </body>
 
